@@ -10,6 +10,7 @@ void clsAlumnoDAO::Insertar(clsAlumnoDTO dto)
         fclose(p);
     }
 }
+
 void clsAlumnoDAO::Eliminar(int legajo)
 {
     FILE *p;
@@ -33,6 +34,7 @@ void clsAlumnoDAO::Eliminar(int legajo)
         fclose(p);
     }
 }
+
 void clsAlumnoDAO::Modificar(clsAlumnoDTO dto)
 {
     FILE *p;

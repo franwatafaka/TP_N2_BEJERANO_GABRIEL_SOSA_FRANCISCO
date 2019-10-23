@@ -16,6 +16,8 @@ void clsMateriasView::MenuMaterias()
     cout<<"----------SUBMENU MATERIAS---------"<<endl;
     cout<<"A - Nueva Materia"<<endl;
     cout<<"B - Listar Materias"<<endl;
+    cout<<"C - Eliminar Materias"<<endl;
+    cout<<"D - Modificar Materias"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------------------"<<endl;
     cin.getline(op, 50);
@@ -31,6 +33,18 @@ void clsMateriasView::MenuMaterias()
         case 'B':
         {
             Listar();
+        }
+        break;
+        case'c':
+        case'C':
+        {
+            Eliminar();
+        }
+        break;
+        case'd':
+        case'D':
+        {
+            Modificar();
         }
         break;
         case 's':
@@ -66,6 +80,40 @@ void clsMateriasView::Insertar()
     dto.SetNombre(nombre);
     dto.SetProfesor(profesor);
     bl.Insertar(dto);
+
+}
+
+void clsMateriasView::Eliminar()
+{
+    int Id;
+    clsMateriaDAO dao;
+    Listar();
+    cout<<"Ingrese el ID de la materia a eliminar:"<<endl;
+    cin>>Id;
+    dao.Eliminar(Id);
+}
+
+void clsMateriasView::Modificar()
+{
+    char nombre[50];
+    char profesor[50];
+    int id;
+    clsMateriaDTO dto;
+    clsMateriaBL bl;
+    system("cls");
+    Listar();
+    cout<<"Ingrese el ID de la materia cuyos datos se deseen modificar:"<<endl;
+    cin>>id;
+    dto.SetId(id);
+    cin.ignore();
+    cout<<"MODIFICAR MATERIA:"<<endl;
+    cout<<"Ingrese nuevo nombre:"<<endl;
+    cin.getline(nombre, 50);
+    cout<<"Ingrese nuevo profesor:"<<endl;
+    cin.getline(profesor, 50);
+    dto.SetNombre(nombre);
+    dto.SetProfesor(profesor);
+    bl.Modificar(dto);
 
 }
 

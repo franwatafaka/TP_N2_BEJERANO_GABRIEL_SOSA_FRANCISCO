@@ -16,6 +16,8 @@ class clsAlumnosView
     void MenuAlumnos();
     void Insertar();
     void Listar();
+    void Eliminar();
+    void Modificar();
 
 };
 

@@ -16,6 +16,8 @@ class clsMateriasView
     void MenuMaterias();
     void Insertar();
     void Listar();
+    void Eliminar();
+    void Modificar();
 
 };
 

@@ -14,6 +14,8 @@ void clsAlumnosView::MenuAlumnos()
     cout<<"----------SUBMENU ALUMNOS---------"<<endl;
     cout<<"A - Nuevo Alumno"<<endl;
     cout<<"B - Listar Alumnos"<<endl;
+    cout<<"C - Eliminar Alumnos"<<endl;
+    cout<<"D - Modificar Alumnos"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
     cin.getline(op, 50);
@@ -29,6 +31,18 @@ void clsAlumnosView::MenuAlumnos()
         case'B':
         {
             Listar();
+        }
+        break;
+        case'c':
+        case'C':
+        {
+            Eliminar();
+        }
+        break;
+        case'd':
+        case'D':
+        {
+            Modificar();
         }
         break;
         case 's':
@@ -65,6 +79,39 @@ void clsAlumnosView::Insertar()
     dto.SetApellido(apellido);
     bl.Insertar(dto);
 
+}
+
+void clsAlumnosView::Eliminar()
+{
+    int Legajo;
+    clsAlumnoDAO dao;
+    Listar();
+    cout<<"Ingrese el legajo del alumno a eliminar:"<<endl;
+    cin>>Legajo;
+    dao.Eliminar(Legajo);
+}
+
+void clsAlumnosView::Modificar()
+{
+    char nombre[50];
+    char apellido[50];
+    int legajo;
+    clsAlumnoDTO dto;
+    clsAlumnoBL bl;
+    system("cls");
+    Listar();
+    cout<<"Ingrese el legajo del alumno cuyos datos se deseen modificar:"<<endl;
+    cin>>legajo;
+    dto.SetLegajo(legajo);
+    cin.ignore();
+    cout<<"MODIFICAR ALUMNO:"<<endl;
+    cout<<"Ingrese nuevo nombre:"<<endl;
+    cin.getline(nombre, 50);
+    cout<<"Ingrese nuevo apellido:"<<endl;
+    cin.getline(apellido, 50);
+    dto.SetNombre(nombre);
+    dto.SetApellido(apellido);
+    bl.Modificar(dto);
 }
 
 void clsAlumnosView::Listar()
