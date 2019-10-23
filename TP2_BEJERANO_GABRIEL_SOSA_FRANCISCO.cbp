@@ -47,6 +47,8 @@ AYUDANTE : Fernando Calabuig.
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BL/clsMateriaBL.cpp" />
+		<Unit filename="BL/clsMateriaBL.h" />
 		<Unit filename="CSYSTEM/csystem.h" />
 		<Unit filename="DAO/clsMateriaDAO.cpp" />
 		<Unit filename="DAO/clsMateriaDAO.h" />
@@ -55,6 +57,10 @@ AYUDANTE : Fernando Calabuig.
 		<Unit filename="HEADERS/menu.h" />
 		<Unit filename="LICENCIA GPL/Licencia GPL (traduccion NO OFICIAL - castellano argentina).txt" />
 		<Unit filename="LICENCIA GPL/Licencia GPL original (ingles).txt" />
+		<Unit filename="VIEW/clsMainView.cpp" />
+		<Unit filename="VIEW/clsMainView.h" />
+		<Unit filename="VIEW/clsMateriasView.cpp" />
+		<Unit filename="VIEW/clsMateriasView.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

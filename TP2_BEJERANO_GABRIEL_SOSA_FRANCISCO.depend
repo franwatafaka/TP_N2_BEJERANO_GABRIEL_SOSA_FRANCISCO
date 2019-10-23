@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1571815769 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+	"clsMateriaBL.h"
+
+1571822753 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
+	"../DAO/clsMateriaDAO.h"
+	"../DTO/clsMateriaDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1571821992 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
+	<cstdio>
+	"../DTO/clsMateriaDTO.h"
+
+1571822614 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
+	<cstring>
+
+1571821843 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
+	"clsMateriaDAO.h"
+
+1571821843 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
+	"clsMateriaDTO.h"
+
+1571811830 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+	"clsMainView.h"
+	"clsMateriasView.h"
+
+1571823249 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+
+1571823293 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+	"../DTO/clsMateriaDTO.h"
+	"../BL/clsMateriaBL.h"
+
+1571823441 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
+	<iostream>
+	<cstdlib>
+	"CSYSTEM/csystem.h"
+	"DTO/clsMateriaDTO.h"
+	"DAO/clsMateriaDAO.h"
+	"VIEW/clsMainView.h"
+	"../CSYSTEM/csystem.h"
+
+1571822614 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	<windows.h>
+	<unistd.h>
+
