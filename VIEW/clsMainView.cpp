@@ -8,7 +8,7 @@ using namespace std;
 
 void clsMainView::Menu()
 {
-    char op;
+ char op;
  bool     salir=false;
     cout<<"----------MENU---------"<<endl;
     cout<<"M - Materias"<<endl;
