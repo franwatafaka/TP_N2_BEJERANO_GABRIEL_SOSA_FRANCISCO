@@ -17,7 +17,7 @@ void clsMateriasView::MenuMaterias()
     cout<<"A - Nueva Materia"<<endl;
     cout<<"B - Listar Materias"<<endl;
     cout<<"S - Salir"<<endl;
-    cout<<"-----------------------"<<endl;
+    cout<<"-----------------------------------"<<endl;
     cin.getline(op, 50);
     switch(validar.validarUnaLetra(op))
     {
@@ -26,6 +26,7 @@ void clsMateriasView::MenuMaterias()
         {
             Insertar();
         }
+        break;
         case 'b':
         case 'B':
         {
@@ -40,7 +41,10 @@ void clsMateriasView::MenuMaterias()
         break;
         default:
         {
-            cout<<"Error, elija una opcion valida"<<endl;
+        system("cls");
+        cout<<"----------------------------------------------"<<endl;
+        cout<<"-ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
+        cout<<"----------------------------------------------"<<endl<<endl;
         }
         break;
     }
@@ -69,18 +73,28 @@ void clsMateriasView::Listar()
     {
     clsMateriaBL bl;
     system("cls");
-    cout<<"-----------LISTA DE MATERIAS----------------"<<endl;
+    cout<<"---------------------------------------------"<<endl;
+    cout<<"-               LISTA DE MATERIAS           -"<<endl;
+    cout<<"---------------------------------------------"<<endl<<endl;
     int c=bl.Count();
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.Listar(lista);
     char nombre[50];
     char profesor[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"PROFESOR:";
+    cout<<setw(20)<<"ID:"<<endl;
+    cout<<"----------------------------------------------"<<endl;
     for(int x=0;x<c;x++)
     {
         lista[x].GetNombre(nombre);
+        cout<<setw(6)<<nombre;
         lista[x].GetProfesor(profesor);
-        cout<<setw(30)<<lista[x].GetId();
+        cout<<setw(20)<<profesor;
+        cout<<setw(20)<<lista[x].GetId()<<endl;
+        cout<<"----------------------------------------------"<<endl;
     }
+    cout<<endl;
     }
 
 

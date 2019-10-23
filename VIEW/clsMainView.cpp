@@ -50,7 +50,10 @@ void clsMainView::Menu()
         break;
         default:
         {
-            cout<<"Error, elija una opcion valida"<<endl;
+        cout<<"----------------------------------------------"<<endl;
+        cout<<"-ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
+        cout<<"----------------------------------------------"<<endl<<endl;
+        system("pause");
         }
         }
     }

@@ -24,21 +24,25 @@ void clsAlumnosView::MenuAlumnos()
         {
             Insertar();
         }
+        break;
         case'b':
         case'B':
         {
             Listar();
         }
         break;
-        case's':
-        case'S':
+        case 's':
+        case 'S':
         {
-
+            salir=true;
         }
         break;
         default:
         {
-
+        system("cls");
+        cout<<"----------------------------------------------"<<endl;
+        cout<<"-ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
+        cout<<"----------------------------------------------"<<endl<<endl;
         }
         break;
     }
@@ -67,16 +71,25 @@ void clsAlumnosView::Listar()
     {
     clsAlumnoBL bl;
     system("cls");
-    cout<<"-----------LISTA DE ALUMNOS----------------"<<endl;
+    cout<<"---------------------------------------------"<<endl;
+    cout<<"-               LISTA DE ALUMNOS            -"<<endl;
+    cout<<"---------------------------------------------"<<endl<<endl;
     int c=bl.Count();
     clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
     bl.Listar(lista);
     char nombre[50];
     char apellido[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"APELLIDO:";
+    cout<<setw(20)<<"LEGAJO:"<<endl;
+    cout<<"----------------------------------------------"<<endl;
     for(int x=0;x<c;x++)
     {
         lista[x].GetNombre(nombre);
+        cout<<setw(6)<<nombre;
         lista[x].GetApellido(apellido);
-        cout<<setw(30)<<lista[x].GetLegajo();
+        cout<<setw(20)<<apellido;
+        cout<<setw(20)<<lista[x].GetLegajo()<<endl;
+        cout<<"----------------------------------------------"<<endl;
     }
     }
