@@ -13,18 +13,12 @@
                              INCLUSIONES PERSONALES
 /*=============================================================================**/
 #include <cstring>
-#include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <clsMateriaDAO.h>
 
-using namespace std;
 /**=============================================================================**/
 
 class clsMateriaDTO
 {
     public:
-       // clsMateriaDTO(char*, int, char*, bool);
         clsMateriaDTO();
 
          int GetId() { return Id; }
@@ -33,8 +27,9 @@ class clsMateriaDTO
         void SetNombre(char* val) { strcpy(Nombre,val ); }
         void GetProfesor(char* val) { strcpy(val,Profesor ); }
         void SetProfesor(char* val) { strcpy(Profesor ,val); }
-        bool GetEliminado();
-        void SetEliminado(bool val);
+        bool GetEliminado() { return Eliminado; }
+        void SetEliminado(bool val) { Eliminado = val; }
+
         void Copy(clsMateriaDTO);
 
     private:
