@@ -1,4 +1,5 @@
 #include "clsMateriaDAO.h"
+
 /** en DAO NO VAN NI COUT NI CIN JAAMAS */
 void clsMateriaDAO::Insertar(clsMateriaDTO dto)
 {
@@ -12,8 +13,8 @@ void clsMateriaDAO::Insertar(clsMateriaDTO dto)
 }
 void clsMateriaDAO::Eliminar(int id)
 {
-    FILE *p;
     clsMateriaDTO dto;
+    FILE *p;
     int pos = 0;
     p = fopen(ARCHIVO_MATERIAS,"rb+");
     if(p!=NULL)

@@ -71,6 +71,8 @@
 //=============================================================================
 #include "CSYSTEM/csystem.h" // Libreria para multiplataforma.
 #include "HEADERS/menu.h" /** LIBRERIA DE MENUS */
+#include "DTO/clsMateriasDTO.h"
+#include "DAO/clsMateriasDAO.h"
 //==============================================================================
 // DECLARACION DEL ESPACIO DE NOMBRES POR DEFECTO
 //------------------------------------------------------------------------------
