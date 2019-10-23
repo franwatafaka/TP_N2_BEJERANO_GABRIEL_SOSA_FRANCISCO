@@ -70,9 +70,7 @@
 //                             INCLUSIONES PERSONALES
 //=============================================================================
 #include "CSYSTEM/csystem.h" // Libreria para multiplataforma.
-#include "DTO/clsMateriaDTO.h"
-#include "DAO/clsMateriaDAO.h"
-#include "VIEW/clsMainView.h"
+#include "HEADERS/menu.h" /** LIBRERIA DE MENUS */
 //==============================================================================
 // DECLARACION DEL ESPACIO DE NOMBRES POR DEFECTO
 //------------------------------------------------------------------------------
@@ -84,8 +82,7 @@ using namespace std;
 //------------------------------------------------------------------------------
 int main()
 {
-    clsMainView view;
-     view.Menu();
+    menuPpal();
 
     //--------------------------------------------------------------------------
     // FIN DE LA FUNCION main() SIN ERRORES.

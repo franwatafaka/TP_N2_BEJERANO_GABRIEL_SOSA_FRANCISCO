@@ -9,10 +9,10 @@ clsMateriaDTO::clsMateriaDTO()
  void clsMateriaDTO::Copy(clsMateriaDTO dto)
  {
      char nombre[50],profesor[50];
-     this->Id = dto.GetId();
+     this->id = dto.GetId();
      dto.GetNombre(nombre);
      strcpy(this->Nombre,nombre);
-     dto.GetProfesor(Profesor);
-     strcpy(this->Profesor,Profesor);
+     dto.GetProfesor(profesor);
+     strcpy(this-Profesor,profesor);
 
  }

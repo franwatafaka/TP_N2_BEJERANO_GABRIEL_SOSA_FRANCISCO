@@ -20,7 +20,7 @@ void clsMateriaDAO::Eliminar(int id)
     {
         while(fread(&dto,sizeof(clsMateriaDTO),1,p))
         {
-            if(dto.GetId()==id && !dto.GetEliminado())
+            if(dto.GetId()==id && !dto.Eliminado())
             {
                 dto.SetEliminado(true);
                 fseek(p,sizeof(clsMateriaDTO)*pos,SEEK_SET);
@@ -43,7 +43,7 @@ void clsMateriaDAO::Modificar(clsMateriaDTO dto)
     {
         while(fread(&dto_arch,sizeof(clsMateriaDTO),1,p))
         {
-            if(dto_arch.GetId()==dto.GetId() && !dto_arch.GetEliminado())
+            if(dto_arch.GetId()==dto.GetId() && !dto_arch.Eliminado())
             {
 
                 fseek(p,sizeof(clsMateriaDTO)*pos,SEEK_SET);
@@ -71,14 +71,13 @@ void clsMateriaDAO::Listar(clsMateriaDTO *dto )
             {
                 /** en caso de que encuentre registros que no esten eliminados, los agregara al listado */
                 dto[pos].Copy(dto_arch);
-                pos++;
+                post++;
             }
         }
         fclose(p);
     }
 
 }
-
 int clsMateriaDAO::Count()
 {
     FILE *p;
