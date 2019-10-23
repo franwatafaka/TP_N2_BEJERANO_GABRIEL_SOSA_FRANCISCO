@@ -29,6 +29,20 @@ void clsMateriaBL::Listar(clsMateriaDTO *lista)
 
 int clsMateriaBL::Count()
 {
-    clsMateriaDAO dao;
-    return dao.Count();
+    FILE *p;
+    int cant=0;
+    clsMateriaBL bl;
+    p = fopen(ARCHIVO_MATERIAS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&bl,sizeof(clsMateriaBL),1,p))
+        {
+//            if(!bl.GetEliminado())
+//            {
+                cant++;
+//            }
+        }
+        fclose(p);
+    }
+    return cant;
 }

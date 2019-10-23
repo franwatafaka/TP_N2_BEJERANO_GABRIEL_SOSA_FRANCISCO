@@ -3,12 +3,6 @@
 
 #include "../DAO/clsMateriaDAO.h"
 #include "../DTO/clsMateriaDTO.h"
-#include "../CSYSTEM/csystem.h"
-#include <iostream>
-#include <cstdio>
-#include <iomanip>
-
-using namespace std;
 
 
 class clsMateriaBL
@@ -17,7 +11,7 @@ class clsMateriaBL
     void Insertar(clsMateriaDTO);
     void Eliminar(int);
     void Modificar(clsMateriaDTO);
-    void Listar(clsMateriaDTO *);
+    void Listar(clsMateriaDTO * );
     int Count();
 
 };

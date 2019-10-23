@@ -1,7 +1,5 @@
 #include "clsMateriasView.h"
 
-using namespace std;
-
 void clsMateriasView::MenuMaterias()
 {
     char op;
@@ -59,21 +57,15 @@ void clsMateriasView::Insertar()
 }
 
 void clsMateriasView::Listar()
-    {
+{
+    //ESTA FUNCIOÓN ESTÁ ERN CLASES GRABADAS, EN EL VIDEO  DE ORDENAR
+    //LAS "TABLAS" Ó EN EL ÚLTIMO VIDEO QUE SUBA HOY 24/10
     clsMateriaBL bl;
-//    system("cls");
-    cout<<"-----------LISTA DE MATERIAS----------------"<<endl;
+    system("cls");
+    cout<<"---------LISTADO DE MATERIAS-----------"<<endl;
     int c=bl.Count();
-    clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
+    clsMateriaDTO *lista=(clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.Listar(lista);
-    char nombre[50];
-    char profesor[50];
-    for(int x=0;x<c;x++)
-    {
-        lista[x].GetNombre(nombre);
-        lista[x].GetProfesor(profesor);
-        cout<<setw(30)<<lista[x].GetId();
-    }
-    }
+}
 
 

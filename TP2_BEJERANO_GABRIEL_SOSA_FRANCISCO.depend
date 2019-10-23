@@ -12,16 +12,12 @@
 1571811236 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
 	"clsMateriaDTO.h"
 
-1571815769 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+1571812438 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
 	"clsMateriaBL.h"
 
-1571815769 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
+1571807665 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
 	"../DAO/clsMateriaDAO.h"
 	"../DTO/clsMateriaDTO.h"
-	"../CSYSTEM/csystem.h"
-	<iostream>
-	<cstdio>
-	<iomanip>
 
 1571811687 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
 	<iostream>
@@ -50,7 +46,7 @@
 	"clsMainView.h"
 	"clsMateriasView.h"
 
-1571816140 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+1571811815 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -59,6 +55,6 @@
 	"../DTO/clsMateriaDTO.h"
 	"../BL/clsMateriaBL.h"
 
-1571816186 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+1571812309 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
 	"clsMateriasView.h"
 
