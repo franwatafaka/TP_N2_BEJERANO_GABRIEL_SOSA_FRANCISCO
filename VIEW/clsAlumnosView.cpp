@@ -1,28 +1,31 @@
 #include "clsAlumnosView.h"
+#include "../BL/clsValidacionesBL.h"
 
 using namespace std;
 
 void clsAlumnosView::MenuAlumnos()
 {
-    char op;
+    system("cls");
+    char op[50];
+    clsValidacionesBL validar;
     bool salir=false;
+    while(!salir)
+    {
     cout<<"----------SUBMENU ALUMNOS---------"<<endl;
-    cout<<"N - Nuevo Alumno"<<endl;
-    cout<<"L - Listar Alumnos"<<endl;
+    cout<<"A - Nuevo Alumno"<<endl;
+    cout<<"B - Listar Alumnos"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
-    cin>>op;
-    cin.ignore();
-    system("cls");
-    switch(op)
+    cin.getline(op, 50);
+    switch(validar.validarUnaLetra(op))
     {
-        case'n':
-        case'N':
+        case'a':
+        case'A':
         {
             Insertar();
         }
-        case'L':
-        case'l':
+        case'b':
+        case'B':
         {
             Listar();
         }
@@ -39,6 +42,7 @@ void clsAlumnosView::MenuAlumnos()
         }
         break;
     }
+}
 }
 
 void clsAlumnosView::Insertar()

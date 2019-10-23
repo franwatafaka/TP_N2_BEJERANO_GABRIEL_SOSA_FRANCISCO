@@ -14,45 +14,44 @@ using namespace std;
 
 void clsMainView::Menu()
 {
-    char *op;
+    char op[50];
     clsValidacionesBL validar;
     bool salir=false;
-
-//    cout<<op<<endl;
-
-//    system("cls");
     while(!salir)
     {
+        system("cls");
         cout<<"----------MENU---------"<<endl;
-        cout<<" 1 - Materias"<<endl;
-        cout<<" 2 - Alumnos"<<endl;
-        cout<<" 9 - Salir"<<endl;
+        cout<<" A - Materias"<<endl;
+        cout<<" B - Alumnos"<<endl;
+        cout<<" S - Salir"<<endl;
         cout<<"-----------------------"<<endl;
-
-        sys::getline(op,1);
-        switch(validar.validarUnNumero(op))
+        cin.getline(op, 50);
+        switch(validar.validarUnaLetra(op))
         {
-        case 49:
+        case 'a':
+        case 'A':
         {
             clsMateriasView matView;
             matView.MenuMaterias();
         }
         break;
-        case 50:
+        case 'b':
+        case 'B':
         {
             clsAlumnosView aluView;
             aluView.MenuAlumnos();
         }
-        case 57:
+        break;
+        case 's':
+        case 'S':
         {
             salir=true;
         }
         break;
         default:
         {
-
+            cout<<"Error, elija una opcion valida"<<endl;
         }
-
         }
     }
 }

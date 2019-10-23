@@ -1,45 +1,49 @@
 #include "clsMateriasView.h"
-
 #include "../BL/clsValidacionesBL.h"
+
+//#include "../BL/clsValidacionesBL.h"
+
 using namespace std;
 
 void clsMateriasView::MenuMaterias()
 {
-     clsValidacionesBL opc;
-    char *op;
+    system("cls");
+    char op[50];
+    clsValidacionesBL validar;
     bool salir=false;
+    while(!salir)
+    {
     cout<<"----------SUBMENU MATERIAS---------"<<endl;
-    cout<<"N - Nueva Materia"<<endl;
-    cout<<"L - Listar Materias"<<endl;
+    cout<<"A - Nueva Materia"<<endl;
+    cout<<"B - Listar Materias"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
-//    sys::getline(op,1);
-//    cin.ignore();
-//    system("cls");
-    switch(opc.validarUnNumero(op))
+    cin.getline(op, 50);
+    switch(validar.validarUnaLetra(op))
     {
-        case'n':
-        case'N':
+        case 'a':
+        case 'A':
         {
             Insertar();
         }
-        case'L':
-        case'l':
+        case 'b':
+        case 'B':
         {
             Listar();
         }
         break;
-        case's':
-        case'S':
+        case 's':
+        case 'S':
         {
-
+            salir=true;
         }
         break;
         default:
         {
-
+            cout<<"Error, elija una opcion valida"<<endl;
         }
         break;
+    }
     }
 }
 

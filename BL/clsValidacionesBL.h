@@ -6,6 +6,7 @@ class clsValidacionesBL{
 
     public:
     char validarUnNumero(char *);
+    char validarUnaLetra(char *);
 
 };
 
