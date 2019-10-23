@@ -1,14 +1,14 @@
-#include "clsMateriasView.h"
+#include "clsAlumnosView.h"
 
 using namespace std;
 
-void clsMateriasView::MenuMaterias()
+void clsAlumnosView::MenuAlumnos()
 {
     char op;
     bool salir=false;
-    cout<<"----------SUBMENU MATERIAS---------"<<endl;
-    cout<<"N - Nueva Materia"<<endl;
-    cout<<"L - Listar Materias"<<endl;
+    cout<<"----------SUBMENU ALUMNOS---------"<<endl;
+    cout<<"N - Nuevo Alumno"<<endl;
+    cout<<"L - Listar Alumnos"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
     cin>>op;
@@ -41,40 +41,38 @@ void clsMateriasView::MenuMaterias()
     }
 }
 
-void clsMateriasView::Insertar()
+void clsAlumnosView::Insertar()
 {
     char nombre[50];
-    char profesor[50];
-    clsMateriaDTO dto;
-    clsMateriaBL bl;
+    char apellido[50];
+    clsAlumnoDTO dto;
+    clsAlumnoBL bl;
     system("cls");
-    cout<<"NUEVA MATERIA:"<<endl;
+    cout<<"NUEVO ALUMNO:"<<endl;
     cout<<"Ingrese un nombre:"<<endl;
     cin.getline(nombre, 50);
-    cout<<"Ingrese un profesor:"<<endl;
-    cin.getline(profesor, 50);
+    cout<<"Ingrese un apellido:"<<endl;
+    cin.getline(apellido, 50);
     dto.SetNombre(nombre);
-    dto.SetProfesor(profesor);
+    dto.SetApellido(apellido);
     bl.Insertar(dto);
 
 }
 
-void clsMateriasView::Listar()
+void clsAlumnosView::Listar()
     {
-    clsMateriaBL bl;
+    clsAlumnoBL bl;
     system("cls");
-    cout<<"-----------LISTA DE MATERIAS----------------"<<endl;
+    cout<<"-----------LISTA DE ALUMNOS----------------"<<endl;
     int c=bl.Count();
-    clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
+    clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
     bl.Listar(lista);
     char nombre[50];
-    char profesor[50];
+    char apellido[50];
     for(int x=0;x<c;x++)
     {
         lista[x].GetNombre(nombre);
-        lista[x].GetProfesor(profesor);
-        cout<<setw(30)<<lista[x].GetId();
+        lista[x].GetApellido(apellido);
+        cout<<setw(30)<<lista[x].GetLegajo();
     }
     }
-
-

@@ -1,5 +1,6 @@
 #include "clsMainView.h"
 #include "clsMateriasView.h"
+#include "clsAlumnosView.h"
 
 using namespace std;
 
@@ -11,10 +12,12 @@ void clsMainView::Menu()
  bool     salir=false;
     cout<<"----------MENU---------"<<endl;
     cout<<"M - Materias"<<endl;
+    cout<<"A - Alumnos"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
     cin>>op;
     cin.ignore();
+    system("cls");
     switch(op)
     {
         case 'm':
@@ -24,6 +27,12 @@ void clsMainView::Menu()
           matView.MenuMaterias();
         }
         break;
+        case 'a':
+        case'A' :
+        {
+          clsAlumnosView aluView;
+          aluView.MenuAlumnos();
+        }
         case's':
         case'S':
         {

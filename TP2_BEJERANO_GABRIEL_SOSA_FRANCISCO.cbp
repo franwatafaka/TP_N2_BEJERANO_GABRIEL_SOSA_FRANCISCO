@@ -25,6 +25,8 @@ AYUDANTE : Fernando Calabuig.
 					<Add option="-g" />
 					<Add directory="DTO" />
 					<Add directory="DAO" />
+					<Add directory="VIEW" />
+					<Add directory="BL" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -37,6 +39,8 @@ AYUDANTE : Fernando Calabuig.
 					<Add option="-O2" />
 					<Add directory="DTO" />
 					<Add directory="DAO" />
+					<Add directory="VIEW" />
+					<Add directory="BL" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -47,16 +51,24 @@ AYUDANTE : Fernando Calabuig.
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BL/clsAlumnoBL.cpp" />
+		<Unit filename="BL/clsAlumnoBL.h" />
 		<Unit filename="BL/clsMateriaBL.cpp" />
 		<Unit filename="BL/clsMateriaBL.h" />
 		<Unit filename="CSYSTEM/csystem.h" />
+		<Unit filename="DAO/clsAlumnoDAO.cpp" />
+		<Unit filename="DAO/clsAlumnoDAO.h" />
 		<Unit filename="DAO/clsMateriaDAO.cpp" />
 		<Unit filename="DAO/clsMateriaDAO.h" />
+		<Unit filename="DTO/clsAlumnoDTO.cpp" />
+		<Unit filename="DTO/clsAlumnoDTO.h" />
 		<Unit filename="DTO/clsMateriaDTO.cpp" />
 		<Unit filename="DTO/clsMateriaDTO.h" />
 		<Unit filename="HEADERS/menu.h" />
 		<Unit filename="LICENCIA GPL/Licencia GPL (traduccion NO OFICIAL - castellano argentina).txt" />
 		<Unit filename="LICENCIA GPL/Licencia GPL original (ingles).txt" />
+		<Unit filename="VIEW/clsAlumnosView.cpp" />
+		<Unit filename="VIEW/clsAlumnosView.h" />
 		<Unit filename="VIEW/clsMainView.cpp" />
 		<Unit filename="VIEW/clsMainView.h" />
 		<Unit filename="VIEW/clsMateriasView.cpp" />
