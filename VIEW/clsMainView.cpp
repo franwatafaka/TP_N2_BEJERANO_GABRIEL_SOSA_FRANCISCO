@@ -1,3 +1,8 @@
+
+#include <cstdio>
+#include <iostream>
+#include <cstdlib>
+#include "../CSYSTEM/csystem.h"
 #include "clsMainView.h"
 #include "clsMateriasView.h"
 #include "clsAlumnosView.h"
@@ -9,41 +14,45 @@ using namespace std;
 
 void clsMainView::Menu()
 {
- char *op;
- clsValidacionesBL val;
- bool salir=false;
-    cout<<"----------MENU---------"<<endl;
-    cout<<" 1- Materias"<<endl;
-    cout<<" 2 - Alumnos"<<endl;
-    cout<<" 9 - Salir"<<endl;
-    cout<<"-----------------------"<<endl;
-    cin>>op;
-    cout<<op<<endl;
-    system("pause");
-    cin.ignore();
-    system("cls");
-    switch(val.validarUnNumero(op))
+    char *op;
+    clsValidacionesBL validar;
+    bool salir=false;
+
+//    cout<<op<<endl;
+
+//    system("cls");
+    while(!salir)
     {
-        case 1:
+        cout<<"----------MENU---------"<<endl;
+        cout<<" 1 - Materias"<<endl;
+        cout<<" 2 - Alumnos"<<endl;
+        cout<<" 9 - Salir"<<endl;
+        cout<<"-----------------------"<<endl;
+
+        sys::getline(op,1);
+        switch(validar.validarUnNumero(op))
         {
-          clsMateriasView matView;
-          matView.MenuMaterias();
+        case 49:
+        {
+            clsMateriasView matView;
+            matView.MenuMaterias();
         }
         break;
-        case 2:
+        case 50:
         {
-          clsAlumnosView aluView;
-          aluView.MenuAlumnos();
+            clsAlumnosView aluView;
+            aluView.MenuAlumnos();
         }
-        case 9:
+        case 57:
         {
-        salir=true;
+            salir=true;
         }
         break;
         default:
         {
 
         }
-        break;
+
+        }
     }
 }

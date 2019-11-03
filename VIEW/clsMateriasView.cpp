@@ -1,20 +1,22 @@
 #include "clsMateriasView.h"
 
+#include "../BL/clsValidacionesBL.h"
 using namespace std;
 
 void clsMateriasView::MenuMaterias()
 {
-    char op;
+     clsValidacionesBL opc;
+    char *op;
     bool salir=false;
     cout<<"----------SUBMENU MATERIAS---------"<<endl;
     cout<<"N - Nueva Materia"<<endl;
     cout<<"L - Listar Materias"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
-    cin>>op;
-    cin.ignore();
-    system("cls");
-    switch(op)
+//    sys::getline(op,1);
+//    cin.ignore();
+//    system("cls");
+    switch(opc.validarUnNumero(op))
     {
         case'n':
         case'N':

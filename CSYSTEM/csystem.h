@@ -99,41 +99,41 @@
 //                             INCLUSIONES ESTANDAR
 //=============================================================================
 #include <iostream> // Libreria que incluye los flujos de entrada y salida para
-                    // el lenguaje C++.
-                    //
-                    // En esta libreria se desarrollan las definiciones de las
-                    // clases "cin" y "cout".
+// el lenguaje C++.
+//
+// En esta libreria se desarrollan las definiciones de las
+// clases "cin" y "cout".
 
 #include <cstdlib>  // Libreria que incluye funciones relacionadas con el
-                    // sistema estandar para el lenguaje C++.
-                    //
-                    // En esta libreria se desarrolla, entre otras, a las
-                    // funciones "system()" y "time()", utilizadas para el
-                    // desarrollo de algunas de las funciones de este espacio
-                    // de nombres, tales como: cls(), randomize() y random().
+// sistema estandar para el lenguaje C++.
+//
+// En esta libreria se desarrolla, entre otras, a las
+// funciones "system()" y "time()", utilizadas para el
+// desarrollo de algunas de las funciones de este espacio
+// de nombres, tales como: cls(), randomize() y random().
 
 #include <cstdio>   // Libreria que incluye funciones relacionadas con el
-                    // sistema de entrada/salida estandar par el lenguaje C++.
-                    //
-                    // En esta libreria se desarrolla, entre otras, la funcion
-                    // "printf()", utilizada en la funcion gotoxy().
+// sistema de entrada/salida estandar par el lenguaje C++.
+//
+// En esta libreria se desarrolla, entre otras, la funcion
+// "printf()", utilizada en la funcion gotoxy().
 
 #include <ctime>   // Libreria que incluye funciones relacionadas con el
-                   // tiempo.
+// tiempo.
 
 
 //*****************************************************************************
 //                             INCLUSIONES PARA WINDOWS
 //=============================================================================
 #ifdef _WIN32
-  #include <windows.h>  // Libreria que incluye la funcion sleep para Windows
+#include <windows.h>  // Libreria que incluye la funcion sleep para Windows
 #endif // _WIN32
 
 //*****************************************************************************
 //                             INCLUSIONES PARA LINUX
 //=============================================================================
 #ifdef _LINUX
-  #include <unistd.h>  // Libreria que incluye la funcion sleep para Linux
+#include <unistd.h>  // Libreria que incluye la funcion sleep para Linux
 #endif
 
 
@@ -153,7 +153,7 @@ namespace sys
 //---------------------------------------------------------------------------
 void cls()
 {
-  system("cls");
+    system("cls");
 }
 
 //---------------------------------------------------------------------------
@@ -164,7 +164,7 @@ void cls()
 //---------------------------------------------------------------------------
 void msleep(int s)
 {
-  Sleep(s * 1000);
+    Sleep(s * 1000);
 }
 
 #endif // _WIN32 - Fin de version para Windows.
@@ -180,7 +180,7 @@ void msleep(int s)
 //---------------------------------------------------------------------------
 void cls()
 {
-  system("clear");
+    system("clear");
 }
 
 //---------------------------------------------------------------------------
@@ -191,7 +191,7 @@ void cls()
 //---------------------------------------------------------------------------
 void msleep(int s)
 {
-  sleep(s);
+    sleep(s);
 }
 
 #endif // _LINUX - Fin de version para Linux.
@@ -206,16 +206,16 @@ void msleep(int s)
 //---------------------------------------------------------------------------
 char getch()
 {
-  const char LF=10; // LINEFID --> ASCII del caracter de salto de linea.
-  char aux;
+    const char LF=10; // LINEFID --> ASCII del caracter de salto de linea.
+    char aux;
 
-  aux = std::cin.get();
-  if(aux==LF) // Si quedo un LF en el buffer, vuelve a leer.
-  {
-      aux=std::cin.get();
-  }
+    aux = std::cin.get();
+    if(aux==LF) // Si quedo un LF en el buffer, vuelve a leer.
+    {
+        aux=std::cin.get();
+    }
 
-  return aux;
+    return aux;
 }
 
 //===========================================================================
@@ -226,13 +226,13 @@ char getch()
 //---------------------------------------------------------------------------
 void pause()
 {
-const char LF=10; // LINEFID --> ASCII del caracter de salto de linea.
-char aux;
-aux = std::cin.get();
-if(aux==LF) // Si quedo un LF en el buffer, vuelve a leer.
-{
-  std::cin.get();
-}
+    const char LF=10; // LINEFID --> ASCII del caracter de salto de linea.
+    char aux;
+    aux = std::cin.get();
+    if(aux==LF) // Si quedo un LF en el buffer, vuelve a leer.
+    {
+        std::cin.get();
+    }
 }
 
 //===========================================================================
@@ -246,8 +246,8 @@ if(aux==LF) // Si quedo un LF en el buffer, vuelve a leer.
 //---------------------------------------------------------------------------
 void randomize()
 {
-time_t t;
-srand((unsigned) time(&t));
+    time_t t;
+    srand((unsigned) time(&t));
 }
 
 //===========================================================================
@@ -258,7 +258,7 @@ srand((unsigned) time(&t));
 //----------------------------------------------------------------------
 int random(int n)
 {
-return rand() % n;
+    return rand() % n;
 }
 
 //===========================================================================
@@ -268,21 +268,21 @@ return rand() % n;
 //             int cantidad: cantidad de caracteres a guardar
 // DEVUELVE  : NADA.
 //----------------------------------------------------------------------
-void getline(char *cadena,int cantidad)
-{
-    int contador =0;
-    char caracter ='\0';
-    while(caracter!=10)
+    void getline(char *cadena,int cantidad)
     {
-        caracter = std::cin.get();
-        if(contador != cantidad && caracter!=10)
+        int contador =0;
+        char caracter ='\0';
+        while(caracter!=10)
         {
-            cadena[contador] = caracter;
-            contador++;
+            caracter = std::cin.get();
+            if(contador != cantidad && caracter!=10)
+            {
+                cadena[contador] = caracter;
+                contador++;
+            }
         }
+        cadena[contador]='\0';
     }
-    cadena[contador]='\0';
-}
 } // Fin namespace sys
 
 #endif // CSYSTEM_H

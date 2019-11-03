@@ -6,7 +6,7 @@
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
-char clsValidacionesBL::validarUnNumero(char* opcion)
+char clsValidacionesBL::validarUnNumero(char *opcion)
 {
     bool valido = false;
     while(!valido)
@@ -21,11 +21,11 @@ char clsValidacionesBL::validarUnNumero(char* opcion)
             valido = true;
             return opcion[0];
         }
-        else
-        {
-            //DEVUELVE MENOS 1 SU N HUBO INGRESO
-            return -1;
-        }
+//        else
+//        {
+//            //DEVUELVE MENOS 1 SU N HUBO INGRESO
+//            sys::getline(opcion,1);
+//        }
     }
     return 'e';
 }

@@ -55,6 +55,7 @@ AYUDANTE : Fernando Calabuig.
 		<Unit filename="BL/clsAlumnoBL.h" />
 		<Unit filename="BL/clsMateriaBL.cpp" />
 		<Unit filename="BL/clsMateriaBL.h" />
+		<Unit filename="BL/clsValidacionesBL.cpp" />
 		<Unit filename="CSYSTEM/csystem.h" />
 		<Unit filename="DAO/clsAlumnoDAO.cpp" />
 		<Unit filename="DAO/clsAlumnoDAO.h" />

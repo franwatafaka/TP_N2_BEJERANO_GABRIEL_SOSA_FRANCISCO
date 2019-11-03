@@ -98,3 +98,109 @@
 	"../DTO/clsAlumnoDTO.h"
 	"../BL/clsAlumnoBL.h"
 
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
+	"clsAlumnoBL.h"
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
+	"../DAO/clsAlumnoDAO.h"
+	"../DTO/clsAlumnoDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
+	<cstdio>
+	"../DTO/clsAlumnoDTO.h"
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
+	<cstring>
+
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+	"clsMateriaBL.h"
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
+	"../DAO/clsMateriaDAO.h"
+	"../DTO/clsMateriaDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
+	<cstdio>
+	"../DTO/clsMateriaDTO.h"
+
+1571077226 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
+	<cstring>
+
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
+	"clsAlumnoDAO.h"
+
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
+	"clsMateriaDAO.h"
+
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
+	"clsAlumnoDTO.h"
+
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
+	"clsMateriaDTO.h"
+
+1572813424 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
+	<iostream>
+	<cstdlib>
+	"VIEW/clsMainView.h"
+
+1572809063 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	<windows.h>
+	<unistd.h>
+
+1572810955 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+
+1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
+	"clsAlumnosView.h"
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+	"../DTO/clsAlumnoDTO.h"
+	"../BL/clsAlumnoBL.h"
+
+1572813424 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+	<cstdio>
+	<iostream>
+	<cstdlib>
+	"../CSYSTEM/csystem.h"
+	"clsMainView.h"
+	"clsMateriasView.h"
+	"clsAlumnosView.h"
+	"../BL/clsValidacionesBL.h"
+
+1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+	"../DTO/clsMateriaDTO.h"
+	"../BL/clsMateriaBL.h"
+
+1572813766 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
+
+1572813633 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+	"clsMateriasView.h"
+	"../BL/clsValidacionesBL.h"
+
+1572813766 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
+	"clsValidacionesBL.h"
+

@@ -69,11 +69,8 @@
 //*****************************************************************************
 //                             INCLUSIONES PERSONALES
 //=============================================================================
-#include "CSYSTEM/csystem.h" // Libreria para multiplataforma.
-#include "DTO/clsMateriaDTO.h"
-#include "DAO/clsMateriaDAO.h"
+
 #include "VIEW/clsMainView.h"
-#include "../CSYSTEM/csystem.h"
 
 
 using namespace std;
