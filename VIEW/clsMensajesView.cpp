@@ -20,7 +20,7 @@ using namespace std;
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
-void clsMensajesView::void mensajeError()
+void clsMensajesView::mensajeError()
 {
 
 }
@@ -63,6 +63,17 @@ void clsMensajesView::vistaMenuAlumno()
 void clsMensajesView::vistaMenuMatXAl()
 {
 
+}
+
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtLinea()
+{
+    cout<<"----------------------------------------------"<<endl;
 }
 
 

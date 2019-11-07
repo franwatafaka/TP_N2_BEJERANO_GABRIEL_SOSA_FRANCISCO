@@ -15,10 +15,6 @@ class clsMensajesView
         void vistaMenuMateria();
         void vistaMenuAlumno();
         void vistaMenuMatXAl();
-
-    protected:
-
-    private:
 };
 
 #endif // CLSMENSAJESVIEW_H

@@ -120,10 +120,11 @@ void clsMateriasView::Modificar()
 void clsMateriasView::Listar()
     {
     clsMateriaBL bl;
+    clsMensajesView txt;
     system("cls");
-    cout<<"---------------------------------------------"<<endl;
+    txt.txtLinea();
     cout<<"-               LISTA DE MATERIAS           -"<<endl;
-    cout<<"---------------------------------------------"<<endl<<endl;
+    txt.txtLinea();
     int c=bl.Count();
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.Listar(lista);
@@ -132,7 +133,6 @@ void clsMateriasView::Listar()
     cout<<setw(6)<<"NOMBRE:";
     cout<<setw(20)<<"PROFESOR:";
     cout<<setw(20)<<"ID:"<<endl;
-    cout<<"----------------------------------------------"<<endl;
     for(int x=0;x<c;x++)
     {
         lista[x].GetNombre(nombre);
@@ -140,7 +140,7 @@ void clsMateriasView::Listar()
         lista[x].GetProfesor(profesor);
         cout<<setw(20)<<profesor;
         cout<<setw(20)<<lista[x].GetId()<<endl;
-        cout<<"----------------------------------------------"<<endl;
+        txt.txtLinea();
     }
     cout<<endl;
     }
