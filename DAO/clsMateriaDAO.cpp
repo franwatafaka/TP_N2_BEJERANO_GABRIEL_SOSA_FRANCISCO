@@ -1,5 +1,20 @@
+/**#############################################################################
+ ARCHIVO             : clsMateriaDAO.cpp
+ AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
+ VERSION             : 1.0 beta.
+ FECHA DE CREACION   : 22/10/2019.
+ ULTIMA ACTUALIZACION: 07/11/2019.
+*****************************************************************************
+                             INCLUSIONES ESTANDAR
+=============================================================================**/
 #include "clsMateriaDAO.h"
 /** en DAO NO VAN NI COUT NI CIN JAAMAS */
+/**=============================================================================
+ FUNCION : void Insertar()
+ ACCION : Carga en la db el objeto dto
+ PARAMETROS: clsMateriaDTO dto
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriaDAO::Insertar(clsMateriaDTO dto)
 {
     FILE *p;
@@ -10,6 +25,12 @@ void clsMateriaDAO::Insertar(clsMateriaDTO dto)
         fclose(p);
     }
 }
+/**=============================================================================
+ FUNCION : void Eliminar()
+ ACCION : Elimina el registro de la db (de manera logica)
+ PARAMETROS: int id
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriaDAO::Eliminar(int id)
 {
     FILE *p;
@@ -33,6 +54,12 @@ void clsMateriaDAO::Eliminar(int id)
         fclose(p);
     }
 }
+/**=============================================================================
+ FUNCION : void Modificar()
+ ACCION : Guarda en la db la modificacion realizada en el registro.
+ PARAMETROS: clsMateriaDTO dto
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriaDAO::Modificar(clsMateriaDTO dto)
 {
     FILE *p;
@@ -56,7 +83,12 @@ void clsMateriaDAO::Modificar(clsMateriaDTO dto)
         fclose(p);
     }
 }
-
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriaDAO::Listar(clsMateriaDTO *dto )
 {
     FILE *p;
@@ -78,7 +110,12 @@ void clsMateriaDAO::Listar(clsMateriaDTO *dto )
     }
 
 }
-
+/**=============================================================================
+ FUNCION : void Listar()
+ ACCION : copia en un array el listado de registros de materias
+ PARAMETROS: clsMateriaDTO *dto
+ DEVUELVE : nada
+============================================================================= **/
 int clsMateriaDAO::Count()
 {
     FILE *p;

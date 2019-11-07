@@ -1,10 +1,19 @@
+/**#############################################################################
+ ARCHIVO             : clsValidacionesBL.cpp
+ AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
+ VERSION             : 1.0 beta.
+ FECHA DE CREACION   : 23/10/2019.
+ ULTIMA ACTUALIZACION: 07/1/2019.
+*****************************************************************************
+                             INCLUSIONES ESTANDAR
+=============================================================================**/
 #include "clsValidacionesBL.h"
 
 /**=============================================================================
- FUNCION : void ValidarUnNumero()
- ACCION : Funcion del Menu Principal
- PARAMETROS: nada
- DEVUELVE : nada
+ FUNCION : char ValidarUnNumero()
+ ACCION : Valida en formato ascii que el valor ingresado sea un numero
+ PARAMETROS: char *opcion
+ DEVUELVE : devuelve en char un numero ascii, caso contrario devolvera -1,
 ============================================================================= **/
 char clsValidacionesBL::validarUnNumero(char *opcion)
 {
@@ -19,10 +28,10 @@ char clsValidacionesBL::validarUnNumero(char *opcion)
 }
 
 /**=============================================================================
- FUNCION : void ValidarUnNumero()
- ACCION : Funcion del Menu Principal
- PARAMETROS: nada
- DEVUELVE : nada
+ FUNCION : char validarUnaLetra()
+ ACCION : Valida en formato ascii que el caracter ingresado sea una letra.
+ PARAMETROS: char * opcion
+ DEVUELVE : devuelve en char el caracter ingresado, caso contrario devolvera -1,
 ============================================================================= **/
 char clsValidacionesBL::validarUnaLetra(char *opcion)
 {

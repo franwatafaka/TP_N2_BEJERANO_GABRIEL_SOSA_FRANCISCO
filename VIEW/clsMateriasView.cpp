@@ -1,25 +1,36 @@
+/**#############################################################################
+ ARCHIVO             : clsMensajesView.cpp
+ AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
+ VERSION             : 0.01 beta.
+ FECHA DE CREACION   : 07/11/2019.
+ ULTIMA ACTUALIZACION: dd/mm/aaaa.
+*****************************************************************************
+                             INCLUSIONES ESTANDAR
+=============================================================================**/
+
 #include "clsMateriasView.h"
 #include "../BL/clsValidacionesBL.h"
-
+#include "../VIEW/clsMensajesView.h"
 //#include "../BL/clsValidacionesBL.h"
 
-using namespace std;
 
+using namespace std;
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriasView::MenuMaterias()
 {
+    clsMensajesView txt;
     system("cls");
     char op[50];
     clsValidacionesBL validar;
     bool salir=false;
     while(!salir)
     {
-    cout<<"----------SUBMENU MATERIAS---------"<<endl;
-    cout<<"A - Nueva Materia"<<endl;
-    cout<<"B - Listar Materias"<<endl;
-    cout<<"C - Eliminar Materias"<<endl;
-    cout<<"D - Modificar Materias"<<endl;
-    cout<<"S - Salir"<<endl;
-    cout<<"-----------------------------------"<<endl;
+    txt.vistaMenuMateria();
     cin.getline(op, 50);
     switch(validar.validarUnaLetra(op))
     {
@@ -56,15 +67,19 @@ void clsMateriasView::MenuMaterias()
         default:
         {
         system("cls");
-        cout<<"----------------------------------------------"<<endl;
-        cout<<"-ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
-        cout<<"----------------------------------------------"<<endl<<endl;
+        txt.mensajeError();
         }
         break;
     }
     }
 }
 
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriasView::Insertar()
 {
     char nombre[50];
@@ -82,7 +97,12 @@ void clsMateriasView::Insertar()
     bl.Insertar(dto);
 
 }
-
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriasView::Eliminar()
 {
     int Id;
@@ -92,7 +112,12 @@ void clsMateriasView::Eliminar()
     cin>>Id;
     dao.Eliminar(Id);
 }
-
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriasView::Modificar()
 {
     char nombre[50];
@@ -102,28 +127,33 @@ void clsMateriasView::Modificar()
     clsMateriaBL bl;
     system("cls");
     Listar();
-    cout<<"Ingrese el ID de la materia cuyos datos se deseen modificar:"<<endl;
+    cout<<setw(20)<<"Ingrese el ID de la materia cuyos datos se deseen modificar:";
     cin>>id;
     dto.SetId(id);
     cin.ignore();
-    cout<<"MODIFICAR MATERIA:"<<endl;
-    cout<<"Ingrese nuevo nombre:"<<endl;
+    cout<<setw(40)<<right<<"MODIFICAR MATERIA:"<<endl;
+    cout<<setw(20)<<"Ingrese nuevo nombre:";
     cin.getline(nombre, 50);
-    cout<<"Ingrese nuevo profesor:"<<endl;
+    cout<<setw(20)<<"Ingrese nuevo profesor:";
     cin.getline(profesor, 50);
     dto.SetNombre(nombre);
     dto.SetProfesor(profesor);
     bl.Modificar(dto);
 
 }
-
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMateriasView::Listar()
     {
     clsMateriaBL bl;
     clsMensajesView txt;
     system("cls");
     txt.txtLinea();
-    cout<<"-               LISTA DE MATERIAS           -"<<endl;
+    cout<<"|"<<setw(30)<<right<<"LISTA DE MATERIAS"<<setw(20)<<"|"<<endl;
     txt.txtLinea();
     int c=bl.Count();
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);

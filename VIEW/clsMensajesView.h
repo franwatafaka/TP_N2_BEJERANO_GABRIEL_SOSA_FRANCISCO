@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <cstdio>
 
+
 class clsMensajesView
 {
     public:
@@ -15,6 +16,9 @@ class clsMensajesView
         void vistaMenuMateria();
         void vistaMenuAlumno();
         void vistaMenuMatXAl();
+        void txtLinea();
+        void TxtMenuPpal();
+        void TxtListaAlumnos();
 };
 
 #endif // CLSMENSAJESVIEW_H

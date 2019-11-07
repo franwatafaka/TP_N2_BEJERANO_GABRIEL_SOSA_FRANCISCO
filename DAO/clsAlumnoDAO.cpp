@@ -1,5 +1,19 @@
+/**#############################################################################
+ ARCHIVO             : clsAlumnoDAO.cpp
+ AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
+ VERSION             : 1.0 beta.
+ FECHA DE CREACION   : 22/10/2019.
+ ULTIMA ACTUALIZACION: 07/11/2019.
+*****************************************************************************
+                             INCLUSIONES ESTANDAR
+=============================================================================**/
 #include "clsAlumnoDAO.h"
-
+/**=============================================================================
+ FUNCION : void Insertar()
+ ACCION : Carga en la db el objeto dto
+ PARAMETROS: clsAlumnoDTO dto
+ DEVUELVE : nada
+============================================================================= **/
 void clsAlumnoDAO::Insertar(clsAlumnoDTO dto)
 {
     FILE *p;
@@ -10,7 +24,12 @@ void clsAlumnoDAO::Insertar(clsAlumnoDTO dto)
         fclose(p);
     }
 }
-
+/**=============================================================================
+ FUNCION : void Eliminar()
+ ACCION : Elimina el registro de la db (de manera logica)
+ PARAMETROS: int legajo
+ DEVUELVE : nada
+============================================================================= **/
 void clsAlumnoDAO::Eliminar(int legajo)
 {
     FILE *p;
@@ -34,7 +53,12 @@ void clsAlumnoDAO::Eliminar(int legajo)
         fclose(p);
     }
 }
-
+/**=============================================================================
+ FUNCION : void Modificar()
+ ACCION : Guarda en la db la modificacion realizada en el registro.
+ PARAMETROS: clsAlumnoDTO dto
+ DEVUELVE : nada
+============================================================================= **/
 void clsAlumnoDAO::Modificar(clsAlumnoDTO dto)
 {
     FILE *p;
@@ -58,7 +82,12 @@ void clsAlumnoDAO::Modificar(clsAlumnoDTO dto)
         fclose(p);
     }
 }
-
+/**=============================================================================
+ FUNCION : void Listar()
+ ACCION : copia en un array el listado de registros de alumnos
+ PARAMETROS: clsAlumnoDTO *dto
+ DEVUELVE : nada
+============================================================================= **/
 void clsAlumnoDAO::Listar(clsAlumnoDTO *dto )
 {
     FILE *p;
@@ -80,7 +109,12 @@ void clsAlumnoDAO::Listar(clsAlumnoDTO *dto )
     }
 
 }
-
+/**=============================================================================
+ FUNCION : int Count()
+ ACCION : cuenta la cantidad de registros activos en la db
+ PARAMETROS: nada
+ DEVUELVE : cantidad de registros
+============================================================================= **/
 int clsAlumnoDAO::Count()
 {
     FILE *p;

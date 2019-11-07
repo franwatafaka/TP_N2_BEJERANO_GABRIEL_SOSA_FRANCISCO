@@ -1,4 +1,12 @@
-
+/**#############################################################################
+ ARCHIVO             : clsMensajesView.cpp
+ AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
+ VERSION             : 0.01 beta.
+ FECHA DE CREACION   : 07/11/2019.
+ ULTIMA ACTUALIZACION: dd/mm/aaaa.
+*****************************************************************************
+                             INCLUSIONES ESTANDAR
+=============================================================================**/
 #include <cstdio>
 #include <iostream>
 #include <cstdlib>
@@ -7,24 +15,28 @@
 #include "clsMateriasView.h"
 #include "clsAlumnosView.h"
 #include "../BL/clsValidacionesBL.h"
-
+#include "../VIEW/clsMensajesView.h"
 using namespace std;
 
 //agregar menu.h ACÁ ABAJO, (TODOS LOS MENUS Y SUBMENUS A UTILIZAR)
 
+/**=============================================================================
+ FUNCION : void subMaterias()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
 void clsMainView::Menu()
 {
     char op[50];
     clsValidacionesBL validar;
+    clsMensajesView txt;
     bool salir=false;
     while(!salir)
     {
+
         system("cls");
-        cout<<"|----------------------------MENU----------------------------|"<<endl;
-        cout<<setw(40)<<right<<" A - Materias"<<endl;
-        cout<<setw(40)<<right<<" B - Alumnos"<<endl;
-        cout<<setw(35)<<right<<" S - Salir"<<endl;
-        cout<<"|------------------------------------------------------------|"<<endl;
+        txt.TxtMenuPpal();
         cin.getline(op, 50);
         switch(validar.validarUnaLetra(op))
         {
@@ -50,10 +62,7 @@ void clsMainView::Menu()
         break;
         default:
         {
-            cout<<"|------------------------------------------------------------|"<<endl;
-            cout<<setw(30)<<"   -   ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
-            cout<<"|------------------------------------------------------------|"<<endl;
-            system("pause");
+           txt.mensajeError();
         }
         }
     }
