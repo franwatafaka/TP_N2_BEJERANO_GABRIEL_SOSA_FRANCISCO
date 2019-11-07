@@ -35,6 +35,7 @@ void clsMainView::Menu()
     clsValidacionesBL validar;
     clsMensajesView txt;
     bool salir=false;
+    txt.txtPresentacion();
     while(!salir)
     {
 
@@ -69,4 +70,5 @@ void clsMainView::Menu()
         }
         }
     }
+    txt.txtDespedida();
 }

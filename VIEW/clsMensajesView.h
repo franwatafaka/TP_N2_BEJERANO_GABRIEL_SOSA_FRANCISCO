@@ -19,6 +19,9 @@ class clsMensajesView
         void txtLinea();
         void txtListaAlumnos();
         void txtListaMaterias();
+        void txtPresentacion();
+        void txtDespedida();
+
 };
 
 #endif // CLSMENSAJESVIEW_H
