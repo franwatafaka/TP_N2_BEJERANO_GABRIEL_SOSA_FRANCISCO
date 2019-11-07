@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <iostream>
 #include <cstdlib>
-#include "../CSYSTEM/csystem.h"
+#include <iomanip>
 #include "clsMainView.h"
 #include "clsMateriasView.h"
 #include "clsAlumnosView.h"
@@ -20,11 +20,11 @@ void clsMainView::Menu()
     while(!salir)
     {
         system("cls");
-        cout<<"----------MENU---------"<<endl;
-        cout<<" A - Materias"<<endl;
-        cout<<" B - Alumnos"<<endl;
-        cout<<" S - Salir"<<endl;
-        cout<<"-----------------------"<<endl;
+        cout<<"|----------------------------MENU----------------------------|"<<endl;
+        cout<<setw(40)<<right<<" A - Materias"<<endl;
+        cout<<setw(40)<<right<<" B - Alumnos"<<endl;
+        cout<<setw(35)<<right<<" S - Salir"<<endl;
+        cout<<"|------------------------------------------------------------|"<<endl;
         cin.getline(op, 50);
         switch(validar.validarUnaLetra(op))
         {
@@ -50,10 +50,10 @@ void clsMainView::Menu()
         break;
         default:
         {
-        cout<<"----------------------------------------------"<<endl;
-        cout<<"-ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
-        cout<<"----------------------------------------------"<<endl<<endl;
-        system("pause");
+            cout<<"|------------------------------------------------------------|"<<endl;
+            cout<<setw(30)<<"   -   ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
+            cout<<"|------------------------------------------------------------|"<<endl;
+            system("pause");
         }
         }
     }
