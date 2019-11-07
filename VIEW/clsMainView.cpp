@@ -8,6 +8,10 @@
                              INCLUSIONES ESTANDAR
 =============================================================================**/
 #include <cstdio>
+
+/*******************************************************************************
+                             INCLUSIONES PERSONALES
+=============================================================================**/
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
@@ -16,12 +20,11 @@
 #include "clsAlumnosView.h"
 #include "../BL/clsValidacionesBL.h"
 #include "../VIEW/clsMensajesView.h"
+
 using namespace std;
 
-//agregar menu.h ACÁ ABAJO, (TODOS LOS MENUS Y SUBMENUS A UTILIZAR)
-
 /**=============================================================================
- FUNCION : void subMaterias()
+ FUNCION : void Menu()
  ACCION : Muestra y permite el acceso a las funciones de gestion de materias
  PARAMETROS: nada
  DEVUELVE : nada
@@ -36,7 +39,7 @@ void clsMainView::Menu()
     {
 
         system("cls");
-        txt.TxtMenuPpal();
+        txt.txtMenuPpal();
         cin.getline(op, 50);
         switch(validar.validarUnaLetra(op))
         {
@@ -62,7 +65,7 @@ void clsMainView::Menu()
         break;
         default:
         {
-           txt.mensajeError();
+           txt.txtMensajeError();
         }
         }
     }

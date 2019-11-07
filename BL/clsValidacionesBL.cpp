@@ -13,7 +13,7 @@
  FUNCION : char ValidarUnNumero()
  ACCION : Valida en formato ascii que el valor ingresado sea un numero
  PARAMETROS: char *opcion
- DEVUELVE : devuelve en char un numero ascii, caso contrario devolvera -1,
+ DEVUELVE : devuelve el valor ascii si es un caracter numerico, caso contrario devolvera -1,
 ============================================================================= **/
 char clsValidacionesBL::validarUnNumero(char *opcion)
 {
@@ -29,9 +29,9 @@ char clsValidacionesBL::validarUnNumero(char *opcion)
 
 /**=============================================================================
  FUNCION : char validarUnaLetra()
- ACCION : Valida en formato ascii que el caracter ingresado sea una letra.
+ ACCION : devuelve el valor ascii si es una letra,
  PARAMETROS: char * opcion
- DEVUELVE : devuelve en char el caracter ingresado, caso contrario devolvera -1,
+ DEVUELVE : devuelve ascii si es una letra, caso contrario devolvera -1,
 ============================================================================= **/
 char clsValidacionesBL::validarUnaLetra(char *opcion)
 {

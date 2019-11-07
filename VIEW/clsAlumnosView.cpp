@@ -32,7 +32,7 @@ void clsAlumnosView::MenuAlumnos()
     bool salir=false;
     while(!salir)
     {
-        txt.vistaMenuAlumno();
+        txt.txtMenuAlumno();
         cin.getline(op, 50);
         switch(validar.validarUnaLetra(op))
         {
@@ -68,8 +68,8 @@ void clsAlumnosView::MenuAlumnos()
         break;
         default:
         {
+            txt.txtMensajeError();
             system("cls");
-            txt.mensajeError();
         }
 
         }
@@ -77,7 +77,7 @@ void clsAlumnosView::MenuAlumnos()
 }
 /**=============================================================================
  FUNCION : void Insertar()
- ACCION : Permite el la carga de un nuevo registro a la db de Alumnos
+ ACCION : Permite la carga de un nuevo registro a la db de Alumnos
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -101,7 +101,8 @@ void clsAlumnosView::Insertar()
 
 /**=============================================================================
  FUNCION : void Eliminar()
- ACCION : Pide los datos de que alumno se desea eliminar
+ ACCION : Pide los datos de que alumno se desea eliminar, y setea el valor
+        Eliminado en true(baja logica)
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -118,6 +119,7 @@ void clsAlumnosView::Eliminar()
 /**=============================================================================
  FUNCION : void Modificar()
  ACCION : solicita el legajo del alumno a modificar y permite su modificacion
+            y grabado en la db
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -154,7 +156,7 @@ void clsAlumnosView::Listar()
 {
     clsAlumnoBL bl;
     clsMensajesView txt;
-    txt.TxtListaAlumnos();
+    txt.txtListaAlumnos();
     int c=bl.Count();
     clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
     bl.Listar(lista);
@@ -163,7 +165,7 @@ void clsAlumnosView::Listar()
     cout<<setw(6)<<"NOMBRE:";
     cout<<setw(20)<<"APELLIDO:";
     cout<<setw(20)<<"LEGAJO:"<<endl;
-    cout<<"----------------------------------------------"<<endl;
+    txt.txtLinea();
     for(int x=0; x<c; x++)
     {
         lista[x].GetNombre(nombre);
@@ -171,6 +173,6 @@ void clsAlumnosView::Listar()
         lista[x].GetApellido(apellido);
         cout<<setw(20)<<apellido;
         cout<<setw(20)<<lista[x].GetLegajo()<<endl;
-        cout<<"----------------------------------------------"<<endl;
+        txt.txtLinea();
     }
 }

@@ -11,14 +11,14 @@
 class clsMensajesView
 {
     public:
-        void mensajeError();
-        void vistaMenuPpal();
-        void vistaMenuMateria();
-        void vistaMenuAlumno();
-        void vistaMenuMatXAl();
+        void txtMensajeError();
+        void txtMenuPpal();
+        void txtMenuMateria();
+        void txtMenuAlumno();
+        void txtMenuMatXAl();
         void txtLinea();
-        void TxtMenuPpal();
-        void TxtListaAlumnos();
+        void txtListaAlumnos();
+        void txtListaMaterias();
 };
 
 #endif // CLSMENSAJESVIEW_H

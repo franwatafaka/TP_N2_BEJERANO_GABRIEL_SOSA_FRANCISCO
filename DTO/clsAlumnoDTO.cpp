@@ -19,6 +19,7 @@ clsAlumnoDTO::clsAlumnoDTO()
     this->Eliminado = false;
 
 }
+
 /**=============================================================================
  FUNCION : void Copy()
  ACCION : Levanta los datos del alumno y los guarda en el nuevo objeto dto.

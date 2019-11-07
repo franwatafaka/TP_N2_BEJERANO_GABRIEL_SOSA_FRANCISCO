@@ -11,12 +11,11 @@
 #include "clsMateriasView.h"
 #include "../BL/clsValidacionesBL.h"
 #include "../VIEW/clsMensajesView.h"
-//#include "../BL/clsValidacionesBL.h"
 
 
 using namespace std;
 /**=============================================================================
- FUNCION : void subMaterias()
+ FUNCION : void MenuMaterias()
  ACCION : Muestra y permite el acceso a las funciones de gestion de materias
  PARAMETROS: nada
  DEVUELVE : nada
@@ -30,7 +29,7 @@ void clsMateriasView::MenuMaterias()
     bool salir=false;
     while(!salir)
     {
-    txt.vistaMenuMateria();
+    txt.txtMenuMateria();
     cin.getline(op, 50);
     switch(validar.validarUnaLetra(op))
     {
@@ -66,8 +65,8 @@ void clsMateriasView::MenuMaterias()
         break;
         default:
         {
+        txt.txtMensajeError();
         system("cls");
-        txt.mensajeError();
         }
         break;
     }
@@ -75,8 +74,8 @@ void clsMateriasView::MenuMaterias()
 }
 
 /**=============================================================================
- FUNCION : void subMaterias()
- ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ FUNCION : void Insertar()
+ ACCION : Carga en la db el objeto dto
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -98,8 +97,8 @@ void clsMateriasView::Insertar()
 
 }
 /**=============================================================================
- FUNCION : void subMaterias()
- ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ FUNCION : void Eliminar()
+ ACCION : Elimina el registro de la db (de manera logica)
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -113,8 +112,8 @@ void clsMateriasView::Eliminar()
     dao.Eliminar(Id);
 }
 /**=============================================================================
- FUNCION : void subMaterias()
- ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ FUNCION : void Modificar()
+ ACCION : Guarda en la db la modificacion realizada en el registro.
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -142,8 +141,8 @@ void clsMateriasView::Modificar()
 
 }
 /**=============================================================================
- FUNCION : void subMaterias()
- ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ FUNCION : void Listar()
+ ACCION : Muestra el listado de materias activas
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -152,9 +151,7 @@ void clsMateriasView::Listar()
     clsMateriaBL bl;
     clsMensajesView txt;
     system("cls");
-    txt.txtLinea();
-    cout<<"|"<<setw(30)<<right<<"LISTA DE MATERIAS"<<setw(20)<<"|"<<endl;
-    txt.txtLinea();
+    txt.txtListaMaterias();
     int c=bl.Count();
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.Listar(lista);
@@ -163,6 +160,7 @@ void clsMateriasView::Listar()
     cout<<setw(6)<<"NOMBRE:";
     cout<<setw(20)<<"PROFESOR:";
     cout<<setw(20)<<"ID:"<<endl;
+    txt.txtLinea();
     for(int x=0;x<c;x++)
     {
         lista[x].GetNombre(nombre);
