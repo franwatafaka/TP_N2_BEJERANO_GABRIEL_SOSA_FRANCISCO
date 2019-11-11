@@ -21,6 +21,14 @@ class clsMensajesView
         void txtListaMaterias();
         void txtPresentacion();
         void txtDespedida();
+        void txtAsignacionError();
+        void txtAsignacionExitosa();
+        void txtAsignacionDeAlumnos();
+        void txtAsignacionDeMaterias();
+        void txtMateriaInexistente();
+        void txtAlumnoInexistente();
+        void txtSeleccionDeAlumno();
+        void txtSeleccionDeMateria();
 
 };
 

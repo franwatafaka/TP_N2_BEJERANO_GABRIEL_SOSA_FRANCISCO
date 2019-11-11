@@ -9,8 +9,101 @@
 =============================================================================**/
 
 #include "clsMateriaXAlumnoVIEW.h"
+#include "../CSYSTEM/csystem.h"
 
-clsMateriaXAlumnoVIEW::clsMateriaXAlumnoVIEW()
+using namespace std;
+
+/**=============================================================================
+ FUNCION : void AsignarAtoM()
+ ACCION : Permite asociar un alumno a una materia
+ PARAMETROS:nada.
+ DEVUELVE : nada.
+============================================================================= **/
+void clsMateriaXAlumnoVIEW::AsignarAtoM()
 {
-    //ctor
+    system("cls");
+    clsMateriaXAlumnoDAO dao; clsMateriaXAlumnoDTO dto;
+    clsAlumnosView aview; clsMateriasView mview; clsMensajesView txt;
+    int legajo, id;
+    bool exit=false, c=false;
+    aview.Listar();
+    txt.txtAsignacionDeAlumnos();
+    cin>>legajo;
+    cin.ignore();
+    exit=dao.verificarEstadoAlumno(legajo);
+    if(!exit)
+    {
+        dto.SetLegajo(legajo);
+    }
+    while(!exit)
+    {
+        system("cls");
+        mview.Listar();
+        txt.txtLinea();
+        txt.txtAsignacionDeMaterias();
+        cin>>id;
+        cin.ignore();
+        //VALIDA SI EL ID ES CORRECTO
+        exit=dao.verificarEstadoMateria(id);
+        if(!exit)
+        {
+            dto.SetId(id);
+            c=dao.Insertar(dto);
+            if(c)
+            {
+                txt.txtAsignacionExitosa();
+            }
+            else
+            {
+                txt.txtAsignacionError();
+            }
+        }
+    }
+}
+/**=============================================================================
+ FUNCION : void AsignarMtoA()
+ ACCION : estructura de las materias x alumno
+ PARAMETROS:nada.
+ DEVUELVE : nada.
+============================================================================= **/
+void clsMateriaXAlumnoVIEW::AsignarMtoA()
+{
+    system("cls");
+    clsMateriaXAlumnoDAO dao; clsMateriaXAlumnoDTO dto;
+    clsAlumnosView aview; clsMateriasView mview; clsMensajesView txt;
+    int legajo, id;
+    bool exit=false, c=false;
+    mview.Listar();
+    txt.txtLinea();
+    txt.txtAsignacionDeMaterias();
+    cin>>id;
+    cin.ignore();
+    //VALIDA SI EL ID ES CORRECTO
+    exit=dao.verificarEstadoMateria(id);
+    if(!exit)
+    {
+            dto.SetId(id);
+    }
+    while(!exit)
+    {
+        system("cls");
+        aview.Listar();
+        txt.txtAsignacionDeAlumnos();
+        cin>>legajo;
+        cin.ignore();
+        exit=dao.verificarEstadoAlumno(legajo);
+        if(!exit)
+        {
+            dto.SetLegajo(legajo);
+        }
+        c=dao.Insertar(dto);
+        if(c)
+        {
+            txt.txtAsignacionExitosa();
+        }
+        else
+        {
+            txt.txtAsignacionError();
+        }
+    }
 }

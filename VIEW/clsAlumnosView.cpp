@@ -60,7 +60,18 @@ void clsAlumnosView::MenuAlumnos()
                     Modificar();
                 }
                 break;
-        case 's':
+        case'e':
+            case'E':
+                {
+                    Asignar();                }
+                break;
+        case'f':
+            case'F':
+                {
+                    MostrarAsignaciones();
+                }
+                break;
+                case 's':
         case 'S':
         {
             salir=true;
@@ -175,4 +186,58 @@ void clsAlumnosView::Listar()
         cout<<setw(20)<<lista[x].GetLegajo()<<endl;
         txt.txtLinea();
     }
+}
+
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnosView::MostrarAlumno(clsAlumnoDTO dto)
+{
+    clsMensajesView txt;
+    txt.txtListaAlumnos();
+    char nombre[50];
+    char apellido[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"APELLIDO:";
+    cout<<setw(20)<<"LEGAJO:"<<endl;
+    txt.txtLinea();
+        dto.GetNombre(nombre);
+        cout<<setw(6)<<nombre;
+        dto.GetApellido(apellido);
+        cout<<setw(20)<<apellido;
+        cout<<setw(20)<<dto.GetLegajo()<<endl;
+        txt.txtLinea();
+}
+
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnosView::Asignar()
+{
+        clsMateriaXAlumnoVIEW aview;
+        aview.AsignarMtoA();
+}
+
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnosView::MostrarAsignaciones()
+{
+        clsMateriaXAlumnoDAO adao;
+        clsMensajesView txt;
+        Listar();
+        txt.txtLinea();
+        txt.txtSeleccionDeAlumno();
+        int legajo;
+        cin>>legajo;
+        adao.mostrarMateriasAsignadas(legajo);
 }

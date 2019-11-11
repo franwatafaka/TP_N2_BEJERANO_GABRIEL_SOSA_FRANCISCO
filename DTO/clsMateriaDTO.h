@@ -21,7 +21,7 @@ class clsMateriaDTO
     public:
         clsMateriaDTO();
 
-         int GetId() { return Id; }
+        int GetId() { return Id; }
         void SetId(int val) { Id = val; }
         void GetNombre(char* val) { strcpy(val,Nombre ); }
         void SetNombre(char* val) { strcpy(Nombre,val ); }

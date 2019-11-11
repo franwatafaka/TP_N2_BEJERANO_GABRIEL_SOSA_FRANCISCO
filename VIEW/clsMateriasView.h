@@ -8,6 +8,8 @@
 #include <cstdio>
 #include "../DTO/clsMateriaDTO.h"
 #include "../BL/clsMateriaBL.h"
+#include "clsMateriaXAlumnoVIEW.h"
+#include "../DAO/clsMateriaXAlumnoDAO.h"
 
 
 class clsMateriasView
@@ -16,8 +18,11 @@ class clsMateriasView
     void MenuMaterias();
     void Insertar();
     void Listar();
+    void Asignar();
+    void MostrarMateria(clsMateriaDTO);
     void Eliminar();
     void Modificar();
+    void MostrarAsignaciones();
 
 };
 

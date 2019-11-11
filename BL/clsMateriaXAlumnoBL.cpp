@@ -15,7 +15,34 @@
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
-clsMateriaXAlumnoBL::clsMateriaXAlumnoBL()
-{
-    //ctor
+void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo){
+    clsMateriaXAlumnoDAO dao;
+    dto.SetId(id);
+    dto.SetLegajo(legajo);
+    dao.Insertar(dto);
 }
+
+/**=============================================================================
+ FUNCION : void Listar()
+ ACCION : Lista el contenido de la db
+ PARAMETROS: clsMateriaDTO *lista
+ DEVUELVE : nada
+============================================================================= **/
+//void clsMateriaXAlumnoBL::Listar(clsMateriaXAlumnoDTO *lista)
+//    {
+//    clsMateriaXAlumnoDAO dao;
+//    dao.Listar(lista);
+//    }
+/**=============================================================================
+ FUNCION : int Count()
+ ACCION : devuelve la cantidad de registros que existen en la db
+ PARAMETROS: nada
+ DEVUELVE : cantidad de registros
+============================================================================= **/
+int clsMateriaXAlumnoBL::Count()
+{
+    clsMateriaXAlumnoDAO dao;
+    return dao.Count();
+}
+
+

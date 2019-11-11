@@ -28,7 +28,8 @@ class clsAlumnoDAO
     void Modificar(clsAlumnoDTO);
     void Listar(clsAlumnoDTO * );
     int Count();
-
+    void leerAlumno(int, clsAlumnoDTO);
+    int buscarAlumno(int);
 };
 
 #endif // CLSALUMNODAO_H

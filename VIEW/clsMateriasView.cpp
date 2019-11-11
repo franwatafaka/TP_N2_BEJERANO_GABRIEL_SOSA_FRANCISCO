@@ -56,6 +56,17 @@ void clsMateriasView::MenuMaterias()
         {
             Modificar();
         }
+        case'e':
+        case'E':
+        {
+            Asignar();
+        }
+        break;
+        case'f':
+        case'F':
+        {
+            MostrarAsignaciones();
+        }
         break;
         case 's':
         case 'S':
@@ -172,5 +183,62 @@ void clsMateriasView::Listar()
     }
     cout<<endl;
     }
+
+/**=============================================================================
+ FUNCION : void MostrarMateria()
+ ACCION : Muestra la materia cuyos alumnos asignados seran listados
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::MostrarMateria(clsMateriaDTO dto)
+    {
+    clsMensajesView txt;
+    system("cls");
+    txt.txtLinea();
+    cout<<"DATOS DE LA MATERIA CUYOS ALUMNOS SE LISTARAN:"<<endl;
+    char nombre[50];
+    char profesor[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"PROFESOR:";
+    cout<<setw(20)<<"ID:"<<endl;
+    txt.txtLinea();
+        dto.GetNombre(nombre);
+        cout<<setw(6)<<nombre;
+        dto.GetProfesor(profesor);
+        cout<<setw(20)<<profesor;
+        cout<<setw(20)<<dto.GetId()<<endl;
+        txt.txtLinea();
+    cout<<endl;
+    }
+
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::Asignar()
+{
+        clsMateriaXAlumnoVIEW mview;
+        mview.AsignarAtoM();
+}
+
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::MostrarAsignaciones()
+{
+        clsMateriaXAlumnoDAO mdao;
+        clsMensajesView txt;
+        Listar();
+        txt.txtLinea();
+        txt.txtSeleccionDeMateria();
+        int id;
+        cin>>id;
+        mdao.mostrarAlumnosAsignados(id);
+}
 
 

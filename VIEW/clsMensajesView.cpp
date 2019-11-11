@@ -133,6 +133,8 @@ void clsMensajesView::txtMenuMateria()
     cout<<"B - Listar Materias"<<endl;
     cout<<"C - Eliminar Materias"<<endl;
     cout<<"D - Modificar Materias"<<endl;
+    cout<<"E - Asignar Alumnos"<<endl;
+    cout<<"F - Mostrar Alumnos Asignados"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------------------"<<endl;
 }
@@ -149,6 +151,8 @@ void clsMensajesView::txtMenuAlumno()
     cout<<"B - Listar Alumnos"<<endl;
     cout<<"C - Eliminar Alumnos"<<endl;
     cout<<"D - Modificar Alumnos"<<endl;
+    cout<<"E - Asignar Materias"<<endl;
+    cout<<"F - Mostrar Materias Asignadas"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
 }
@@ -205,4 +209,102 @@ void clsMensajesView::txtListaMaterias(){
     txtLinea();
     cout<<"-               LISTA DE MATERIAS            -"<<endl;
     txtLinea();
+}
+
+/**=============================================================================
+ FUNCION : void txtAlumnoInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtAlumnoInexistente()
+{
+    cout<<"----------ADVERTENCIA: NO EXISTE EL ALUMNO---------"<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtMateriaInexistente()
+{
+    cout<<"----------ADVERTENCIA: NO EXISTE LA MATERIA--------"<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtAsignacionDeMaterias()
+{
+        cout<<  "||  NOTA: Ingrese 0 para finalizar la asignación  ||"<<endl;
+        cout<<endl;
+        cout<<  "Ingrese el ID de la materia que desea asignar al alumno:"<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtAsignacionDeAlumnos()
+{
+    cout<<  "||  NOTA: Ingrese 0 para finalizar la asignación  ||"<<endl;
+    cout<<endl;
+    cout<<  "Ingrese el legajo del alumno que desea asignar a la materia:"<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtAsignacionExitosa()
+{
+cout<<"||  ASIGNACION EXITOSA  ||"<<endl;
+system("pause");
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtAsignacionError()
+{
+cout<<"||  ERROR EN LA ASIGNACION  ||"<<endl;
+system("pause");
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtSeleccionDeMateria()
+{
+        cout<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
+        cout<<endl;
+        cout<<  "Ingrese el ID de la materia para mostrar los alumnos asignados:"<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtMateriaInexistente()
+ ACCION : Texto que indica que el alumno no existe
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtSeleccionDeAlumno()
+{
+    cout<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
+    cout<<endl;
+    cout<<  "Ingrese el legajo del alumno para mostrar las materias asignadas:"<<endl;
 }

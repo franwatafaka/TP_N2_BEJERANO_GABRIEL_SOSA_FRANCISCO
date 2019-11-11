@@ -14,6 +14,7 @@
 /*=============================================================================**/
 #include <cstdio>
 #include "../DTO/clsMateriaDTO.h"
+#include "../VIEW/clsMensajesView.h"
 
 char const ARCHIVO_MATERIAS[]="archivo_materia.dat";
 /**=============================================================================**/
@@ -27,6 +28,8 @@ class clsMateriaDAO
     void Modificar(clsMateriaDTO);
     void Listar(clsMateriaDTO * );
     int Count();
+    void leerMateria(int, clsMateriaDTO);
+    int buscarMateria(int);
 
 };
 
