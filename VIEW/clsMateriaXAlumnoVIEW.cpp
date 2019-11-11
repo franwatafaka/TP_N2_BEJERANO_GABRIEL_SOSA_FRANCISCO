@@ -11,6 +11,9 @@
 #include "clsMateriaXAlumnoVIEW.h"
 #include "../CSYSTEM/csystem.h"
 
+#include "../BL/clsValidacionesBL.h"
+#include "../VIEW/clsMensajesView.h"
+
 using namespace std;
 
 /**=============================================================================
@@ -59,6 +62,7 @@ void clsMateriaXAlumnoVIEW::AsignarAtoM()
             }
         }
     }
+    system("cls");
 }
 /**=============================================================================
  FUNCION : void AsignarMtoA()
@@ -105,5 +109,53 @@ void clsMateriaXAlumnoVIEW::AsignarMtoA()
         {
             txt.txtAsignacionError();
         }
+    }
+        system("cls");
+}
+
+/**=============================================================================
+ FUNCION : void MenuMXA()
+ ACCION : estructura de las materias x alumno
+ PARAMETROS:nada.
+ DEVUELVE : nada.
+============================================================================= **/
+void clsMateriaXAlumnoVIEW::MenuMXA()
+{
+    clsMensajesView txt;
+    system("cls");
+    char op[50];
+    clsValidacionesBL validar;
+    bool salir=false;
+    while(!salir)
+    {
+    txt.txtMenuMXA();
+    cin.getline(op, 50);
+    switch(validar.validarUnaLetra(op))
+    {
+        case 'a':
+        case 'A':
+        {
+            AsignarAtoM();
+        }
+        break;
+        case 'b':
+        case 'B':
+        {
+            AsignarMtoA();
+        }
+        break;
+        case 's':
+        case 'S':
+        {
+            salir=true;
+        }
+        break;
+        default:
+        {
+        txt.txtMensajeError();
+        system("cls");
+        }
+        break;
+    }
     }
 }

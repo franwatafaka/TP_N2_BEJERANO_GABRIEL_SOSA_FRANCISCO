@@ -103,7 +103,7 @@ system("pause");
 ============================================================================= **/
 void clsMensajesView::txtLinea()
 {
-    cout<<"----------------------------------------------"<<endl;
+    cout<<"-----------------------------------------------------"<<endl;
 }
 
 /**=============================================================================
@@ -133,10 +133,9 @@ void clsMensajesView::txtMenuMateria()
     cout<<"B - Listar Materias"<<endl;
     cout<<"C - Eliminar Materias"<<endl;
     cout<<"D - Modificar Materias"<<endl;
-    cout<<"E - Asignar Alumnos"<<endl;
-    cout<<"F - Mostrar Alumnos Asignados"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------------------"<<endl;
+    cout<<endl;
 }
 /**=============================================================================
  FUNCION : void txtMenuAlumno()
@@ -151,10 +150,9 @@ void clsMensajesView::txtMenuAlumno()
     cout<<"B - Listar Alumnos"<<endl;
     cout<<"C - Eliminar Alumnos"<<endl;
     cout<<"D - Modificar Alumnos"<<endl;
-    cout<<"E - Asignar Materias"<<endl;
-    cout<<"F - Mostrar Materias Asignadas"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
+    cout<<endl;
 }
 /**=============================================================================
  FUNCION : void txtMenuMatXAl()
@@ -162,9 +160,16 @@ void clsMensajesView::txtMenuAlumno()
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
-void clsMensajesView::txtMenuMatXAl()
+void clsMensajesView::txtMenuMXA()
 {
-
+    cout<<"----------SUBMENU MATERIAS POR ALUMNO---------"<<endl;
+    cout<<"A - Asignar alumnos a materia"<<endl;
+    cout<<"B - Asignar materias a alumno"<<endl;
+    cout<<"C - Mostrar alumnos asignados a materia"<<endl;
+    cout<<"D - Mostrar materias asignados a alumnos"<<endl;
+    cout<<"S - Salir"<<endl;
+    cout<<"-----------------------"<<endl;
+    cout<<endl;
 }
 
 
@@ -179,6 +184,7 @@ void clsMensajesView::txtMenuPpal(){
 cout<<"|----------------------------MENU----------------------------|"<<endl;
         cout<<setw(40)<<" A - Materias"<<endl;
         cout<<setw(39)<<" B - Alumnos"<<endl;
+        cout<<setw(51)<<" C - Materias por alumno"<<endl;
         cout<<setw(37)<<" S - Salir"<<endl;
         cout<<"|------------------------------------------------------------|"<<endl;
 }
@@ -241,8 +247,9 @@ void clsMensajesView::txtMateriaInexistente()
 ============================================================================= **/
 void clsMensajesView::txtAsignacionDeMaterias()
 {
-        cout<<  "||  NOTA: Ingrese 0 para finalizar la asignación  ||"<<endl;
-        cout<<endl;
+        cout<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
         cout<<  "Ingrese el ID de la materia que desea asignar al alumno:"<<endl;
 }
 
@@ -254,8 +261,9 @@ void clsMensajesView::txtAsignacionDeMaterias()
 ============================================================================= **/
 void clsMensajesView::txtAsignacionDeAlumnos()
 {
-    cout<<  "||  NOTA: Ingrese 0 para finalizar la asignación  ||"<<endl;
-    cout<<endl;
+    cout<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
     cout<<  "Ingrese el legajo del alumno que desea asignar a la materia:"<<endl;
 }
 
@@ -292,8 +300,10 @@ system("pause");
 void clsMensajesView::txtSeleccionDeMateria()
 {
         cout<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
-        cout<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
         cout<<  "Ingrese el ID de la materia para mostrar los alumnos asignados:"<<endl;
+
 }
 
 /**=============================================================================
@@ -305,6 +315,7 @@ void clsMensajesView::txtSeleccionDeMateria()
 void clsMensajesView::txtSeleccionDeAlumno()
 {
     cout<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
-    cout<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
     cout<<  "Ingrese el legajo del alumno para mostrar las materias asignadas:"<<endl;
 }

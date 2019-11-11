@@ -20,6 +20,7 @@
 #include "clsAlumnosView.h"
 #include "../BL/clsValidacionesBL.h"
 #include "../VIEW/clsMensajesView.h"
+#include "../VIEW/clsMateriaXAlumnoVIEW.h"
 
 using namespace std;
 
@@ -56,6 +57,13 @@ void clsMainView::Menu()
         {
             clsAlumnosView aluView;
             aluView.MenuAlumnos();
+        }
+        break;
+        case 'c':
+        case 'C':
+        {
+            clsMateriaXAlumnoVIEW mxaView;
+            mxaView.MenuMXA();
         }
         break;
         case 's':
