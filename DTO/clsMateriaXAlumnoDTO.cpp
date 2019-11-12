@@ -27,8 +27,9 @@ clsMateriaXAlumnoDTO::clsMateriaXAlumnoDTO()
 ============================================================================= **/
  void clsMateriaXAlumnoDTO::Copy(clsMateriaXAlumnoDTO dto)
  {
-     int id, legajo;
+     int id, legajo, LegajoMateria;
      this->Id = dto.GetId();
      this->Legajo = dto.GetLegajo();
+     this->LegajoMateria = dto.GetLegajoMateria();
 
  }

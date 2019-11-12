@@ -9,6 +9,7 @@ class clsMateriaXAlumnoVIEW
     public:
         void AsignarMtoA();
         void AsignarAtoM();
+        void MostrarAsignaciones();
 
 };
 

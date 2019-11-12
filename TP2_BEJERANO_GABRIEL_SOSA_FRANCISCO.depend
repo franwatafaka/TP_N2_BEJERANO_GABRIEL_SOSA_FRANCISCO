@@ -98,7 +98,7 @@
 	"../DTO/clsAlumnoDTO.h"
 	"../BL/clsAlumnoBL.h"
 
-1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
+1573153211 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
 	"clsAlumnoBL.h"
 
 1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
@@ -108,14 +108,14 @@
 	<cstdio>
 	<iomanip>
 
-1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
+1573516329 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
 	<cstdio>
 	"../DTO/clsAlumnoDTO.h"
 
 1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
 	<cstring>
 
-1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+1573154102 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
 	"clsMateriaBL.h"
 
 1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
@@ -125,23 +125,25 @@
 	<cstdio>
 	<iomanip>
 
-1572806837 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
+1573516329 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
 	<cstdio>
 	"../DTO/clsMateriaDTO.h"
+	"../VIEW/clsMensajesView.h"
 
-1571077226 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
+1573516329 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
 	<cstring>
 
-1573104060 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
+1573516329 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
 	"clsAlumnoDAO.h"
 
-1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
+1573516329 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
 	"clsMateriaDAO.h"
+	"../DTO/clsMateriaDTO.h"
 
-1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
+1573182105 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
 	"clsAlumnoDTO.h"
 
-1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
+1573156817 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
 	"clsMateriaDTO.h"
 
 1573093907 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
@@ -163,12 +165,12 @@
 	<cstdlib>
 	<cstdio>
 
-1573150323 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
+1573516329 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
 	"clsAlumnosView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
 
-1573104060 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
+1573516329 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -176,8 +178,10 @@
 	<cstdio>
 	"../DTO/clsAlumnoDTO.h"
 	"../BL/clsAlumnoBL.h"
+	"clsMateriaXAlumnoVIEW.h"
+	"../DAO/clsMateriaXAlumnoDAO.h"
 
-1573150323 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+1573528438 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
 	<cstdio>
 	<iostream>
 	<cstdlib>
@@ -187,8 +191,9 @@
 	"clsAlumnosView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
+	"../VIEW/clsMateriaXAlumnoVIEW.h"
 
-1573104060 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+1573528132 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -196,45 +201,63 @@
 	<cstdio>
 	"../DTO/clsMateriaDTO.h"
 	"../BL/clsMateriaBL.h"
+	"clsMateriaXAlumnoVIEW.h"
+	"../DAO/clsMateriaXAlumnoDAO.h"
 
 1573093915 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
 
-1573150619 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+1573528438 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
 	"clsMateriasView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
 
-1573093915 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
+1573182105 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
 	"clsValidacionesBL.h"
 
-1573106920 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.cpp
+1573526696 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.cpp
 	"clsMateriaXAlumnoBL.h"
 
-1573106920 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.h
+1573526654 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.h
+	"../DAO/clsMateriaXAlumnoDAO.h"
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
 
-1573106896 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.cpp
+1573518736 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.cpp
 	"clsMateriaXAlumnoDAO.h"
 
-1573106896 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.h
+1573518737 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.h
+	<cstdio>
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	"../DTO/clsMateriaDTO.h"
+	"../DTO/clsAlumnoDTO.h"
+	"../DAO/clsMateriaDAO.h"
+	"../DAO/clsAlumnoDAO.h"
+	"../VIEW/clsMateriasView.h"
+	"../VIEW/clsAlumnosView.h"
 
-1573106956 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.cpp
+1573526549 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.cpp
 	"clsMateriaXAlumnoDTO.h"
 
-1573106955 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.h
+1573526541 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.h
 
-1573106981 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.cpp
+1573528438 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.cpp
 	"clsMateriaXAlumnoVIEW.h"
+	"../CSYSTEM/csystem.h"
 
-1573106981 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.h
+1573528313 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.h
+	"../DAO/clsMateriaXAlumnoDAO.h"
+	"../DTO/clsMateriaXAlumnoDTO.h"
 
-1573150722 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.h
+1573516329 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.h
 	<cstring>
 	<iostream>
 	<iomanip>
 	<cstdlib>
 	<cstdio>
 
-1573150388 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
+1573528438 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
 	"clsMensajesView.h"
 	<cstdlib>
 	<iomanip>

@@ -56,18 +56,7 @@ void clsMateriasView::MenuMaterias()
         {
             Modificar();
         }
-        case'e':
-        case'E':
-        {
-            Asignar();
-        }
-        break;
-        case'f':
-        case'F':
-        {
-            MostrarAsignaciones();
-        }
-        break;
+
         case 's':
         case 'S':
         {
@@ -211,34 +200,5 @@ void clsMateriasView::MostrarMateria(clsMateriaDTO dto)
     cout<<endl;
     }
 
-/**=============================================================================
- FUNCION : void MostrarAlumno()
- ACCION : Muestra el listado de alumnos de la db.
- PARAMETROS: nada
- DEVUELVE : nada
-============================================================================= **/
-void clsMateriasView::Asignar()
-{
-        clsMateriaXAlumnoVIEW mview;
-        mview.AsignarAtoM();
-}
-
-/**=============================================================================
- FUNCION : void MostrarAlumno()
- ACCION : Muestra el listado de alumnos de la db.
- PARAMETROS: nada
- DEVUELVE : nada
-============================================================================= **/
-void clsMateriasView::MostrarAsignaciones()
-{
-        clsMateriaXAlumnoDAO mdao;
-        clsMensajesView txt;
-        Listar();
-        txt.txtLinea();
-        txt.txtSeleccionDeMateria();
-        int id;
-        cin>>id;
-        mdao.mostrarAlumnosAsignados(id);
-}
 
 

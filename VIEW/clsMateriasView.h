@@ -22,7 +22,7 @@ class clsMateriasView
     void MostrarMateria(clsMateriaDTO);
     void Eliminar();
     void Modificar();
-    void MostrarAsignaciones();
+//    void MostrarAsignaciones();
 
 };
 

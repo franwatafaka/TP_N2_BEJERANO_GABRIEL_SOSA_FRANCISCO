@@ -164,7 +164,10 @@ void clsMensajesView::txtMenuAlumno()
 ============================================================================= **/
 void clsMensajesView::txtMenuMatXAl()
 {
-
+ cout<<"----------SUBMENU MATERIAS X ALUMNOS ---------"<<endl;
+    cout<<"A - Asignar alumno a materias"<<endl;
+    cout<<"S - Salir"<<endl;
+    cout<<"-----------------------"<<endl;
 }
 
 
@@ -179,6 +182,7 @@ void clsMensajesView::txtMenuPpal(){
 cout<<"|----------------------------MENU----------------------------|"<<endl;
         cout<<setw(40)<<" A - Materias"<<endl;
         cout<<setw(39)<<" B - Alumnos"<<endl;
+        cout<<setw(20))<<" C - Asignar alumno a materia"<<endl;
         cout<<setw(37)<<" S - Salir"<<endl;
         cout<<"|------------------------------------------------------------|"<<endl;
 }

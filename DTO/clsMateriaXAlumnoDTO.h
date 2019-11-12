@@ -8,6 +8,8 @@ class clsMateriaXAlumnoDTO
         clsMateriaXAlumnoDTO();
         int GetLegajo() { return Legajo; }
         void SetLegajo(int val) { Legajo = val; }
+        int GetLegajoMateria() { return LegajoMateria; }
+        void SetLegajoMateria(int val) { LegajoMateria = val; }
         int GetId() { return Id; }
         void SetId(int val) { Id = val; }
         bool GetEliminado() { return Eliminado; }
@@ -17,6 +19,7 @@ class clsMateriaXAlumnoDTO
 
     private:
         int Legajo;
+        int LegajoMateria;
         int Id;
         bool Eliminado;
 };

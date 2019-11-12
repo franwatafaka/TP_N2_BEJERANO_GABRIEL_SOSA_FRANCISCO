@@ -107,3 +107,20 @@ void clsMateriaXAlumnoVIEW::AsignarMtoA()
         }
     }
 }
+
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
+{
+        clsMateriaXAlumnoDAO mdao;
+        clsMensajesView txt;
+        txt.txtLinea();
+        txt.txtSeleccionDeMateria();
+        int id;
+        cin>>id;
+        mdao.Listar(id);
+}

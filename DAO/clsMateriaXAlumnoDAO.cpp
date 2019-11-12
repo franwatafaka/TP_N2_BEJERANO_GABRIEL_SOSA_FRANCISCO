@@ -141,7 +141,7 @@ bool clsMateriaXAlumnoDAO::verificarEstadoAlumno(int legajo)
  PARAMETROS: id a buscar
  DEVUELVE : nada
 ============================================================================= **/
-void clsMateriaXAlumnoDAO::mostrarAlumnosAsignados(int id)
+void clsMateriaXAlumnoDAO::Listar(int id)
 {
     clsMateriaXAlumnoDAO dao; clsMateriaXAlumnoDTO dto;
     clsAlumnoDAO adao; clsAlumnoDTO adto;
