@@ -31,7 +31,11 @@ class clsMateriaXAlumnoDAO
 public:
     bool Insertar(clsMateriaXAlumnoDTO);
     void Listar(clsMateriaXAlumnoDTO *);
+    void ListaLegajos(int, int *);
+    void ListaIds(int, int *);
     int Count();
+    int CountAsignados(int);
+    int CountAsignadosM(int);
 //    int buscarAlumno(int, clsAlumnoDTO);
 //    int buscarMateria(int);
     bool verificarEstadoMateria(int);

@@ -30,7 +30,7 @@ class clsMateriaDAO
     int Count();
     void leerMateria(int, clsMateriaDTO);
     int buscarMateria(int);
-
+    void ListarAsignados(clsMateriaDTO *, int *);
 };
 
 #endif // CLSMATERIADAO_H

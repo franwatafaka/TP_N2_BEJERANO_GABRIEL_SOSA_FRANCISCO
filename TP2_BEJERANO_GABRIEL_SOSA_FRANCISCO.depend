@@ -1,40 +1,48 @@
 # depslib dependency file v1.0
-1571815769 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
 	"clsMateriaBL.h"
 
-1571822753 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
 	"../DAO/clsMateriaDAO.h"
 	"../DTO/clsMateriaDTO.h"
 	<iostream>
 	<cstdio>
 	<iomanip>
 
-1571821992 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
 	<cstdio>
 	"../DTO/clsMateriaDTO.h"
+	"../VIEW/clsMensajesView.h"
 
-1571822614 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
 	<cstring>
 
-1571821843 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
 	"clsMateriaDAO.h"
+	"../DTO/clsMateriaDTO.h"
 
-1571821843 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
 	"clsMateriaDTO.h"
 
-1571831247 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+1573448983 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+	<cstdio>
+	<iostream>
+	<cstdlib>
+	<iomanip>
 	"clsMainView.h"
 	"clsMateriasView.h"
 	"clsAlumnosView.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
+	"../VIEW/clsMateriaXAlumnoVIEW.h"
 
-1571823249 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
 	<cstring>
 	<iostream>
-	<iomanip>
 	<cstdlib>
 	<cstdio>
 
-1571823293 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -42,17 +50,15 @@
 	<cstdio>
 	"../DTO/clsMateriaDTO.h"
 	"../BL/clsMateriaBL.h"
+	"clsMateriaXAlumnoVIEW.h"
+	"../DAO/clsMateriaXAlumnoDAO.h"
 
-1571823441 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
 	<iostream>
 	<cstdlib>
-	"CSYSTEM/csystem.h"
-	"DTO/clsMateriaDTO.h"
-	"DAO/clsMateriaDAO.h"
 	"VIEW/clsMainView.h"
-	"../CSYSTEM/csystem.h"
 
-1571822614 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -60,36 +66,40 @@
 	<windows.h>
 	<unistd.h>
 
-1571831351 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
 	"clsMateriasView.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
 
-1571830684 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
 	"clsAlumnoBL.h"
 
-1571830684 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
 	"../DAO/clsAlumnoDAO.h"
 	"../DTO/clsAlumnoDTO.h"
 	<iostream>
 	<cstdio>
 	<iomanip>
 
-1571830079 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
 	<cstdio>
 	"../DTO/clsAlumnoDTO.h"
 
-1571830843 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
 	<cstring>
 
-1571830079 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
 	"clsAlumnoDAO.h"
 
-1571829108 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
 	"clsAlumnoDTO.h"
 
-1571831351 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
 	"clsAlumnosView.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
 
-1571831005 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -97,6 +107,8 @@
 	<cstdio>
 	"../DTO/clsAlumnoDTO.h"
 	"../BL/clsAlumnoBL.h"
+	"clsMateriaXAlumnoVIEW.h"
+	"../DAO/clsMateriaXAlumnoDAO.h"
 
 1572806837 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
 	"clsAlumnoBL.h"
@@ -235,6 +247,228 @@
 	<cstdio>
 
 1573150388 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
+	"clsMensajesView.h"
+	<cstdlib>
+	<iomanip>
+
+1573448861 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.cpp
+	"clsMateriaXAlumnoBL.h"
+
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.h
+	"../DAO/clsMateriaXAlumnoDAO.h"
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.h
+	<cstdio>
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	"../DTO/clsMateriaDTO.h"
+	"../DTO/clsAlumnoDTO.h"
+	"../DAO/clsMateriaDAO.h"
+	"../DAO/clsAlumnoDAO.h"
+	"../VIEW/clsMateriasView.h"
+	"../VIEW/clsAlumnosView.h"
+
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.h
+
+1573449059 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.h
+	"../DAO/clsMateriaXAlumnoDAO.h"
+	"../DTO/clsMateriaXAlumnoDTO.h"
+
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
+	"clsValidacionesBL.h"
+
+1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
+
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.cpp
+	"clsMateriaXAlumnoDAO.h"
+
+1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.cpp
+	"clsMateriaXAlumnoDTO.h"
+
+1573449623 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.cpp
+	"clsMateriaXAlumnoVIEW.h"
+	"../CSYSTEM/csystem.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
+
+1573450029 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
+	"clsMensajesView.h"
+	<cstdlib>
+	<iomanip>
+
+1573640597 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
+	"clsAlumnoBL.h"
+
+1573640597 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
+	"../DAO/clsAlumnoDAO.h"
+	"../DTO/clsAlumnoDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1573640729 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
+	<cstdio>
+	"../DTO/clsAlumnoDTO.h"
+
+1573446617 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
+	<cstring>
+
+1573642238 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+	"clsMateriaBL.h"
+
+1573642293 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
+	"../DAO/clsMateriaDAO.h"
+	"../DTO/clsMateriaDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1573642490 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
+	<cstdio>
+	"../DTO/clsMateriaDTO.h"
+	"../VIEW/clsMensajesView.h"
+
+1573446617 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
+	<cstring>
+
+1573448861 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+
+1573642200 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.cpp
+	"clsMateriaXAlumnoBL.h"
+
+1573642712 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.h
+	"../DAO/clsMateriaXAlumnoDAO.h"
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	<iostream>
+	<cstdio>
+	<iomanip>
+
+1573642833 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.h
+	<cstdio>
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	"../DTO/clsMateriaDTO.h"
+	"../DTO/clsAlumnoDTO.h"
+	"../DAO/clsMateriaDAO.h"
+	"../DAO/clsAlumnoDAO.h"
+	"../VIEW/clsMateriasView.h"
+	"../VIEW/clsAlumnosView.h"
+
+1573446617 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.h
+
+1573643147 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+	"../DTO/clsMateriaDTO.h"
+	"../BL/clsMateriaBL.h"
+	"clsMateriaXAlumnoVIEW.h"
+	"../DAO/clsMateriaXAlumnoDAO.h"
+
+1573643264 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.h
+	"../DAO/clsMateriaXAlumnoDAO.h"
+	"../DTO/clsMateriaXAlumnoDTO.h"
+	"../BL/clsMateriaXAlumnoBL.h"
+
+1573640597 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+	"../DTO/clsAlumnoDTO.h"
+	"../BL/clsAlumnoBL.h"
+	"clsMateriaXAlumnoVIEW.h"
+	"../DAO/clsMateriaXAlumnoDAO.h"
+
+1573446617 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
+	"clsValidacionesBL.h"
+
+1573446617 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
+
+1573640729 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
+	"clsAlumnoDAO.h"
+
+1573642855 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
+	"clsMateriaDAO.h"
+	"../DTO/clsMateriaDTO.h"
+
+1573642880 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.cpp
+	"clsMateriaXAlumnoDAO.h"
+
+1573446617 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
+	"clsAlumnoDTO.h"
+
+1573446617 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
+	"clsMateriaDTO.h"
+
+1573446617 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.cpp
+	"clsMateriaXAlumnoDTO.h"
+
+1573446617 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
+	<iostream>
+	<cstdlib>
+	"VIEW/clsMainView.h"
+
+1573446617 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
+	<cstring>
+	<iostream>
+	<cstdlib>
+	<cstdio>
+
+1573640597 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
+	"clsAlumnosView.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
+
+1573448983 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+	<cstdio>
+	<iostream>
+	<cstdlib>
+	<iomanip>
+	"clsMainView.h"
+	"clsMateriasView.h"
+	"clsAlumnosView.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
+	"../VIEW/clsMateriaXAlumnoVIEW.h"
+
+1573643214 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+	"clsMateriasView.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
+
+1573643279 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.cpp
+	"clsMateriaXAlumnoVIEW.h"
+	"../CSYSTEM/csystem.h"
+	"../BL/clsValidacionesBL.h"
+	"../VIEW/clsMensajesView.h"
+
+1573446617 c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	<windows.h>
+	<unistd.h>
+
+1573450029 source:c:\users\raptor\desktop\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
 	"clsMensajesView.h"
 	<cstdlib>
 	<iomanip>

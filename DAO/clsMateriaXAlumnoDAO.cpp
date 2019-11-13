@@ -55,6 +55,58 @@ void clsMateriaXAlumnoDAO::Listar(clsMateriaXAlumnoDTO *dto )
 }
 
 /**=============================================================================
+ FUNCION : void ListaLegajos()
+ ACCION : copia en un array el listado de registros de alumnos
+ PARAMETROS: clsAlumnoDTO *dto
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoDAO::ListaLegajos(int id, int *legajos)
+{
+    FILE *p;
+    int pos=0;
+    clsMateriaXAlumnoDTO dto;
+    p = fopen(ARCHIVO_MXA,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetId()==id)
+            {
+                legajos[pos]=dto.GetLegajo();
+                pos++;
+            }
+        }
+        fclose(p);
+    }
+}
+
+/**=============================================================================
+ FUNCION : void ListaLegajos()
+ ACCION : copia en un array el listado de registros de alumnos
+ PARAMETROS: clsAlumnoDTO *dto
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoDAO::ListaIds(int legajo, int *ids)
+{
+    FILE *p;
+    int pos=0;
+    clsMateriaXAlumnoDTO dto;
+    p = fopen(ARCHIVO_MXA,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetLegajo()==legajo)
+            {
+                ids[pos]=dto.GetId();
+                pos++;
+            }
+        }
+        fclose(p);
+    }
+}
+
+/**=============================================================================
  FUNCION : int Count()
  ACCION : cuenta la cantidad de registros activos en la db
  PARAMETROS: nada
@@ -78,6 +130,57 @@ int clsMateriaXAlumnoDAO::Count()
 }
 
 /**=============================================================================
+ FUNCION : int Count()
+ ACCION : cuenta la cantidad de registros activos en la db
+ PARAMETROS: nada
+ DEVUELVE : cantidad de registros
+============================================================================= **/
+int clsMateriaXAlumnoDAO::CountAsignados(int id)
+{
+    FILE *p;
+    int cant=0;
+    clsMateriaXAlumnoDTO dto;
+    p = fopen(ARCHIVO_MXA,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetId()==id)
+            {
+                cant++;
+            }
+        }
+        fclose(p);
+    }
+    return cant;
+}
+/**=============================================================================
+ FUNCION : int CountAsignados()
+ ACCION : cuenta la cantidad de registros activos en la db
+ PARAMETROS: int legajo
+ DEVUELVE : cantidad de registros
+============================================================================= **/
+int clsMateriaXAlumnoDAO::CountAsignadosM(int legajo)
+{
+    FILE *p;
+    int cant=0;
+    clsMateriaXAlumnoDTO dto;
+    p = fopen(ARCHIVO_MXA,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetLegajo()==legajo)
+            {
+                cant++;
+            }
+        }
+        fclose(p);
+    }
+    return cant;
+}
+
+/**=============================================================================
  FUNCION : bool verificarEstadoMateria(int id)
  ACCION : Verifica si la materia se encuentra activa o dada de baja
  PARAMETROS: int id.
@@ -94,7 +197,6 @@ bool clsMateriaXAlumnoDAO::verificarEstadoMateria(int id)
     clsMateriaDAO mdao; clsMateriaDTO mdto;
     int mpos=-1;
     mpos=mdao.buscarMateria(id);
-    mdao.leerMateria(mpos, mdto);
     if(mpos==-1)
     {
         clsMensajesView txt;
@@ -122,7 +224,6 @@ bool clsMateriaXAlumnoDAO::verificarEstadoAlumno(int legajo)
     clsAlumnoDAO adao; clsAlumnoDTO adto;
     int apos=-1;
     apos=adao.buscarAlumno(legajo);
-    adao.leerAlumno(apos, adto);
     if(apos==-1)
     {
         clsMensajesView txt;

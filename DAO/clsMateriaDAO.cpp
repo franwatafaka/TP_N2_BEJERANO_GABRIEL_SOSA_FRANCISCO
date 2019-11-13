@@ -199,3 +199,29 @@ int clsMateriaDAO::buscarMateria(int id)
         fclose(p);
     }
 }
+
+/**=============================================================================
+ FUNCION : void ListarAsignados()
+ ACCION : copia en un array el listado de registros de alumnos
+ PARAMETROS: clsAlumnoDTO *dto, int *legajos
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaDAO::ListarAsignados(clsMateriaDTO *listaids, int *ids)
+{
+    FILE *p;
+    int pos=0;
+    clsMateriaDTO dto_arch;
+    p = fopen(ARCHIVO_MATERIAS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto_arch,sizeof(clsMateriaDTO),1,p))
+        {
+            if(dto_arch.GetId()==ids[pos])
+            {
+                listaids[pos].Copy(dto_arch);
+                pos++;
+            }
+        }
+        fclose(p);
+    }
+}

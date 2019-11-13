@@ -16,6 +16,7 @@ class clsAlumnoBL
     void Modificar(clsAlumnoDTO);
     void Listar(clsAlumnoDTO *);
     int Count();
+    void ListarAsignados(clsAlumnoDTO *, int *);
 
 };
 

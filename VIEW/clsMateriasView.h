@@ -20,6 +20,7 @@ class clsMateriasView
     void Listar();
     void Asignar();
     void MostrarMateria(clsMateriaDTO);
+    void MostrarAsignadosM(clsMateriaDTO *, int);
     void Eliminar();
     void Modificar();
     void MostrarAsignaciones();

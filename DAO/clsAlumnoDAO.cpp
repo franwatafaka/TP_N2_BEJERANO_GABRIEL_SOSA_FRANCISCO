@@ -198,3 +198,29 @@ int clsAlumnoDAO::buscarAlumno(int legajo)
         fclose(p);
     }
 }
+
+/**=============================================================================
+ FUNCION : void ListarAsignados()
+ ACCION : copia en un array el listado de registros de alumnos
+ PARAMETROS: clsAlumnoDTO *dto, int *legajos
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnoDAO::ListarAsignados(clsAlumnoDTO *listalegajos, int *legajos)
+{
+    FILE *p;
+    int pos=0;
+    clsAlumnoDTO dto_arch;
+    p = fopen(ARCHIVO_ALUMNOS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto_arch,sizeof(clsAlumnoDTO),1,p))
+        {
+            if(dto_arch.GetLegajo()==legajos[pos])
+            {
+                listalegajos[pos].Copy(dto_arch);
+                pos++;
+            }
+        }
+        fclose(p);
+    }
+}

@@ -3,6 +3,7 @@
 
 #include "../DAO/clsMateriaXAlumnoDAO.h"
 #include "../DTO/clsMateriaXAlumnoDTO.h"
+#include "../BL/clsMateriaXAlumnoBL.h"
 
 class clsMateriaXAlumnoVIEW
 {
@@ -10,6 +11,8 @@ class clsMateriaXAlumnoVIEW
         void AsignarMtoA();
         void AsignarAtoM();
         void MenuMXA();
+        void MostrarAsignaciones();
+        void MostrarAsignacionesM();
 
 };
 

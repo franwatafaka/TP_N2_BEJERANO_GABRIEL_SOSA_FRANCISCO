@@ -30,6 +30,7 @@ class clsAlumnoDAO
     int Count();
     void leerAlumno(int, clsAlumnoDTO);
     int buscarAlumno(int);
+    void ListarAsignados(clsAlumnoDTO *, int *);
 };
 
 #endif // CLSALUMNODAO_H

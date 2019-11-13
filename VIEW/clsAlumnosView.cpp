@@ -189,6 +189,33 @@ void clsAlumnosView::Listar()
 }
 
 /**=============================================================================
+ FUNCION : void MostrarAsignados()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: clsAlumnoDTO *listalegajos, int cant
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnosView::MostrarAsignados(clsAlumnoDTO *listalegajos, int cant)
+{
+    clsMensajesView txt;
+    txt.txtListaAlumnos();
+    char nombre[50];
+    char apellido[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"APELLIDO:";
+    cout<<setw(20)<<"LEGAJO:"<<endl;
+    txt.txtLinea();
+    for(int x=0; x<cant; x++)
+    {
+        listalegajos[x].GetNombre(nombre);
+        cout<<setw(6)<<nombre;
+        listalegajos[x].GetApellido(apellido);
+        cout<<setw(20)<<apellido;
+        cout<<setw(20)<<listalegajos[x].GetLegajo()<<endl;
+        txt.txtLinea();
+    }
+}
+
+/**=============================================================================
  FUNCION : void MostrarAlumno()
  ACCION : Muestra el listado de alumnos de la db.
  PARAMETROS: nada

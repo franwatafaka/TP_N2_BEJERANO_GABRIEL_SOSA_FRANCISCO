@@ -20,6 +20,7 @@ class clsAlumnosView
     void Listar();
     void Asignar();
     void MostrarAlumno(clsAlumnoDTO);
+    void MostrarAsignados(clsAlumnoDTO *, int);
     void Eliminar();
     void Modificar();
     void MostrarAsignaciones();

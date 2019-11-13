@@ -15,6 +15,7 @@ class clsMateriaBL
     void Eliminar(int);
     void Modificar(clsMateriaDTO);
     void Listar(clsMateriaDTO *);
+    void ListarAsignados(clsMateriaDTO *, int *);
     int Count();
 
 };

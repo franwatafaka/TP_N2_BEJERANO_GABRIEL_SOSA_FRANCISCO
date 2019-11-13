@@ -184,6 +184,32 @@ void clsMateriasView::Listar()
     cout<<endl;
     }
 
+    /**=============================================================================
+ FUNCION : void MostrarAsignados()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: clsAlumnoDTO *listalegajos, int cant
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::MostrarAsignadosM(clsMateriaDTO *listaids, int cant)
+{
+    clsMensajesView txt;
+    txt.txtListaMaterias();
+    char nombre[50];
+    char profesor[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"PROFESOR:";
+    cout<<setw(20)<<"ID:"<<endl;
+    txt.txtLinea();
+    for(int x=0; x<cant; x++)
+    {
+        listaids[x].GetNombre(nombre);
+        cout<<setw(6)<<nombre;
+        listaids[x].GetProfesor(profesor);
+        cout<<setw(20)<<profesor;
+        cout<<setw(20)<<listaids[x].GetId()<<endl;
+        txt.txtLinea();
+    }
+}
 /**=============================================================================
  FUNCION : void MostrarMateria()
  ACCION : Muestra la materia cuyos alumnos asignados seran listados

@@ -34,6 +34,57 @@ void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo)
 //    dao.Listar(lista);
 //    }
 /**=============================================================================
+ FUNCION : int CountAsignados()
+ ACCION : devuelve la cantidad de registros que existen en la db
+ PARAMETROS: nada
+ DEVUELVE : cantidad de registros
+============================================================================= **/
+int clsMateriaXAlumnoBL::CountAsignados(int id)
+{
+    clsMateriaXAlumnoDAO dao;
+    int cant;
+    cant= dao.CountAsignados(id);
+    return cant;
+}
+
+/**=============================================================================
+ FUNCION : int CountAsignados()
+ ACCION : devuelve la cantidad de registros que existen en la db
+ PARAMETROS: nada
+ DEVUELVE : cantidad de registros
+============================================================================= **/
+int clsMateriaXAlumnoBL::CountAsignadosM(int legajo)
+{
+    clsMateriaXAlumnoDAO dao;
+    int cant;
+    cant= dao.CountAsignadosM(legajo);
+    return cant;
+}
+
+/**=============================================================================
+ FUNCION : void ListaLegajos()
+ ACCION : Lista el contenido de la db
+ PARAMETROS: clsMateriaDTO *lista
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoBL::ListaLegajos(int id, int *legajos)
+    {
+    clsMateriaXAlumnoDAO dao;
+    dao.ListaLegajos(id, legajos);
+    }
+
+/**=============================================================================
+ FUNCION : void ListaLegajos()
+ ACCION : Lista el contenido de la db
+ PARAMETROS: clsMateriaDTO *lista
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoBL::ListaIds(int legajo, int *ids)
+    {
+    clsMateriaXAlumnoDAO dao;
+    dao.ListaIds(legajo, ids);
+    }
+/**=============================================================================
  FUNCION : int Count()
  ACCION : devuelve la cantidad de registros que existen en la db
  PARAMETROS: nada

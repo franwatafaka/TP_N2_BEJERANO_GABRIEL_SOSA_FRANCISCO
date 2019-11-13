@@ -55,6 +55,19 @@ void clsMateriaBL::Listar(clsMateriaDTO *lista)
     clsMateriaDAO dao;
     dao.Listar(lista);
     }
+
+/**=============================================================================
+ FUNCION : void ListarAsignados()
+ ACCION : Lista los alumnos de la db
+ PARAMETROS: clsAlumnoDTO *listalegajos, int *legajos
+ DEVUELVE : nada
+============================================================================= **/
+
+void clsMateriaBL::ListarAsignados(clsMateriaDTO *listaids, int *ids)
+{
+    clsMateriaDAO dao;
+    dao.ListarAsignados(listaids, ids);
+}
 /**=============================================================================
  FUNCION : int Count()
  ACCION : devuelve la cantidad de registros que existen en la db

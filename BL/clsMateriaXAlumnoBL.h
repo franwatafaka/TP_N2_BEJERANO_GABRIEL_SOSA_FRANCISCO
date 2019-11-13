@@ -14,6 +14,10 @@ class clsMateriaXAlumnoBL
         void Insertar(clsMateriaXAlumnoDTO, int, int);
         void Listar(clsMateriaXAlumnoDTO *);
         int Count();
+        void ListaLegajos(int, int *);
+        void ListaIds(int , int *);
+        int CountAsignados(int);
+        int CountAsignadosM(int);
 
 };
 
