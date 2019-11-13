@@ -15,10 +15,11 @@
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
-void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo){
+void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo, int LegajoMateria){
     clsMateriaXAlumnoDAO dao;
     dto.SetId(id);
     dto.SetLegajo(legajo);
+    dto.SetLegajoMateria(LegajoMateria);
     dao.Insertar(dto);
 }
 
@@ -28,7 +29,7 @@ void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo)
  PARAMETROS: clsMateriaDTO *lista
  DEVUELVE : nada
 ============================================================================= **/
-//void clsMateriaXAlumnoBL::Listar(clsMateriaXAlumnoDTO *lista)
+//void clsMateriaBL::Listar(clsMateriaXAlumnoDTO *lista)
 //    {
 //    clsMateriaXAlumnoDAO dao;
 //    dao.Listar(lista);

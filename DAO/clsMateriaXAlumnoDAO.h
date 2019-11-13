@@ -40,7 +40,7 @@ public:
 //    int buscarMateria(int);
     bool verificarEstadoMateria(int);
     bool verificarEstadoAlumno(int);
-    void mostrarAlumnosAsignados(int);
+    void Listar(int);
     void mostrarMateriasAsignadas(int);
 
 

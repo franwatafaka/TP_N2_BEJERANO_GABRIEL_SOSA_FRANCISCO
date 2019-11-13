@@ -11,9 +11,6 @@
 #include "clsMateriaXAlumnoVIEW.h"
 #include "../CSYSTEM/csystem.h"
 
-#include "../BL/clsValidacionesBL.h"
-#include "../VIEW/clsMensajesView.h"
-
 using namespace std;
 
 /**=============================================================================
@@ -63,7 +60,6 @@ void clsMateriaXAlumnoVIEW::AsignarAtoM()
             }
         }
     }
-    system("cls");
 }
 /**=============================================================================
  FUNCION : void AsignarMtoA()
@@ -111,17 +107,17 @@ void clsMateriaXAlumnoVIEW::AsignarMtoA()
             txt.txtAsignacionError();
         }
     }
-        system("cls");
 }
 
 /**=============================================================================
- FUNCION : void MenuMXA()
- ACCION : estructura de las materias x alumno
- PARAMETROS:nada.
- DEVUELVE : nada.
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
 ============================================================================= **/
-void clsMateriaXAlumnoVIEW::MenuMXA()
+void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
 {
+<<<<<<< HEAD
     clsMensajesView txt;
     system("cls");
     char op[50];
@@ -171,6 +167,15 @@ void clsMateriaXAlumnoVIEW::MenuMXA()
         break;
     }
     }
+=======
+        clsMateriaXAlumnoDAO mdao;
+        clsMensajesView txt;
+        txt.txtLinea();
+        txt.txtSeleccionDeMateria();
+        int id;
+        cin>>id;
+        mdao.Listar(id);
+>>>>>>> 5a6e84480e210091c6059749fdded53acc95ea76
 }
 
 /**=============================================================================

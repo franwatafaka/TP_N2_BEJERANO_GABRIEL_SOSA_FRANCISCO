@@ -15,7 +15,7 @@ class clsMensajesView
         void txtMenuPpal();
         void txtMenuMateria();
         void txtMenuAlumno();
-        void txtMenuMXA();
+        void txtMenuMatXAl();
         void txtLinea();
         void txtListaAlumnos();
         void txtListaMaterias();

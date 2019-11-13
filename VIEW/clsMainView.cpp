@@ -34,6 +34,9 @@ void clsMainView::Menu()
 {
     char op[50];
     clsValidacionesBL validar;
+      clsMateriasView matView;
+        clsAlumnosView aluView;
+           clsMateriaXAlumnoVIEW mview;
     clsMensajesView txt;
     bool salir=false;
     txt.txtPresentacion();
@@ -48,24 +51,25 @@ void clsMainView::Menu()
         case 'a':
         case 'A':
         {
-            clsMateriasView matView;
+
             matView.MenuMaterias();
         }
         break;
         case 'b':
         case 'B':
         {
-            clsAlumnosView aluView;
+
             aluView.MenuAlumnos();
         }
         break;
-        case 'c':
         case 'C':
-        {
-            clsMateriaXAlumnoVIEW mxaView;
-            mxaView.MenuMXA();
-        }
-        break;
+        case 'c':
+            {
+
+                matView.Listar();
+                mview.AsignarAtoM();
+            }
+            break;
         case 's':
         case 'S':
         {
