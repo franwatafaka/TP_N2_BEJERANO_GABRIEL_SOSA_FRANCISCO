@@ -17,6 +17,8 @@ class clsAlumnoBL
     void Listar(clsAlumnoDTO *);
     int Count();
     void ListarAsignados(clsAlumnoDTO *, int *);
+    void BuscarSubA(clsAlumnoDTO *, char *cond);
+    int BuscarSubCountA(char *);
 
 };
 

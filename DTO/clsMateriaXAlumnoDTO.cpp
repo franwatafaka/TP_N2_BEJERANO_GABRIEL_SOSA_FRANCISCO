@@ -21,15 +21,13 @@ clsMateriaXAlumnoDTO::clsMateriaXAlumnoDTO()
 }
 /**=============================================================================
  FUNCION : void Copy()
- ACCION : Levanta los datos del materia y los guarda en el nuevo objeto dto.
- PARAMETROS: clsMateriaDTO dto
+ ACCION : Levanta los datos del materiaxalumno y los guarda en el nuevo objeto dto.
+ PARAMETROS: clsMateriaXAlumnoDTO dto
  DEVUELVE : nada
 ============================================================================= **/
  void clsMateriaXAlumnoDTO::Copy(clsMateriaXAlumnoDTO dto)
  {
-     int id, legajo, LegajoMateria;
      this->Id = dto.GetId();
      this->Legajo = dto.GetLegajo();
-     this->LegajoMateria = dto.GetLegajoMateria();
 
  }

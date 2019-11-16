@@ -81,8 +81,8 @@ void clsMateriaXAlumnoDAO::ListaLegajos(int id, int *legajos)
 }
 
 /**=============================================================================
- FUNCION : void ListaLegajos()
- ACCION : copia en un array el listado de registros de alumnos
+ FUNCION : void ListaIds()
+ ACCION : copia en un array el listado de ids que tengan el parametro legajo en el atibuto legajo
  PARAMETROS: clsAlumnoDTO *dto
  DEVUELVE : nada
 ============================================================================= **/
@@ -130,8 +130,8 @@ int clsMateriaXAlumnoDAO::Count()
 }
 
 /**=============================================================================
- FUNCION : int Count()
- ACCION : cuenta la cantidad de registros activos en la db
+ FUNCION : int CountAsignados()
+ ACCION : cuenta la cantidad de registros activos en la db que correspondan al id dado
  PARAMETROS: nada
  DEVUELVE : cantidad de registros
 ============================================================================= **/
@@ -155,8 +155,8 @@ int clsMateriaXAlumnoDAO::CountAsignados(int id)
     return cant;
 }
 /**=============================================================================
- FUNCION : int CountAsignados()
- ACCION : cuenta la cantidad de registros activos en la db
+ FUNCION : int CountAsignadosM()
+ ACCION : cuenta la cantidad de registros activos en la db que correspondan al legajo dado
  PARAMETROS: int legajo
  DEVUELVE : cantidad de registros
 ============================================================================= **/
@@ -242,7 +242,7 @@ bool clsMateriaXAlumnoDAO::verificarEstadoAlumno(int legajo)
  PARAMETROS: id a buscar
  DEVUELVE : nada
 ============================================================================= **/
-void clsMateriaXAlumnoDAO::Listar(int id)
+void clsMateriaXAlumnoDAO::mostrarAlumnosAsignados(int id)
 {
     clsMateriaXAlumnoDAO dao; clsMateriaXAlumnoDTO dto;
     clsAlumnoDAO adao; clsAlumnoDTO adto;
@@ -262,7 +262,7 @@ void clsMateriaXAlumnoDAO::Listar(int id)
             std::cout<<"Error"<<std::endl;
         }
         else
-    {
+        {
         mdao.leerMateria(mpos, mdto);
         mview.MostrarMateria(mdto);
         system("pause");
@@ -284,7 +284,7 @@ void clsMateriaXAlumnoDAO::Listar(int id)
 }
 
 /**=============================================================================
- FUNCION : void mostrarAlumnosaAsignados(int id_materia)
+ FUNCION : void mostrarMateriasAsignadas(int id_materia)
  ACCION : Funcion para mostrar los alumnos cuyo id_materia coincida con el indicado,
  dentro del archivo relacional. Si coincide, los busca y muestra sus datos
  PARAMETROS: id a buscar

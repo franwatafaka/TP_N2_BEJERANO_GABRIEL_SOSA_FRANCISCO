@@ -79,3 +79,28 @@ int clsMateriaBL::Count()
     clsMateriaDAO dao;
     return dao.Count();
 }
+
+/**=============================================================================
+ FUNCION : void Buscarsub()
+ ACCION : Compara dos cadenas, char *cond
+ PARAMETROS: clsMateriaDTO *lista
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaBL::BuscarSubM(clsMateriaDTO *lista, char *cond)
+    {
+    clsMateriaDAO dao;
+    dao.BuscarSubM(lista, cond);
+    }
+
+/**=============================================================================
+ FUNCION : int BuscarSubCount()
+ ACCION : cuenta la diferencia de chars entre dos cadenas
+ PARAMETROS: nada
+ DEVUELVE : 0 si no hay strings iguales, y el valor de characteres iguales entre las
+            dos cadenas
+============================================================================= **/
+int clsMateriaBL::BuscarSubCountM(char *cond)
+{
+    clsMateriaDAO dao;
+    return dao.BuscarSubCountM(cond);
+}

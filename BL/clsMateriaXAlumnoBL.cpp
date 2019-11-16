@@ -10,34 +10,22 @@
 
 #include "clsMateriaXAlumnoBL.h"
 /**=============================================================================
- FUNCION : void subMaterias()
- ACCION : Muestra y permite el acceso a las funciones de gestion de materias
- PARAMETROS: nada
+ FUNCION : void Insertar()
+ ACCION : graba un objeto materiaxalumno en la db
+ PARAMETROS: clsMateriaXAlumnoDTO dto, int id, int legajo
  DEVUELVE : nada
 ============================================================================= **/
-void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo, int LegajoMateria){
+void clsMateriaXAlumnoBL::Insertar(clsMateriaXAlumnoDTO dto, int id, int legajo){
     clsMateriaXAlumnoDAO dao;
     dto.SetId(id);
     dto.SetLegajo(legajo);
-    dto.SetLegajoMateria(LegajoMateria);
     dao.Insertar(dto);
 }
 
 /**=============================================================================
- FUNCION : void Listar()
- ACCION : Lista el contenido de la db
- PARAMETROS: clsMateriaDTO *lista
- DEVUELVE : nada
-============================================================================= **/
-//void clsMateriaBL::Listar(clsMateriaXAlumnoDTO *lista)
-//    {
-//    clsMateriaXAlumnoDAO dao;
-//    dao.Listar(lista);
-//    }
-/**=============================================================================
  FUNCION : int CountAsignados()
  ACCION : devuelve la cantidad de registros que existen en la db
- PARAMETROS: nada
+ PARAMETROS: int id
  DEVUELVE : cantidad de registros
 ============================================================================= **/
 int clsMateriaXAlumnoBL::CountAsignados(int id)
@@ -49,9 +37,9 @@ int clsMateriaXAlumnoBL::CountAsignados(int id)
 }
 
 /**=============================================================================
- FUNCION : int CountAsignados()
+ FUNCION : int CountAsignadosM()
  ACCION : devuelve la cantidad de registros que existen en la db
- PARAMETROS: nada
+ PARAMETROS: int legajo
  DEVUELVE : cantidad de registros
 ============================================================================= **/
 int clsMateriaXAlumnoBL::CountAsignadosM(int legajo)
@@ -64,8 +52,8 @@ int clsMateriaXAlumnoBL::CountAsignadosM(int legajo)
 
 /**=============================================================================
  FUNCION : void ListaLegajos()
- ACCION : Lista el contenido de la db
- PARAMETROS: clsMateriaDTO *lista
+ ACCION : Llena un array con los legajos que tengan el id en su atributo id
+ PARAMETROS: int id, int *legajos
  DEVUELVE : nada
 ============================================================================= **/
 void clsMateriaXAlumnoBL::ListaLegajos(int id, int *legajos)
@@ -75,9 +63,9 @@ void clsMateriaXAlumnoBL::ListaLegajos(int id, int *legajos)
     }
 
 /**=============================================================================
- FUNCION : void ListaLegajos()
- ACCION : Lista el contenido de la db
- PARAMETROS: clsMateriaDTO *lista
+ FUNCION : void ListaIds()
+ ACCION : Llena un array con los ids que tengan el legajo en su atributo legajo
+ PARAMETROS: int id, int *legajos
  DEVUELVE : nada
 ============================================================================= **/
 void clsMateriaXAlumnoBL::ListaIds(int legajo, int *ids)

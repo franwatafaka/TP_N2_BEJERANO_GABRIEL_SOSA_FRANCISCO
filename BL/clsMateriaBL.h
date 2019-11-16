@@ -17,6 +17,8 @@ class clsMateriaBL
     void Listar(clsMateriaDTO *);
     void ListarAsignados(clsMateriaDTO *, int *);
     int Count();
+        void BuscarSubM(clsMateriaDTO *, char *cond);
+    int BuscarSubCountM(char *);
 
 };
 

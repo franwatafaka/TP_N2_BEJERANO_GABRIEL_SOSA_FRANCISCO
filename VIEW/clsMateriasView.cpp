@@ -48,15 +48,32 @@ void clsMateriasView::MenuMaterias()
         case'c':
         case'C':
         {
-            Eliminar();
+            ListarBusqueda();
         }
         break;
         case'd':
         case'D':
         {
+            Eliminar();
+        }
+        case'e':
+        case'E':
+        {
             Modificar();
         }
-
+        break;
+        case'f':
+        case'F':
+        {
+            Asignar();
+        }
+        break;
+        case'g':
+        case'G':
+        {
+            MostrarAsignaciones();
+        }
+        break;
         case 's':
         case 'S':
         {
@@ -141,13 +158,49 @@ void clsMateriasView::Modificar()
 
 }
 /**=============================================================================
+ FUNCION : void ListarBusqueda()
+ ACCION : Muestra el listado de materias activas de acuerdo a la cadena ingresada
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::ListarBusqueda()
+    {
+    clsMateriaBL bl;
+    char cond[50];
+    clsMensajesView txt;
+    system("cls");
+    txt.txtListaMaterias();
+    cout<<"Ingrese la materia:"<<endl;
+    cin.getline(cond, 50);
+    int c=bl.BuscarSubCountM(cond);
+    clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
+    bl.BuscarSubM(lista, cond);
+    char nombre[50];
+    char profesor[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"PROFESOR:";
+    cout<<setw(20)<<"ID:"<<endl;
+    txt.txtLinea();
+    for(int x=0;x<c;x++)
+    {
+        lista[x].GetNombre(nombre);
+        cout<<setw(6)<<nombre;
+        lista[x].GetProfesor(profesor);
+        cout<<setw(20)<<profesor;
+        cout<<setw(20)<<lista[x].GetId()<<endl;
+        txt.txtLinea();
+    }
+    cout<<endl;
+    }
+
+/**=============================================================================
  FUNCION : void Listar()
  ACCION : Muestra el listado de materias activas
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
 void clsMateriasView::Listar()
-    {
+{
     clsMateriaBL bl;
     clsMensajesView txt;
     system("cls");
@@ -171,10 +224,11 @@ void clsMateriasView::Listar()
         txt.txtLinea();
     }
     cout<<endl;
-    }
+}
+
 
     /**=============================================================================
- FUNCION : void MostrarAsignados()
+ FUNCION : void MostrarAsignadosM()
  ACCION : Muestra el listado de alumnos de la db.
  PARAMETROS: clsAlumnoDTO *listalegajos, int cant
  DEVUELVE : nada
@@ -226,5 +280,34 @@ void clsMateriasView::MostrarMateria(clsMateriaDTO dto)
     cout<<endl;
     }
 
+/**=============================================================================
+ FUNCION : void MostrarAlumno()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::Asignar()
+{
+        clsMateriaXAlumnoVIEW mview;
+        mview.AsignarAtoM();
+}
+
+/**=============================================================================
+ FUNCION : void MostrarAsignaciones()
+ ACCION : Muestra el listado de alumnos de la db.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriasView::MostrarAsignaciones()
+{
+        clsMateriaXAlumnoDAO mdao;
+        clsMensajesView txt;
+        Listar();
+        txt.txtLinea();
+        txt.txtSeleccionDeMateria();
+        int id;
+        cin>>id;
+        mdao.mostrarAlumnosAsignados(id);
+}
 
 

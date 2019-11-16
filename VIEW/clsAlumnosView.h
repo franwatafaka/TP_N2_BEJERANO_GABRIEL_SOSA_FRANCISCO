@@ -18,6 +18,7 @@ class clsAlumnosView
     void MenuAlumnos();
     void Insertar();
     void Listar();
+    void ListarBusqueda();
     void Asignar();
     void MostrarAlumno(clsAlumnoDTO);
     void MostrarAsignados(clsAlumnoDTO *, int);

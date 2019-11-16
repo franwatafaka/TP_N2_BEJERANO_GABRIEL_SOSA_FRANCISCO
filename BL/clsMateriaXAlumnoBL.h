@@ -11,7 +11,7 @@
 class clsMateriaXAlumnoBL
 {
     public:
-        void Insertar(clsMateriaXAlumnoDTO, int, int, int);
+        void Insertar(clsMateriaXAlumnoDTO, int, int);
         void Listar(clsMateriaXAlumnoDTO *);
         int Count();
         void ListaLegajos(int, int *);

@@ -15,6 +15,7 @@
 #include <cstdio>
 #include "../DTO/clsMateriaDTO.h"
 #include "../VIEW/clsMensajesView.h"
+#include "../Helpers/clsCadenas.h"
 
 char const ARCHIVO_MATERIAS[]="archivo_materia.dat";
 /**=============================================================================**/
@@ -31,6 +32,8 @@ class clsMateriaDAO
     void leerMateria(int, clsMateriaDTO);
     int buscarMateria(int);
     void ListarAsignados(clsMateriaDTO *, int *);
+    void BuscarSubM(clsMateriaDTO *, char *cond);
+    int BuscarSubCountM(char *);
 };
 
 #endif // CLSMATERIADAO_H

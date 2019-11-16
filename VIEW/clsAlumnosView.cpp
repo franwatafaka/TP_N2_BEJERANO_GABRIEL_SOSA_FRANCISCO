@@ -37,40 +37,46 @@ void clsAlumnosView::MenuAlumnos()
         switch(validar.validarUnaLetra(op))
         {
         case'a':
-            case'A':
+        case'A':
                 {
                     Insertar();
                 }
                 break;
         case'b':
-            case'B':
+        case'B':
                 {
                     Listar();
                 }
                 break;
+        break;
         case'c':
-            case'C':
-                {
-                    Eliminar();
-                }
-                break;
+        case'C':
+        {
+            ListarBusqueda();
+        }
+        break;
         case'd':
-            case'D':
-                {
-                    Modificar();
-                }
-                break;
+        case'D':
+        {
+            Eliminar();
+        }
         case'e':
-            case'E':
-                {
-                    Asignar();                }
-                break;
+        case'E':
+        {
+            Modificar();
+        }
+        break;
         case'f':
-            case'F':
-                {
-                    MostrarAsignaciones();
-                }
-                break;
+        case'F':
+        {
+            Asignar();
+        }
+        break;
+        case'g':
+        case'G':
+        {
+            MostrarAsignaciones();
+        }
                 case 's':
         case 'S':
         {
@@ -189,6 +195,40 @@ void clsAlumnosView::Listar()
 }
 
 /**=============================================================================
+ FUNCION : void ListarBusqueda()
+ ACCION : Muestra el listado de alumnos de la db de acuerdo a un parametro(nombre)
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnosView::ListarBusqueda()
+{
+    clsAlumnoBL bl;
+    char cond[50];
+    clsMensajesView txt;
+    txt.txtListaAlumnos();
+    cout<<"Ingrese el alumno:"<<endl;
+    cin.getline(cond, 50);
+    int c=bl.BuscarSubCountA(cond);
+    clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
+    bl.BuscarSubA(lista, cond);
+    char nombre[50];
+    char apellido[50];
+    cout<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"APELLIDO:";
+    cout<<setw(20)<<"LEGAJO:"<<endl;
+    txt.txtLinea();
+    for(int x=0; x<c; x++)
+    {
+        lista[x].GetNombre(nombre);
+        cout<<setw(6)<<nombre;
+        lista[x].GetApellido(apellido);
+        cout<<setw(20)<<apellido;
+        cout<<setw(20)<<lista[x].GetLegajo()<<endl;
+        txt.txtLinea();
+    }
+}
+
+/**=============================================================================
  FUNCION : void MostrarAsignados()
  ACCION : Muestra el listado de alumnos de la db.
  PARAMETROS: clsAlumnoDTO *listalegajos, int cant
@@ -217,8 +257,8 @@ void clsAlumnosView::MostrarAsignados(clsAlumnoDTO *listalegajos, int cant)
 
 /**=============================================================================
  FUNCION : void MostrarAlumno()
- ACCION : Muestra el listado de alumnos de la db.
- PARAMETROS: nada
+ ACCION : Muestra el dto pasado
+ PARAMETROS: clsAlumnoDTO dto
  DEVUELVE : nada
 ============================================================================= **/
 void clsAlumnosView::MostrarAlumno(clsAlumnoDTO dto)
@@ -240,8 +280,8 @@ void clsAlumnosView::MostrarAlumno(clsAlumnoDTO dto)
 }
 
 /**=============================================================================
- FUNCION : void MostrarAlumno()
- ACCION : Muestra el listado de alumnos de la db.
+ FUNCION : void Asignar()
+ ACCION : Accede a la gestión de asignación de alumnos
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -252,8 +292,8 @@ void clsAlumnosView::Asignar()
 }
 
 /**=============================================================================
- FUNCION : void MostrarAlumno()
- ACCION : Muestra el listado de alumnos de la db.
+ FUNCION : void MostrarAsignaciones()
+ ACCION : Muestra las materias asignadas al alumno
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/

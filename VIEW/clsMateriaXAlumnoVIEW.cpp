@@ -11,6 +11,9 @@
 #include "clsMateriaXAlumnoVIEW.h"
 #include "../CSYSTEM/csystem.h"
 
+#include "../BL/clsValidacionesBL.h"
+#include "../VIEW/clsMensajesView.h"
+
 using namespace std;
 
 /**=============================================================================
@@ -60,10 +63,11 @@ void clsMateriaXAlumnoVIEW::AsignarAtoM()
             }
         }
     }
+    system("cls");
 }
 /**=============================================================================
  FUNCION : void AsignarMtoA()
- ACCION : estructura de las materias x alumno
+ ACCION : Permite asociar un alumno a una materia
  PARAMETROS:nada.
  DEVUELVE : nada.
 ============================================================================= **/
@@ -107,17 +111,17 @@ void clsMateriaXAlumnoVIEW::AsignarMtoA()
             txt.txtAsignacionError();
         }
     }
+        system("cls");
 }
 
 /**=============================================================================
- FUNCION : void MostrarAlumno()
- ACCION : Muestra el listado de alumnos de la db.
- PARAMETROS: nada
- DEVUELVE : nada
+ FUNCION : void MenuMXA()
+ ACCION : muestra las opciones de asignacion disponible, y concede acceso a las mismas
+ PARAMETROS:nada.
+ DEVUELVE : nada.
 ============================================================================= **/
-void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
+void clsMateriaXAlumnoVIEW::MenuMXA()
 {
-<<<<<<< HEAD
     clsMensajesView txt;
     system("cls");
     char op[50];
@@ -167,20 +171,11 @@ void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
         break;
     }
     }
-=======
-        clsMateriaXAlumnoDAO mdao;
-        clsMensajesView txt;
-        txt.txtLinea();
-        txt.txtSeleccionDeMateria();
-        int id;
-        cin>>id;
-        mdao.Listar(id);
->>>>>>> 5a6e84480e210091c6059749fdded53acc95ea76
 }
 
 /**=============================================================================
  FUNCION : void MostrarAsignaciones()
- ACCION : Muestra el listado de alumnos de la db.
+ ACCION : Muestra el listado de alumnos asignados a materias de la db.
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -190,12 +185,12 @@ void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
         clsAlumnoBL abl;
         clsAlumnosView aview;
         clsMensajesView txt;
+        aview.Listar();
         txt.txtLinea();
         txt.txtSeleccionDeMateria();
         int id;
         cin>>id;
         int c=bl.CountAsignados(id);
-        system("pause");
         int legajos[c];
         for(int x=0; x<c; x++){legajos[x]=0;}
         clsAlumnoDTO *listalegajos = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
@@ -206,7 +201,7 @@ void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
 
 /**=============================================================================
  FUNCION : void MostrarAsignaciones()
- ACCION : Muestra el listado de alumnos de la db.
+ ACCION : Muestra el listado de materias asignadas a alumnos de la db.
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -216,12 +211,12 @@ void clsMateriaXAlumnoVIEW::MostrarAsignacionesM()
         clsMateriaBL abl;
         clsMateriasView aview;
         clsMensajesView txt;
+        aview.Listar();
         txt.txtLinea();
         txt.txtSeleccionDeAlumno();
         int legajo;
         cin>>legajo;
         int c=bl.CountAsignadosM(legajo);
-        system("pause");
         int ids[c];
         for(int x=0; x<c; x++){ids[x]=0;}
         clsMateriaDTO *listaids = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);

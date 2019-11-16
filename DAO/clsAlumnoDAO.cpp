@@ -8,6 +8,7 @@
                              INCLUSIONES ESTANDAR
 =============================================================================**/
 #include "clsAlumnoDAO.h"
+#include "../VIEW/clsMensajesView.h"
 /**=============================================================================
  FUNCION : void Insertar()
  ACCION : Carga en la db el objeto dto
@@ -152,10 +153,6 @@ void clsAlumnoDAO::leerAlumno(int pos, clsAlumnoDTO adto)
         {
             if(!dto.GetEliminado())
             {
-                //LA FUNCION NO PUEDE DEVOLVER UN OBJETO, POR ENDE, DEBERIA
-                //DEVOLVER LA DIRECCION DE MEMORIA DE dto, Y DESDE AFUERA SE
-                //DEBERIA COPIAR DESDE &dto, hasta sizeof(clsAlumnoDTO) a la
-                //variable que llame a esta funcion.
                 fseek(p,sizeof(clsAlumnoDTO)*pos,SEEK_SET);
                 adto.Copy(dto);
                 break;
@@ -168,8 +165,8 @@ void clsAlumnoDAO::leerAlumno(int pos, clsAlumnoDTO adto)
 
 /**=============================================================================
  FUNCION : void buscarAlumno()
- ACCION : Guarda en la db la modificacion realizada en el registro.
- PARAMETROS: clsAlumnoDTO dto
+ ACCION : devuelve posicion del registro en el archivo de la db
+ PARAMETROS: int legajo
  DEVUELVE : nada
 ============================================================================= **/
 int clsAlumnoDAO::buscarAlumno(int legajo)
@@ -184,11 +181,6 @@ int clsAlumnoDAO::buscarAlumno(int legajo)
         {
             if(dto_arch.GetLegajo()==legajo && !dto_arch.GetEliminado())
             {
-                //PARA PONER EL CURSOR AL PRINCIPIO DEL REGISTRO (EN ESTE CASO,
-                //EL PRINCIPIO DEL OBJETO:
-                //fseek(p,sizeof(clsAlumnoDTO)*pos,SEEK_SET);
-                //PARA ESCRIBIR LOS DATOS DEL DTO EN ESTA POSICION:
-                //fwrite(&dto,sizeof(clsAlumnoDTO),1,p);
                 return pos;
                 break;
             }
@@ -198,6 +190,67 @@ int clsAlumnoDAO::buscarAlumno(int legajo)
         fclose(p);
     }
 }
+
+/**=============================================================================
+ FUNCION : void Buscarsub()
+ ACCION : Compara dos cadenas, char *cond
+ PARAMETROS: clsMateriaDTO *lista
+ DEVUELVE : nada
+============================================================================= **/
+void clsAlumnoDAO::BuscarSubA(clsAlumnoDTO *dto, char *cond)
+{
+    FILE *p;
+    int pos=0;
+    clsAlumnoDTO dto_arch;
+	clsCadenas cadenas;
+	char nombre[50];
+    p = fopen(ARCHIVO_ALUMNOS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto_arch,sizeof(clsAlumnoDTO),1,p))
+        {
+		dto_arch.GetNombre(nombre);
+            if(!dto_arch.GetEliminado()&& cadenas.strSub(nombre, cond)>=0)
+            {
+                /** en caso de que encuentre registros que no esten eliminados, los agregara al listado */
+                dto[pos].Copy(dto_arch);
+                pos++;
+            }
+        }
+        fclose(p);
+    }
+}
+/**=============================================================================
+ FUNCION : void BuscarSubCountA(char *)
+ ACCION : copia en un array el listado de registros de materias
+ PARAMETROS: clsMateriaDTO *dto
+ DEVUELVE : nada
+============================================================================= **/
+int clsAlumnoDAO::BuscarSubCountA(char *cond)
+{
+    FILE *p;
+    int cant=0;
+    clsAlumnoDTO dto;
+		clsCadenas cadenas;
+	char nombre[50];
+
+    p = fopen(ARCHIVO_ALUMNOS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsAlumnoDTO),1,p))
+        {
+				dto.GetNombre(nombre);
+            if(!dto.GetEliminado()&& cadenas.strSub(nombre, cond)>=0)
+            {
+                cant++;
+            }
+        }
+        fclose(p);
+    }
+    return cant;
+}
+
+
 
 /**=============================================================================
  FUNCION : void ListarAsignados()

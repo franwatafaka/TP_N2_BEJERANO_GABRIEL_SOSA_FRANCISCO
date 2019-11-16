@@ -9,6 +9,7 @@
 =============================================================================**/
 #include "clsMateriaDAO.h"
 #include "../DTO/clsMateriaDTO.h"
+#include "../VIEW/clsMensajesView.h"
 /** en DAO NO VAN NI COUT NI CIN JAAMAS */
 /**=============================================================================
  FUNCION : void Insertar()
@@ -224,4 +225,63 @@ void clsMateriaDAO::ListarAsignados(clsMateriaDTO *listaids, int *ids)
         }
         fclose(p);
     }
+}
+
+/**=============================================================================
+ FUNCION : void BuscarSubM()
+ ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaDAO::BuscarSubM(clsMateriaDTO *dto, char *cond)
+{
+    FILE *p;
+    int pos=0;
+    clsMateriaDTO dto_arch;
+	clsCadenas cadenas;
+	char nombre[50];
+    p = fopen(ARCHIVO_MATERIAS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto_arch,sizeof(clsMateriaDTO),1,p))
+        {
+		dto_arch.GetNombre(nombre);
+            if(!dto_arch.GetEliminado()&& cadenas.strSub(nombre, cond)>=0)
+            {
+                /** en caso de que encuentre registros que no esten eliminados, los agregara al listado */
+                dto[pos].Copy(dto_arch);
+                pos++;
+            }
+        }
+        fclose(p);
+    }
+}
+/**=============================================================================
+ FUNCION : void BuscarSubCountM(char *)
+ ACCION : copia en un array el listado de registros de materias
+ PARAMETROS: clsMateriaDTO *dto
+ DEVUELVE : nada
+============================================================================= **/
+int clsMateriaDAO::BuscarSubCountM(char *cond)
+{
+    FILE *p;
+    int cant=0;
+    clsMateriaDTO dto;
+		clsCadenas cadenas;
+	char nombre[50];
+
+    p = fopen(ARCHIVO_MATERIAS,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaDTO),1,p))
+        {
+				dto.GetNombre(nombre);
+            if(!dto.GetEliminado()&& cadenas.strSub(nombre, cond)>=0)
+            {
+                cant++;
+            }
+        }
+        fclose(p);
+    }
+    return cant;
 }

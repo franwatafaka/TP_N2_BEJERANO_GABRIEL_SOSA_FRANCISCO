@@ -18,12 +18,13 @@ class clsMateriasView
     void MenuMaterias();
     void Insertar();
     void Listar();
+    void ListarBusqueda();
     void Asignar();
     void MostrarMateria(clsMateriaDTO);
     void MostrarAsignadosM(clsMateriaDTO *, int);
     void Eliminar();
     void Modificar();
-//    void MostrarAsignaciones();
+    void MostrarAsignaciones();
 
 };
 

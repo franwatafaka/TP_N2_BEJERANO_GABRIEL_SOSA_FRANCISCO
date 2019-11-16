@@ -1,0 +1,15 @@
+#ifndef CLSCADENAS_H
+#define CLSCADENAS_H
+
+
+class clsCadenas
+{
+    public:
+        clsCadenas();
+
+    protected:
+
+    private:
+};
+
+#endif // CLSCADENAS_H

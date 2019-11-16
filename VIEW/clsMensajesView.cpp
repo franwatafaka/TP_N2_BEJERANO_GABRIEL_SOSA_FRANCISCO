@@ -36,7 +36,7 @@ cout<<" A  .-'      \\ .-.\\   \\   \\ \\ '--.__     '\\"<<endl;
 cout<<" |  |____.----((Q))\\   \\__|--\\_      \\     '"<<endl;
 cout<<"    ( )        '-'  \\_  :  \\-' '--.___\\"<<endl;
 cout<<"     Y                \\  \\  \\       \\(_)"<<endl;
-cout<<"     I                 \\  \\  \\         \,"<<endl;
+cout<<"     I                 \\  \\  \\         \\,"<<endl;
 cout<<"     I                  \\  \\  \\          \\"<<endl;
 cout<<"     A                   \\  \\  \\          '\\"<<endl;
 cout<<"     |                    \\  \\__|           '"<<endl;
@@ -58,7 +58,7 @@ system("pause");
 
 /**==============================================================================
  FUNCIÓN : txtDespedida()
- ACCIÓN : Saludo al inicio del programa
+ ACCIÓN : Saludo al final del programa
  PARAMETROS: Ninguno.
  DEVUELVE : nada.
 ============================================================================== */
@@ -75,7 +75,7 @@ cout<<" A  .-'      \\ .-.\\   \\   \\ \\ '--.__     '\\"<<endl;
 cout<<" |  |____.----((Q))\\   \\__|--\\_      \\     '"<<endl;
 cout<<"    ( )        '-'  \\_  :  \\-' '--.___\\"<<endl;
 cout<<"     Y                \\  \\  \\       \\(_)"<<endl;
-cout<<"     I                 \\  \\  \\         \,"<<endl;
+cout<<"     I                 \\  \\  \\         \\,"<<endl;
 cout<<"     I                  \\  \\  \\          \\"<<endl;
 cout<<"     A                   \\  \\  \\          '\\"<<endl;
 cout<<"     |                    \\  \\__|           '"<<endl;
@@ -103,7 +103,7 @@ system("pause");
 ============================================================================= **/
 void clsMensajesView::txtLinea()
 {
-    cout<<"----------------------------------------------"<<endl;
+    cout<<"-----------------------------------------------------"<<endl;
 }
 
 /**=============================================================================
@@ -131,12 +131,12 @@ void clsMensajesView::txtMenuMateria()
  cout<<"----------SUBMENU MATERIAS---------"<<endl;
     cout<<"A - Nueva Materia"<<endl;
     cout<<"B - Listar Materias"<<endl;
-    cout<<"C - Eliminar Materias"<<endl;
-    cout<<"D - Modificar Materias"<<endl;
-    cout<<"E - Asignar Alumnos"<<endl;
-    cout<<"F - Mostrar Alumnos Asignados"<<endl;
+    cout<<"C - Buscar Materias (por nombre)"<<endl;
+    cout<<"D - Eliminar Materias"<<endl;
+    cout<<"E - Modificar Materias"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------------------"<<endl;
+    cout<<endl;
 }
 /**=============================================================================
  FUNCION : void txtMenuAlumno()
@@ -149,12 +149,12 @@ void clsMensajesView::txtMenuAlumno()
     cout<<"----------SUBMENU ALUMNOS---------"<<endl;
     cout<<"A - Nuevo Alumno"<<endl;
     cout<<"B - Listar Alumnos"<<endl;
-    cout<<"C - Eliminar Alumnos"<<endl;
-    cout<<"D - Modificar Alumnos"<<endl;
-    cout<<"E - Asignar Materias"<<endl;
-    cout<<"F - Mostrar Materias Asignadas"<<endl;
+    cout<<"C - Buscar Alumnos (por nombre)"<<endl;
+    cout<<"D - Eliminar Alumnos"<<endl;
+    cout<<"E - Modificar Alumnos"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
+    cout<<endl;
 }
 /**=============================================================================
  FUNCION : void txtMenuMatXAl()
@@ -162,12 +162,16 @@ void clsMensajesView::txtMenuAlumno()
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
-void clsMensajesView::txtMenuMatXAl()
+void clsMensajesView::txtMenuMXA()
 {
- cout<<"----------SUBMENU MATERIAS X ALUMNOS ---------"<<endl;
-    cout<<"A - Asignar alumno a materias"<<endl;
+    cout<<"----------SUBMENU MATERIAS POR ALUMNO---------"<<endl;
+    cout<<"A - Asignar alumnos a materia"<<endl;
+    cout<<"B - Asignar materias a alumno"<<endl;
+    cout<<"C - Mostrar alumnos asignados a materia"<<endl;
+    cout<<"D - Mostrar materias asignados a alumnos"<<endl;
     cout<<"S - Salir"<<endl;
     cout<<"-----------------------"<<endl;
+    cout<<endl;
 }
 
 
@@ -182,7 +186,7 @@ void clsMensajesView::txtMenuPpal(){
 cout<<"|----------------------------MENU----------------------------|"<<endl;
         cout<<setw(40)<<" A - Materias"<<endl;
         cout<<setw(39)<<" B - Alumnos"<<endl;
-        cout<<setw(20))<<" C - Asignar alumno a materia"<<endl;
+        cout<<setw(51)<<" C - Materias por alumno"<<endl;
         cout<<setw(37)<<" S - Salir"<<endl;
         cout<<"|------------------------------------------------------------|"<<endl;
 }
@@ -228,7 +232,7 @@ void clsMensajesView::txtAlumnoInexistente()
 
 /**=============================================================================
  FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ ACCION : Texto que indica que la materia no existe
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -238,34 +242,51 @@ void clsMensajesView::txtMateriaInexistente()
 }
 
 /**=============================================================================
- FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ FUNCION : void txtBusquedaSinResultados()
+ ACCION : Texto que indica que no existen resultados para el parametro que se ingresó
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtBusquedaSinResultados()
+{
+    cout<<"-- ERROR: NO SE ENCONTRARON RESULTADOS PARA ESTA BUSQUEDA --"<<endl;
+    cout<<"--  NOTA: Ingrese 0 para regresar, o verifique su ingreso --"<<endl;
+    cout<<"--                  e intentelo nuevamente.               --"<<endl;
+    cout<<endl;
+    cout<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtAsignacionDeMaterias()
+ ACCION : Texto que indica el ingreso de un caracter para finalizar, y el ingreso de un dato
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
 void clsMensajesView::txtAsignacionDeMaterias()
 {
-        cout<<  "||  NOTA: Ingrese 0 para finalizar la asignación  ||"<<endl;
-        cout<<endl;
+        cout<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
         cout<<  "Ingrese el ID de la materia que desea asignar al alumno:"<<endl;
 }
 
 /**=============================================================================
- FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ FUNCION : void txtAsignacionDeAlumnos()
+  ACCION : Texto que indica el ingreso de un caracter para finalizar, y el ingreso de un dato
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
 void clsMensajesView::txtAsignacionDeAlumnos()
 {
-    cout<<  "||  NOTA: Ingrese 0 para finalizar la asignación  ||"<<endl;
-    cout<<endl;
+    cout<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
     cout<<  "Ingrese el legajo del alumno que desea asignar a la materia:"<<endl;
 }
 
 /**=============================================================================
- FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ FUNCION : void txtAsignacionExitosa()
+ ACCION : Texto que indica la correcta asingación
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -276,8 +297,8 @@ system("pause");
 }
 
 /**=============================================================================
- FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ FUNCION : void txtAsignacionError()
+ ACCION : Texto que indica un error de asignacion
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
@@ -288,27 +309,30 @@ system("pause");
 }
 
 /**=============================================================================
- FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ FUNCION : void txtSeleccionDeMateria()
+  ACCION : Texto que indica el ingreso de un caracter para finalizar, y el ingreso de un dato
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
 void clsMensajesView::txtSeleccionDeMateria()
 {
         cout<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
-        cout<<endl;
-        cout<<  "Ingrese el ID de la materia para mostrar los alumnos asignados:"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
+        cout<<  "Ingrese la materia para mostrar los alumnos asignados:"<<endl;
+
 }
 
 /**=============================================================================
- FUNCION : void txtMateriaInexistente()
- ACCION : Texto que indica que el alumno no existe
+ FUNCION : void txtSeleccionDeAlumno()
+  ACCION : Texto que indica el ingreso de un caracter para finalizar, y el ingreso de un dato
  PARAMETROS: nada
  DEVUELVE : nada
 ============================================================================= **/
 void clsMensajesView::txtSeleccionDeAlumno()
 {
     cout<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
-    cout<<endl;
-    cout<<  "Ingrese el legajo del alumno para mostrar las materias asignadas:"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
+    cout<<  "Ingrese el alumno para mostrar las materias asignadas:"<<endl;
 }

@@ -15,6 +15,7 @@
 /*=============================================================================**/
 #include <cstdio>
 #include "../DTO/clsAlumnoDTO.h"
+#include "../Helpers/clsCadenas.h"
 
 char const ARCHIVO_ALUMNOS[]="archivo_alumno.dat";
 /**=============================================================================**/
@@ -31,6 +32,8 @@ class clsAlumnoDAO
     void leerAlumno(int, clsAlumnoDTO);
     int buscarAlumno(int);
     void ListarAsignados(clsAlumnoDTO *, int *);
+    void BuscarSubA(clsAlumnoDTO *, char *cond);
+    int BuscarSubCountA(char *);
 };
 
 #endif // CLSALUMNODAO_H
