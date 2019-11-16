@@ -206,7 +206,7 @@ void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
     bool exit;
     aview.Listar();
     txt.txtLinea();
-    txt.txtSeleccionDeMateria();
+    txt.txtSeleccionDeAlumno();
     int id;
     cin>>id;
     exit=dao.verificarEstadoAlumno(id);
@@ -239,7 +239,7 @@ void clsMateriaXAlumnoVIEW::MostrarAsignacionesM()
     clsMensajesView txt;
     aview.Listar();
     txt.txtLinea();
-    txt.txtSeleccionDeAlumno();
+    txt.txtSeleccionDeMateria();
     int legajo;
     cin>>legajo;
     int c=bl.CountAsignadosM(legajo);
