@@ -337,3 +337,16 @@ void clsMensajesView::txtSeleccionDeAlumno()
         txt.txtLinea();
     cout<<setw(20)<<right<<  "Ingrese el alumno para mostrar las materias asignadas:"<<endl;
 }
+
+/**=============================================================================
+ FUNCION : void txtErrorIngreso()
+  ACCION : Texto que indica un error en el ingreso de el ingreso de un dato
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtErrorIngreso()
+{
+    cout<<setw(20)<<right<<  "||  NOTA: Por favor, verifique su ingreso  ||"<<endl;
+        clsMensajesView txt;
+        txt.txtLinea();
+}

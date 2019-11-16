@@ -30,7 +30,7 @@ class clsMensajesView
         void txtSeleccionDeAlumno();
         void txtSeleccionDeMateria();
         void txtBusquedaSinResultados();
-
+        void txtErrorIngreso();
 };
 
 #endif // CLSMENSAJESVIEW_H

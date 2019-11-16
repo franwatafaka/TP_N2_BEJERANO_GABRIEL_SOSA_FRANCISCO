@@ -108,22 +108,31 @@ void clsAlumnosView::Insertar()
     clsAlumnoDTO dto;
     clsAlumnoBL bl;
     clsValidacionesBL validar;
+    clsMensajesView txt;
     system("cls");
     cout<<"NUEVO ALUMNO:"<<endl;
-    cout<<"Ingrese un nombre:"<<endl;
-    cin.getline(nombre, 50);
-   if(validar.validarUnaLetra(nombre)!= -1)
+    cout<<setw(20)<<"Ingrese un nombre:"<<endl;
+    cout << "\t \t " ; cin.getline(nombre, 50);
+    if(validar.strAlfa(nombre)!= -1)
     {
-
-    cout<<"Ingrese un apellido:"<<endl;
-    cin.getline(apellido, 50);
-    dto.SetNombre(nombre);
-    dto.SetApellido(apellido);
-    bl.Insertar(dto);
-
+        cout<<setw(20)<<"Ingrese un apellido:"<<endl;
+        cout << "\t \t " ; cin.getline(apellido, 50);
+        if(validar.strAlfa(apellido)!= -1 )
+        {
+            system("pause");
+            dto.SetNombre(nombre);
+            dto.SetApellido(apellido);
+            bl.Insertar(dto);
+        }
+        else
+        {
+            txt.txtErrorIngreso();
+        }
     }
-
-
+    else
+    {
+        txt.txtErrorIngreso();
+    }
 }
 
 /**=============================================================================
@@ -157,6 +166,8 @@ void clsAlumnosView::Modificar()
     int legajo;
     clsAlumnoDTO dto;
     clsAlumnoBL bl;
+    clsValidacionesBL validar;
+    clsMensajesView txt;
     system("cls");
     Listar();
     cout<<"Ingrese el legajo del alumno cuyos datos se deseen modificar:";
@@ -164,13 +175,29 @@ void clsAlumnosView::Modificar()
     dto.SetLegajo(legajo);
     cin.ignore();
     cout<<"MODIFICAR ALUMNO:"<<endl;
-    cout<<"Ingrese nuevo nombre:";
-    cin.getline(nombre, 50);
-    cout<<"Ingrese nuevo apellido:";
-    cin.getline(apellido, 50);
-    dto.SetNombre(nombre);
-    dto.SetApellido(apellido);
-    bl.Modificar(dto);
+    cout<<"NUEVO ALUMNO:"<<endl;
+    cout<<setw(20)<<"Ingrese un nuevo nombre:"<<endl;
+    cout << "\t \t " ; cin.getline(nombre, 50);
+    if(validar.strAlfa(nombre)!= -1)
+    {
+        cout<<setw(20)<<"Ingrese un nuevo apellido:"<<endl;
+        cout << "\t \t " ; cin.getline(apellido, 50);
+        if(validar.strAlfa(apellido)!= -1)
+        {
+            system("pause");
+            dto.SetNombre(nombre);
+            dto.SetApellido(apellido);
+            bl.Modificar(dto);
+        }
+        else
+        {
+            txt.txtErrorIngreso();
+        }
+    }
+    else
+    {
+        txt.txtErrorIngreso();
+    }
 }
 
 /**=============================================================================

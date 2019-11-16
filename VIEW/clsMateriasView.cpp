@@ -103,17 +103,32 @@ void clsMateriasView::Insertar()
     clsMateriaDTO dto;
     clsMateriaBL bl;
     clsValidacionesBL validar;
+    clsMensajesView txt;
     system("cls");
     cout<<setw(20)<<"NUEVA MATERIA:"<<endl;
     cout<<setw(20)<<"Ingrese un nombre:"<<endl;
     cout << "\t \t " ; cin.getline(nombre, 50);
-    if(validar.validarUnaLetra(nombre)!= -1)
+    if(validar.strAlfa(nombre)!= -1)
     {
-    cout<<setw(20)<<"Ingrese un profesor:"<<endl;
-    cout << "\t \t " ; cin.getline(profesor, 50);
-    dto.SetNombre(nombre);
-    dto.SetProfesor(profesor);
-    bl.Insertar(dto);
+        cout<<setw(20)<<"Ingrese un profesor:"<<endl;
+        cout << "\t \t " ; cin.getline(profesor, 50);
+        if(validar.strAlfa(profesor)!= -1)
+        {
+            system("pause");
+            dto.SetNombre(nombre);
+            dto.SetProfesor(profesor);
+            bl.Insertar(dto);
+        }
+        else
+        {
+            txt.txtErrorIngreso();
+            system("pause");
+        }
+    }
+    else
+    {
+        txt.txtErrorIngreso();
+        system("pause");
     }
 }
 /**=============================================================================
@@ -144,6 +159,8 @@ void clsMateriasView::Modificar()
     int id;
     clsMateriaDTO dto;
     clsMateriaBL bl;
+    clsValidacionesBL validar;
+    clsMensajesView txt;
     system("cls");
     Listar();
     cout<<setw(20)<<"Ingrese el ID de la materia cuyos datos se deseen modificar:";
@@ -151,14 +168,28 @@ void clsMateriasView::Modificar()
     dto.SetId(id);
     cin.ignore();
     cout<<setw(40)<<right<<"MODIFICAR MATERIA:"<<endl;
-    cout<<setw(20)<<"Ingrese nuevo nombre:";
+    cout<<setw(20)<<"Ingrese un nombre:"<<endl;
     cout << "\t \t " ; cin.getline(nombre, 50);
-    cout<<setw(20)<<"Ingrese nuevo profesor:";
-    cout << "\t \t " ;cin.getline(profesor, 50);
-    dto.SetNombre(nombre);
-    dto.SetProfesor(profesor);
-    bl.Modificar(dto);
-
+    if(validar.strAlfa(nombre)!= -1)
+    {
+        cout<<setw(20)<<"Ingrese un profesor:"<<endl;
+        cout << "\t \t " ; cin.getline(profesor, 50);
+        if(validar.strAlfa(profesor)!= -1)
+        {
+            system("pause");
+            dto.SetNombre(nombre);
+            dto.SetProfesor(profesor);
+            bl.Modificar(dto);
+        }
+        else
+        {
+            txt.txtErrorIngreso();
+        }
+    }
+    else
+    {
+        txt.txtErrorIngreso();
+    }
 }
 /**=============================================================================
  FUNCION : void ListarBusqueda()

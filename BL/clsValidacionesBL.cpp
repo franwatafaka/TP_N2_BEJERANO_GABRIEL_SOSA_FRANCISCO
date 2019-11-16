@@ -45,3 +45,34 @@ char clsValidacionesBL::validarUnaLetra(char *opcion)
         }
 }
 
+/**=============================================================================
+ FUNCION : char strAlfa()
+ ACCION : devuelve el tamaño de chars de la cadena, o -1 si hay un número en ella, ó -1 si es
+          una cadena vacia
+ PARAMETROS: char *str
+ DEVUELVE : valida que se ingrese solo una cadena de chars, y que no se haya
+            ingresado vacio
+============================================================================= **/
+int clsValidacionesBL::strAlfa(char *str)
+{
+	int len=0;
+	if(*str=='\0')
+    {
+        return -1;
+    }
+	while(*str!= '\0')
+	{
+    if(((*str >= 65) && (*str <= 90)) || ((*str >= 97) && (*str <= 122)))
+        {
+            len++;
+            str++;
+        }
+        else
+        {
+            return -1;
+            break;
+        }
+	}
+	return len;
+}
+

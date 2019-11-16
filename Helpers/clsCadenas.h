@@ -7,7 +7,6 @@ class clsCadenas
     public:
     int strSub(char *, char *);
     void strToUpper(char *);
-
 };
 
 #endif // CLSCADENAS_H

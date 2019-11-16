@@ -7,7 +7,7 @@ class clsValidacionesBL{
     public:
     char validarUnNumero(char *);
     char validarUnaLetra(char *);
-
+    int strAlfa(char *);
 };
 
 #endif // CLSVALIDACIONESBL_H
