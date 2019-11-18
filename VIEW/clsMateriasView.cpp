@@ -36,41 +36,49 @@ void clsMateriasView::MenuMaterias()
         case 'a':
         case 'A':
         {
+            system("cls");
             Insertar();
         }
         break;
         case 'b':
         case 'B':
         {
+            system("cls");
             Listar();
         }
         break;
         case'c':
         case'C':
         {
+            system("cls");
             ListarBusqueda();
         }
         break;
         case'd':
         case'D':
         {
+            system("cls");
             Eliminar();
         }
+        break;
         case'e':
         case'E':
         {
+            system("cls");
             Modificar();
         }
         break;
         case'f':
         case'F':
         {
+            system("cls");
             Asignar();
         }
         break;
         case'g':
         case'G':
         {
+            system("cls");
             MostrarAsignaciones();
         }
         break;
@@ -141,10 +149,12 @@ void clsMateriasView::Eliminar()
 {
     int Id;
     clsMateriaDAO dao;
+    clsMateriaXAlumnoDAO mxadao;
     Listar();
     cout<<setw(20)<<"Ingrese el ID de la materia a eliminar:"<<endl;
     cout << "\t \t "; cin>>Id;
     dao.Eliminar(Id);
+    mxadao.EliminarXId(Id);
 }
 /**=============================================================================
  FUNCION : void Modificar()

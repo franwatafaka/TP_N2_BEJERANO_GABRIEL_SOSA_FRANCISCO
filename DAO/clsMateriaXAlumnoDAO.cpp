@@ -55,6 +55,66 @@ void clsMateriaXAlumnoDAO::Listar(clsMateriaXAlumnoDTO *dto )
 }
 
 /**=============================================================================
+ FUNCION : void EliminarXLegajo()
+ ACCION : Elimina el registro de la db (de manera logica)
+ PARAMETROS: int legajo
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoDAO::EliminarXLegajo(int legajo)
+{
+    FILE *p;
+    clsMateriaXAlumnoDTO dto;
+    int pos = 0;
+    p = fopen(ARCHIVO_MXA,"rb+");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetLegajo()==legajo && !dto.GetEliminado())
+            {
+                dto.SetEliminado(true);
+                fseek(p,sizeof(clsMateriaXAlumnoDTO)*pos,SEEK_SET);
+                fwrite(&dto,sizeof(clsMateriaXAlumnoDTO),1,p);
+                break;
+            }
+            pos++;
+        }
+
+        fclose(p);
+    }
+}
+
+/**=============================================================================
+ FUNCION : void EliminarXId()
+ ACCION : Elimina el registro de la db (de manera logica)
+ PARAMETROS: int id
+ DEVUELVE : nada
+============================================================================= **/
+void clsMateriaXAlumnoDAO::EliminarXId(int id)
+{
+    FILE *p;
+    clsMateriaXAlumnoDTO dto;
+    int pos = 0;
+    p = fopen(ARCHIVO_MXA,"rb+");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetId()==id && !dto.GetEliminado())
+            {
+                dto.SetEliminado(true);
+                fseek(p,sizeof(clsMateriaXAlumnoDTO)*pos,SEEK_SET);
+                fwrite(&dto,sizeof(clsMateriaXAlumnoDTO),1,p);
+                break;
+            }
+            pos++;
+        }
+
+        fclose(p);
+    }
+}
+
+/**=============================================================================
  FUNCION : void ListaLegajos()
  ACCION : copia en un array el listado de registros de alumnos
  PARAMETROS: clsAlumnoDTO *dto

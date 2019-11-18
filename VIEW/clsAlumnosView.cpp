@@ -38,17 +38,17 @@ void clsAlumnosView::MenuAlumnos()
         {
         case'a':
         case'A':
-                {
-                    Insertar();
-                    system("cls");
-                }
-                break;
+        {
+            Insertar();
+            system("cls");
+        }
+        break;
         case'b':
         case'B':
-                {
-                    Listar();
-                }
-                break;
+        {
+            system("cls");
+            Listar();
+        }
         break;
         case'c':
         case'C':
@@ -63,24 +63,29 @@ void clsAlumnosView::MenuAlumnos()
             system("cls");
             Eliminar();
         }
+        break;
         case'e':
         case'E':
         {
+            system("cls");
             Modificar();
         }
         break;
         case'f':
         case'F':
         {
+            system("cls");
             Asignar();
         }
         break;
         case'g':
         case'G':
         {
+            system("cls");
             MostrarAsignaciones();
         }
-                case 's':
+        break;
+        case 's':
         case 'S':
         {
             salir=true;
@@ -161,10 +166,12 @@ void clsAlumnosView::Eliminar()
 {
     int Legajo;
     clsAlumnoDAO dao;
+    clsMateriaXAlumnoDAO mxadao;
     Listar();
     cout<<"Ingrese el legajo del alumno a eliminar:";
     cin>>Legajo;
     dao.Eliminar(Legajo);
+    mxadao.EliminarXLegajo(Legajo);
 }
 
 /**=============================================================================

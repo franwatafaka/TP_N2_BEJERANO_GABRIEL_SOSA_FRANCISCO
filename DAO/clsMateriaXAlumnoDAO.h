@@ -31,6 +31,8 @@ class clsMateriaXAlumnoDAO
 public:
     bool Insertar(clsMateriaXAlumnoDTO);
     void Listar(clsMateriaXAlumnoDTO *);
+    void EliminarXLegajo(int legajo);
+    void EliminarXId(int id);
     void ListaLegajos(int, int *);
     void ListaIds(int, int *);
     int Count();
