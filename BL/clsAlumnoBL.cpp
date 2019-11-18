@@ -20,6 +20,8 @@ void clsAlumnoBL::Insertar(clsAlumnoDTO dto){
     clsAlumnoDAO dao;
     int legajo=dao.Count()+1;
     dto.SetLegajo(legajo);
+    tFecha fecha;
+    dto.SetFecha(fecha);
     dto.SetEliminado(false);
     dao.Insertar(dto);
 }

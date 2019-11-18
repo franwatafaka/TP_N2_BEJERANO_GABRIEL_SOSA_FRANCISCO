@@ -34,4 +34,5 @@ clsAlumnoDTO::clsAlumnoDTO()
      strcpy(this->Nombre,nombre);
      dto.GetApellido(Apellido);
      strcpy(this->Apellido,Apellido);
+     this->Fecha = dto.GetFecha();
  }

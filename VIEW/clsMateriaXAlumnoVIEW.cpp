@@ -72,7 +72,7 @@ void clsMateriaXAlumnoVIEW::AsignarAtoM()
         }
     }
     system("cls");
-     }
+    }
 }
 /**=============================================================================
  FUNCION : void AsignarMtoA()

@@ -76,3 +76,33 @@ int clsValidacionesBL::strAlfa(char *str)
 	return len;
 }
 
+/**=============================================================================
+ FUNCION : bool ValidacionFecha()
+ ACCION : devuelve false si se ingresa una fecha incorrecta
+ PARAMETROS: int dia, int mes, int anio
+ DEVUELVE : devuelve true si la fecha está ok
+============================================================================= **/
+bool clsValidacionesBL::ValidacionFecha(tFecha fecha)
+{
+    int x=0;
+        if(fecha.dia>0 && fecha.dia<32)
+        {
+            x++;
+        }
+        if(fecha.mes>0 && fecha.mes<13)
+        {
+            x++;
+        }
+        if(fecha.anio>1900 && fecha.anio<2200)
+        {
+            x++;
+        }
+    if(x==3)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

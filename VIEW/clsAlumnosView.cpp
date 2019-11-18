@@ -105,6 +105,7 @@ void clsAlumnosView::Insertar()
 {
     char nombre[50];
     char apellido[50];
+    tFecha fecha;
     clsAlumnoDTO dto;
     clsAlumnoBL bl;
     clsValidacionesBL validar;
@@ -119,10 +120,24 @@ void clsAlumnosView::Insertar()
         cout << "\t \t " ; cin.getline(apellido, 50);
         if(validar.strAlfa(apellido)!= -1 )
         {
-            system("pause");
-            dto.SetNombre(nombre);
-            dto.SetApellido(apellido);
-            bl.Insertar(dto);
+            cout<<setw(20)<<"Ingrese dia de nacimiento:"<<endl;
+            cin>>fecha.dia;
+            cout<<setw(20)<<"Ingrese mes de nacimiento:"<<endl;
+            cin>>fecha.mes;
+            cout<<setw(20)<<"Ingrese anio de nacimiento:"<<endl;
+            cin>>fecha.anio;
+            if(validar.ValidacionFecha(fecha))
+            {
+                system("pause");
+                dto.SetNombre(nombre);
+                dto.SetApellido(apellido);
+                dto.SetFecha(fecha);
+                bl.Insertar(dto);
+            }
+            else
+            {
+                txt.txtErrorIngreso();
+            }
         }
         else
         {
@@ -168,6 +183,7 @@ void clsAlumnosView::Modificar()
     clsAlumnoBL bl;
     clsValidacionesBL validar;
     clsMensajesView txt;
+    tFecha fecha;
     system("cls");
     Listar();
     cout<<"Ingrese el legajo del alumno cuyos datos se deseen modificar:";
@@ -184,10 +200,24 @@ void clsAlumnosView::Modificar()
         cout << "\t \t " ; cin.getline(apellido, 50);
         if(validar.strAlfa(apellido)!= -1)
         {
-            system("pause");
-            dto.SetNombre(nombre);
-            dto.SetApellido(apellido);
-            bl.Modificar(dto);
+            cout<<setw(20)<<"Ingrese dia de nacimiento:"<<endl;
+            cin>>fecha.dia;
+            cout<<setw(20)<<"Ingrese mes de nacimiento:"<<endl;
+            cin>>fecha.mes;
+            cout<<setw(20)<<"Ingrese anio de nacimiento:"<<endl;
+            cin>>fecha.anio;
+            if(validar.ValidacionFecha(fecha))
+            {
+                system("pause");
+                dto.SetNombre(nombre);
+                dto.SetApellido(apellido);
+                dto.SetFecha(fecha);
+                bl.Modificar(dto);
+            }
+            else
+            {
+                txt.txtErrorIngreso();
+            }
         }
         else
         {

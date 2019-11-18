@@ -16,6 +16,12 @@
 #include <cstring>
 
 /**=============================================================================**/
+//STRUCT QUE CONTIENE LA ARQUITECTURA DE FECHA QUE UTILIZARÁ EL OBJETO ALUMNO
+struct tFecha{
+    int dia;
+    int mes;
+    int anio;
+};
 
 class clsAlumnoDTO
 {
@@ -30,6 +36,8 @@ class clsAlumnoDTO
         void SetApellido(char* val) { strcpy(Apellido ,val); }
         bool GetEliminado() { return Eliminado; }
         void SetEliminado(bool val) { Eliminado = val; }
+        tFecha GetFecha() { return Fecha; }
+        void SetFecha(tFecha val) { Fecha = val; }
 
         void Copy(clsAlumnoDTO);
 
@@ -37,6 +45,7 @@ class clsAlumnoDTO
         char Nombre[50];
         int Legajo;
         char Apellido[50];
+        tFecha Fecha;
         bool Eliminado;
 };
 
