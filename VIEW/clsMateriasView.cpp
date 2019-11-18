@@ -1,9 +1,9 @@
 /**#############################################################################
  ARCHIVO             : clsMensajesView.cpp
  AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
- VERSION             : 0.01 beta.
+ VERSION             : 1.0 beta.
  FECHA DE CREACION   : 07/11/2019.
- ULTIMA ACTUALIZACION: dd/mm/aaaa.
+ ULTIMA ACTUALIZACION: 16/11/2019.
 *****************************************************************************
                              INCLUSIONES ESTANDAR
 =============================================================================**/
@@ -30,7 +30,7 @@ void clsMateriasView::MenuMaterias()
     while(!salir)
     {
     txt.txtMenuMateria();
-    cin.getline(op, 50);
+    cout << "\t \t " ; cin.getline(op, 50);
     switch(validar.validarUnaLetra(op))
     {
         case 'a':
@@ -102,16 +102,19 @@ void clsMateriasView::Insertar()
     char profesor[50];
     clsMateriaDTO dto;
     clsMateriaBL bl;
+    clsValidacionesBL validar;
     system("cls");
-    cout<<"NUEVA MATERIA:"<<endl;
-    cout<<"Ingrese un nombre:"<<endl;
-    cin.getline(nombre, 50);
-    cout<<"Ingrese un profesor:"<<endl;
-    cin.getline(profesor, 50);
+    cout<<setw(20)<<"NUEVA MATERIA:"<<endl;
+    cout<<setw(20)<<"Ingrese un nombre:"<<endl;
+    cout << "\t \t " ; cin.getline(nombre, 50);
+    if(validar.validarUnaLetra(nombre)!= -1)
+    {
+    cout<<setw(20)<<"Ingrese un profesor:"<<endl;
+    cout << "\t \t " ; cin.getline(profesor, 50);
     dto.SetNombre(nombre);
     dto.SetProfesor(profesor);
     bl.Insertar(dto);
-
+    }
 }
 /**=============================================================================
  FUNCION : void Eliminar()
@@ -124,8 +127,8 @@ void clsMateriasView::Eliminar()
     int Id;
     clsMateriaDAO dao;
     Listar();
-    cout<<"Ingrese el ID de la materia a eliminar:"<<endl;
-    cin>>Id;
+    cout<<setw(20)<<"Ingrese el ID de la materia a eliminar:"<<endl;
+    cout << "\t \t "; cin>>Id;
     dao.Eliminar(Id);
 }
 /**=============================================================================
@@ -144,14 +147,14 @@ void clsMateriasView::Modificar()
     system("cls");
     Listar();
     cout<<setw(20)<<"Ingrese el ID de la materia cuyos datos se deseen modificar:";
-    cin>>id;
+    cout << "\t \t" ; cin>>id;
     dto.SetId(id);
     cin.ignore();
     cout<<setw(40)<<right<<"MODIFICAR MATERIA:"<<endl;
     cout<<setw(20)<<"Ingrese nuevo nombre:";
-    cin.getline(nombre, 50);
+    cout << "\t \t " ; cin.getline(nombre, 50);
     cout<<setw(20)<<"Ingrese nuevo profesor:";
-    cin.getline(profesor, 50);
+    cout << "\t \t " ;cin.getline(profesor, 50);
     dto.SetNombre(nombre);
     dto.SetProfesor(profesor);
     bl.Modificar(dto);
@@ -170,8 +173,8 @@ void clsMateriasView::ListarBusqueda()
     clsMensajesView txt;
     system("cls");
     txt.txtListaMaterias();
-    cout<<"Ingrese la materia:"<<endl;
-    cin.getline(cond, 50);
+   cout<<setw(20)<<"Ingrese la materia:"<<endl;
+    cout << "\t \t " ;cin.getline(cond, 50);
     int c=bl.BuscarSubCountM(cond);
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.BuscarSubM(lista, cond);

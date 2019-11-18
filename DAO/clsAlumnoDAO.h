@@ -24,7 +24,7 @@ class clsAlumnoDAO
 {
     public:
 
-    void Insertar(clsAlumnoDTO);
+    void Insertar(clsAlumnoDTO );
     void Eliminar(int);
     void Modificar(clsAlumnoDTO);
     void Listar(clsAlumnoDTO * );
@@ -34,6 +34,7 @@ class clsAlumnoDAO
     void ListarAsignados(clsAlumnoDTO *, int *);
     void BuscarSubA(clsAlumnoDTO *, char *cond);
     int BuscarSubCountA(char *);
+
 };
 
 #endif // CLSALUMNODAO_H

@@ -1,9 +1,9 @@
 /**#############################################################################
  ARCHIVO             : clsMensajesView.cpp
  AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
- VERSION             : 0.01 beta.
+ VERSION             : 1.0 beta.
  FECHA DE CREACION   : 07/11/2019.
- ULTIMA ACTUALIZACION: dd/mm/aaaa.
+ ULTIMA ACTUALIZACION: 16/11/2019.
 *****************************************************************************
                              INCLUSIONES ESTANDAR
 =============================================================================**/
@@ -42,7 +42,7 @@ void clsMainView::Menu()
 
         system("cls");
         txt.txtMenuPpal();
-        cin.getline(op, 50);
+        cout << "\t \t " ; cin.getline(op, 50);
         switch(validar.validarUnaLetra(op))
         {
         case 'a':

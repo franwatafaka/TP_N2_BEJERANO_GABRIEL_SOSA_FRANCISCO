@@ -71,7 +71,8 @@ AYUDANTE : Fernando Calabuig.
 		<Unit filename="DTO/clsMateriaDTO.h" />
 		<Unit filename="DTO/clsMateriaXAlumnoDTO.cpp" />
 		<Unit filename="DTO/clsMateriaXAlumnoDTO.h" />
-		<Unit filename="HEADERS/menu.h" />
+		<Unit filename="Helpers/clsCadenas.cpp" />
+		<Unit filename="Helpers/clsCadenas.h" />
 		<Unit filename="LICENCIA GPL/Licencia GPL (traduccion NO OFICIAL - castellano argentina).txt" />
 		<Unit filename="LICENCIA GPL/Licencia GPL original (ingles).txt" />
 		<Unit filename="VIEW/clsAlumnosView.cpp" />

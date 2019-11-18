@@ -40,6 +40,7 @@ void clsAlumnosView::MenuAlumnos()
         case'A':
                 {
                     Insertar();
+                    system("cls");
                 }
                 break;
         case'b':
@@ -52,12 +53,14 @@ void clsAlumnosView::MenuAlumnos()
         case'c':
         case'C':
         {
+            system("cls");
             ListarBusqueda();
         }
         break;
         case'd':
         case'D':
         {
+            system("cls");
             Eliminar();
         }
         case'e':
@@ -104,15 +107,22 @@ void clsAlumnosView::Insertar()
     char apellido[50];
     clsAlumnoDTO dto;
     clsAlumnoBL bl;
+    clsValidacionesBL validar;
     system("cls");
     cout<<"NUEVO ALUMNO:"<<endl;
     cout<<"Ingrese un nombre:"<<endl;
     cin.getline(nombre, 50);
+   if(validar.validarUnaLetra(nombre)!= -1)
+    {
+
     cout<<"Ingrese un apellido:"<<endl;
     cin.getline(apellido, 50);
     dto.SetNombre(nombre);
     dto.SetApellido(apellido);
     bl.Insertar(dto);
+
+    }
+
 
 }
 
