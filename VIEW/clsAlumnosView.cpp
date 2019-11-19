@@ -253,9 +253,7 @@ void clsAlumnosView::Listar()
     bl.Listar(lista);
     char nombre[50];
     char apellido[50];
-    cout<<setw(6)<<"NOMBRE:";
-    cout<<setw(20)<<"APELLIDO:";
-    cout<<setw(20)<<"LEGAJO:"<<endl;
+    cout<<setw(6)<<"NOMBRE:" << setw(20)<<"APELLIDO:" <<setw(20)<<"LEGAJO:"<<endl;
     txt.txtLinea();
     for(int x=0; x<c; x++)
     {

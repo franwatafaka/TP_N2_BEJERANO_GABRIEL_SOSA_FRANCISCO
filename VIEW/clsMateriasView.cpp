@@ -260,12 +260,17 @@ void clsMateriasView::Listar()
     txt.txtLinea();
     for(int x=0;x<c;x++)
     {
+        if(!lista[x].GetEliminado())
+        {
+
+
         lista[x].GetNombre(nombre);
         cout<<setw(6)<<nombre;
         lista[x].GetProfesor(profesor);
         cout<<setw(20)<<profesor;
         cout<<setw(20)<<lista[x].GetId()<<endl;
         txt.txtLinea();
+        }
     }
     cout<<endl;
 }
@@ -351,6 +356,7 @@ void clsMateriasView::MostrarAsignaciones()
         txt.txtSeleccionDeMateria();
         int id;
         cin>>id;
+        cin.ignore();
         mdao.mostrarAlumnosAsignados(id);
 }
 
