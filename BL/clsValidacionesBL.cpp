@@ -55,7 +55,6 @@ char clsValidacionesBL::validarUnaLetra(char *opcion)
 ============================================================================= **/
 int clsValidacionesBL::strAlfa(char *str)
 {
-	int len=0;
 	int ic = 0, is,tamSub;
     tamSub = strlen(str);
 	if(tamSub== 0)
@@ -64,36 +63,26 @@ int clsValidacionesBL::strAlfa(char *str)
     }
 	while(str[ic]!='\0')
 	{
-    if(((*str >= 65) && (*str <= 90)) || ((*str >= 97) && (*str <= 122)))
+	    if(str[ic]==' ')
         {
-            len++;
-            str++;
+             ic++;
         }
         else
         {
-            return -1;
-            break;
+             if(((str[ic] >= 65) && (str[ic] <= 90)) || ((str[ic] >= 97) && (str[ic] <= 122)))
+             {
+                  ic++;
+             }
+                else
+            {
+                return -1;
+                break;
+            }
         }
+         ic++;
 	}
-	return len;
+	return  ic++;;
 
-
-
-    while(cad[ic]!='\0')
-    {
-        int icAux = ic;
-        is = 0;
-        while(sub[is]==cad[icAux] && sub[is]!='\0')
-        {
-            icAux++;
-			is++;
-        }
-        if(tamSub==is)
-        {
-            return ic;
-        }
-        ic++;
-    }
 }
 
 /**=============================================================================
