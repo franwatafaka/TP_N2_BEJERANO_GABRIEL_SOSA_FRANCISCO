@@ -25,7 +25,8 @@ using namespace std;
 ============================================================================= **/
 void clsMensajesView::txtLinea()
 {
-    cout<<setw(40)<<right<<"-----------------------------------------------------"<<endl;
+
+    cout<<"\t \t |-----------------------------------------------------|"<<endl;
 }
 
 /**==============================================================================
@@ -37,34 +38,34 @@ void clsMensajesView::txtLinea()
 void clsMensajesView::txtPresentacion()
 {
     system("cls");
-cout<<setw(35)<<right<<"    .-.__      \\ .-.  ___  __"<<endl;
-cout<<setw(35)<<right<<"|_|  '--.-.-(   \\/\\;;\\_\\.-._______.-."<<endl;
-cout<<setw(35)<<right<<"(-)___     \\ \\ .-\\ \\;;\\(   \\       \\ \\"<<endl;
-cout<<setw(35)<<right<<"Y    '---._\\_((Q)) \\;;\\ .-\\     __(_)"<<endl;
-cout<<setw(35)<<right<<"I           __'-' / .--.((Q))---'    \\,"<<endl;
-cout<<setw(35)<<right<<"I     ___.-:    \\|  |   \\'-'_          \\"<<endl;
-cout<<setw(35)<<right<<"A  .-'      \\ .-.\\   \\   \\ \\ '--.__     '\\"<<endl;
-cout<<setw(35)<<right<<"|  |____.----((Q))\\   \\__|--\\_      \\     '"<<endl;
-cout<<setw(35)<<right<<"   ( )        '-'  \\_  :  \\-' '--.___\\"<<endl;
-cout<<setw(35)<<right<<"    Y                \\  \\  \\       \\(_)"<<endl;
-cout<<setw(35)<<right<<"    I                 \\  \\  \\         \\,"<<endl;
-cout<<setw(35)<<right<<"    I                  \\  \\  \\          \\"<<endl;
-cout<<setw(35)<<right<<"    A                   \\  \\  \\          '\\"<<endl;
-cout<<setw(35)<<right<<"    |                    \\  \\__|           '"<<endl;
-cout<<setw(35)<<right<<"                          \\_:.  \\"<<endl;
-cout<<setw(35)<<right<<"           BIENVENIDO       \\ \\  \\"<<endl;
-cout<<setw(35)<<right<<"                             \\ \\  \\"<<endl;
-cout<<setw(35)<<right<<"                              \\_\\_|"<<endl;
-cout<<setw(35)<<right<<"           ____  _____ ____  _____ _ "<<endl;
-cout<<setw(35)<<right<<"          |  _ \\| ____| __ )| ____| |"<<endl;
-cout<<setw(35)<<right<<"          | |_) |  _| |  _ \\|  _| | |"<<endl;
-cout<<setw(35)<<right<<"          |  _ <| |___| |_) | |___| |___"<<endl;
-cout<<setw(35)<<right<<" ____   __|_|_\\_\\_____|____/|_____|_____|____  _____"<<endl;
-cout<<setw(35)<<right<<"/ ___| / _ \\|  ___|_   _\\ \\      / / \\  |  _ \\| ____|"<<endl;
-cout<<setw(35)<<right<<"\\___ \\| | | | |_    | |  \\ \\ /\\ / / _ \\ | |_) |  _|"<<endl;
-cout<<setw(35)<<right<<" ___) | |_| |  _|   | |   \\ V  V / ___ \\|  _ <| |___"<<endl;
-cout<<setw(35)<<right<<"|____/ \\___/|_|     |_|    \\_/\\_/_/   \\_\\_| \\_\\_____|"<<endl;
-cout << setw(40)<<right<< system("pause");
+cout<<"\t \t     .-.__      \\ .-.  ___  __"<<endl;
+cout<<"\t \t |_|  '--.-.-(   \\/\\;;\\_\\.-._______.-."<<endl;
+cout<<"\t \t (-)___     \\ \\ .-\\ \\;;\\(   \\       \\ \\"<<endl;
+cout<<"\t \t Y    '---._\\_((Q)) \\;;\\ .-\\     __(_)"<<endl;
+cout<<"\t \t I           __'-' / .--.((Q))---'    \\,"<<endl;
+cout<<"\t \t I     ___.-:    \\|  |   \\'-'_          \\"<<endl;
+cout<<"\t \t A  .-'      \\ .-.\\   \\   \\ \\ '--.__     '\\"<<endl;
+cout<<"\t \t |  |____.----((Q))\\   \\__|--\\_      \\     '"<<endl;
+cout<<"\t \t    ( )        '-'  \\_  :  \\-' '--.___\\"<<endl;
+cout<<"\t \t     Y                \\  \\  \\       \\(_)"<<endl;
+cout<<"\t \t     I                 \\  \\  \\         \\,"<<endl;
+cout<<"\t \t     I                  \\  \\  \\          \\"<<endl;
+cout<<"\t \t     A                   \\  \\  \\          '\\"<<endl;
+cout<<"\t \t     |                    \\  \\__|           '"<<endl;
+cout<<"\t \t                           \\_:.  \\"<<endl;
+cout<<"\t \t            BIENVENIDO       \\ \\  \\"<<endl;
+cout<<"\t \t                              \\ \\  \\"<<endl;
+cout<<"\t \t                               \\_\\_|"<<endl;
+cout<<"\t \t            ____  _____ ____  _____ _ "<<endl;
+cout<<"\t \t           |  _ \\| ____| __ )| ____| |"<<endl;
+cout<<"\t \t           | |_) |  _| |  _ \\|  _| | |"<<endl;
+cout<<"\t \t           |  _ <| |___| |_) | |___| |___"<<endl;
+cout<<"\t \t  ____   __|_|_\\_\\_____|____/|_____|_____|____  _____"<<endl;
+cout<<"\t \t / ___| / _ \\|  ___|_   _\\ \\      / / \\  |  _ \\| ____|"<<endl;
+cout<<"\t \t \\___ \\| | | | |_    | |  \\ \\ /\\ / / _ \\ | |_) |  _|"<<endl;
+cout<<"\t \t  ___) | |_| |  _|   | |   \\ V  V / ___ \\|  _ <| |___"<<endl;
+cout<<"\t \t |____/ \\___/|_|     |_|    \\_/\\_/_/   \\_\\_| \\_\\_____|"<<endl;
+cout <<"\t \t " ; system("pause");
 }
 
 /**==============================================================================
@@ -76,34 +77,34 @@ cout << setw(40)<<right<< system("pause");
 void clsMensajesView::txtDespedida()
 {
     system("cls");
-cout<<setw(40)<<right<<"    .-.__      \\ .-.  ___  __"<<endl;
-cout<<setw(40)<<right<<"|_|  '--.-.-(   \\/\\;;\\_\\.-._______.-."<<endl;
-cout<<setw(40)<<right<<"(-)___     \\ \\ .-\\ \\;;\\(   \\       \\ \\"<<endl;
-cout<<setw(40)<<right<<"Y    '---._\\_((Q)) \\;;\\ .-\\     __(_)"<<endl;
-cout<<setw(40)<<right<<"I           __'-' / .--.((Q))---'    \\,"<<endl;
-cout<<setw(40)<<right<<"I     ___.-:    \\|  |   \\'-'_          \\"<<endl;
-cout<<setw(40)<<right<<"A  .-'      \\ .-.\\   \\   \\ \\ '--.__     '\\"<<endl;
-cout<<setw(40)<<right<<"|  |____.----((Q))\\   \\__|--\\_      \\     '"<<endl;
-cout<<setw(40)<<right<<"   ( )        '-'  \\_  :  \\-' '--.___\\"<<endl;
-cout<<setw(40)<<right<<"    Y                \\  \\  \\       \\(_)"<<endl;
-cout<<setw(40)<<right<<"    I                 \\  \\  \\         \\,"<<endl;
-cout<<setw(40)<<right<<"    I                  \\  \\  \\          \\"<<endl;
-cout<<setw(40)<<right<<"    A                   \\  \\  \\          '\\"<<endl;
-cout<<setw(40)<<right<<"    |                    \\  \\__|           '"<<endl;
-cout<<setw(40)<<right<<"                          \\_:.  \\"<<endl;
-cout<<setw(40)<<right<<"       GRACIAS POR USAR     \\ \\  \\"<<endl;
-cout<<setw(40)<<right<<"       NUESTRO PROGRAMA      \\ \\  \\"<<endl;
-cout<<setw(40)<<right<<"                              \\_\\_|"<<endl;
-cout<<setw(40)<<right<<"           ____  _____ ____  _____ _ "<<endl;
-cout<<setw(40)<<right<<"          |  _ \\| ____| __ )| ____| |"<<endl;
-cout<<setw(40)<<right<<"          | |_) |  _| |  _ \\|  _| | |"<<endl;
-cout<<setw(40)<<right<<"          |  _ <| |___| |_) | |___| |___"<<endl;
-cout<<setw(40)<<right<<" ____   __|_|_\\_\\_____|____/|_____|_____|____  _____"<<endl;
-cout<<setw(40)<<right<<"/ ___| / _ \\|  ___|_   _\\ \\      / / \\  |  _ \\| ____|"<<endl;
-cout<<setw(40)<<right<<"\\___ \\| | | | |_    | |  \\ \\ /\\ / / _ \\ | |_) |  _|"<<endl;
-cout<<setw(40)<<right<<" ___) | |_| |  _|   | |   \\ V  V / ___ \\|  _ <| |___"<<endl;
-cout<<setw(40)<<right<<"|____/ \\___/|_|     |_|    \\_/\\_/_/   \\_\\_| \\_\\_____|"<<endl;
-cout << setw(40)<<right<<"" ; system("pause");
+cout<<"\t \t     .-.__      \\ .-.  ___  __"<<endl;
+cout<<"\t \t |_|  '--.-.-(   \\/\\;;\\_\\.-._______.-."<<endl;
+cout<<"\t \t (-)___     \\ \\ .-\\ \\;;\\(   \\       \\ \\"<<endl;
+cout<<"\t \t Y    '---._\\_((Q)) \\;;\\ .-\\     __(_)"<<endl;
+cout<<"\t \t I           __'-' / .--.((Q))---'    \\,"<<endl;
+cout<<"\t \t I     ___.-:    \\|  |   \\'-'_          \\"<<endl;
+cout<<"\t \t A  .-'      \\ .-.\\   \\   \\ \\ '--.__     '\\"<<endl;
+cout<<"\t \t |  |____.----((Q))\\   \\__|--\\_      \\     '"<<endl;
+cout<<"\t \t    ( )        '-'  \\_  :  \\-' '--.___\\"<<endl;
+cout<<"\t \t     Y                \\  \\  \\       \\(_)"<<endl;
+cout<<"\t \t     I                 \\  \\  \\         \\,"<<endl;
+cout<<"\t \t     I                  \\  \\  \\          \\"<<endl;
+cout<<"\t \t     A                   \\  \\  \\          '\\"<<endl;
+cout<<"\t \t     |                    \\  \\__|           '"<<endl;
+cout<<"\t \t                           \\_:.  \\"<<endl;
+cout<<"\t \t        GRACIAS POR USAR     \\ \\  \\"<<endl;
+cout<<"\t \t        NUESTRO PROGRAMA      \\ \\  \\"<<endl;
+cout<<"\t \t                               \\_\\_|"<<endl;
+cout<<"\t \t            ____  _____ ____  _____ _ "<<endl;
+cout<<"\t \t           |  _ \\| ____| __ )| ____| |"<<endl;
+cout<<"\t \t           | |_) |  _| |  _ \\|  _| | |"<<endl;
+cout<<"\t \t           |  _ <| |___| |_) | |___| |___"<<endl;
+cout<<"\t \t  ____   __|_|_\\_\\_____|____/|_____|_____|____  _____"<<endl;
+cout<<"\t \t / ___| / _ \\|  ___|_   _\\ \\      / / \\  |  _ \\| ____|"<<endl;
+cout<<"\t \t \\___ \\| | | | |_    | |  \\ \\ /\\ / / _ \\ | |_) |  _|"<<endl;
+cout<<"\t \t  ___) | |_| |  _|   | |   \\ V  V / ___ \\|  _ <| |___"<<endl;
+cout<<"\t \t |____/ \\___/|_|     |_|    \\_/\\_/_/   \\_\\_| \\_\\_____|"<<endl;
+cout << "\t \t " ; system("pause");
 
 }
 
@@ -118,7 +119,7 @@ void clsMensajesView::txtMensajeError()
             txtLinea();
             cout<<setw(30)<<right<<"   -   ERROR: POR FAVOR, INGRESE UNA OPCION VALIDA-"<<endl;
             txtLinea();
-            cout << setw(40)<<right<<"" ; system("pause");
+            cout << "\t \t " ; system("pause");
 }
 
 /**=============================================================================
@@ -129,14 +130,14 @@ void clsMensajesView::txtMensajeError()
 ============================================================================= **/
 void clsMensajesView::txtMenuMateria()
 {
-    cout<<setw(40)<<right<<"----------SUBMENU MATERIAS---------"<<endl;
-    cout<<setw(20)<<right<< "A - Nueva Materia"<<endl;
-    cout<<setw(20)<<right<<"B - Listar Materias"<<endl;
-    cout<<setw(20)<<right<<"C - Buscar Materias (por nombre)"<<endl;
-    cout<<setw(20)<<right<<"D - Eliminar Materias"<<endl;
-    cout<<setw(20)<<right<<"E - Modificar Materias"<<endl;
-    cout<<setw(20)<<right<<"S - Salir"<<endl;
-    cout<<setw(40)<<right<<"-----------------------------------"<<endl;
+    cout<<"\t \t----------SUBMENU MATERIAS---------"<<endl;
+    cout<<setw(40)<<right<< "A - Nueva Materia"<<endl;
+    cout<<setw(40)<<right<<"B - Listar Materias"<<endl;
+    cout<<setw(40)<<right<<"C - Buscar Materias (por nombre)"<<endl;
+    cout<<setw(40)<<right<<"D - Eliminar Materias"<<endl;
+    cout<<setw(40)<<right<<"E - Modificar Materias"<<endl;
+    cout<<setw(40)<<right<<"S - Salir"<<endl;
+   txtLinea();
     cout<<endl;
 }
 /**=============================================================================
@@ -147,14 +148,14 @@ void clsMensajesView::txtMenuMateria()
 ============================================================================= **/
 void clsMensajesView::txtMenuAlumno()
 {
-    cout<<setw(40)<<right<<"----------SUBMENU ALUMNOS---------"<<endl;
+    cout<<"\t \t----------SUBMENU ALUMNOS---------"<<endl;
     cout<<setw(40)<<right<<"A - Nuevo Alumno"<<endl;
     cout<<setw(40)<<right<<"B - Listar Alumnos"<<endl;
-    cout<<setw(40)<<right<<"C - Buscar Alumnos (por nombre)"<<endl;
+    cout<<setw(55)<<right<<"C - Buscar Alumnos (por nombre)"<<endl;
     cout<<setw(40)<<right<<"D - Eliminar Alumnos"<<endl;
     cout<<setw(40)<<right<<"E - Modificar Alumnos"<<endl;
     cout<<setw(40)<<right<<"S - Salir"<<endl;
-    cout<<setw(40)<<right<<"-----------------------"<<endl;
+    txtLinea();
     cout<<endl;
 }
 /**=============================================================================
@@ -165,13 +166,13 @@ void clsMensajesView::txtMenuAlumno()
 ============================================================================= **/
 void clsMensajesView::txtMenuMXA()
 {
-    cout<<setw(40)<<right<<"----------SUBMENU MATERIAS POR ALUMNO---------"<<endl;
-    cout<<setw(20)<<right<<"A - Asignar alumnos a materia"<<endl;
-    cout<<setw(20)<<right<<"B - Asignar materias a alumno"<<endl;
-    cout<<setw(20)<<right<<"C - Mostrar alumnos asignados a materia"<<endl;
-    cout<<setw(20)<<right<<"D - Mostrar materias asignados a alumnos"<<endl;
-    cout<<setw(20)<<right<<"S - Salir"<<endl;
-    cout<<setw(40)<<right<<"-----------------------"<<endl;
+    cout<<"\t \t----------SUBMENU MATERIAS POR ALUMNO---------"<<endl;
+    cout<<setw(60)<<right<<"A - Asignar alumnos a materia"<<endl;
+    cout<<setw(60)<<right<<"B - Asignar materias a alumno"<<endl;
+    cout<<setw(55)<<right<<"C - Mostrar alumnos asignados a materia"<<endl;
+    cout<<setw(55)<<right<<"D - Mostrar materias asignados a alumnos"<<endl;
+    cout<<setw(60)<<right<<"S - Salir"<<endl;
+    txtLinea();
     cout<<endl;
 }
 
@@ -184,11 +185,11 @@ void clsMensajesView::txtMenuMXA()
  DEVUELVE : nada
 ============================================================================= **/
 void clsMensajesView::txtMenuPpal(){
-        cout<<setw(40)<<right<<"|----------------------------MENU----------------------------|"<<endl;
-        cout<<setw(40)<<right<<" A - Materias"<<endl;
-        cout<<setw(39)<<right<<" B - Alumnos"<<endl;
-        cout<<setw(51)<<right<<" C - Materias por alumno"<<endl;
-        cout<<setw(37)<<right<<" S - Salir"<<endl;
+        cout<<"\t \t|--------------------------MENU-----------------------|"<<endl;
+        cout<<setw(50)<<right<<" A - Materias"<<endl;
+        cout<<setw(50)<<right<<" B - Alumnos"<<endl;
+        cout<<setw(60)<<right<<" C - Materias por alumno"<<endl;
+        cout<<setw(50)<<right<<" S - Salir"<<endl;
         txtLinea();
 }
 
@@ -202,7 +203,7 @@ void clsMensajesView::txtMenuPpal(){
 void clsMensajesView::txtListaAlumnos(){
 system("cls");
     txtLinea();
-    cout<<setw(20)<<right<<"-               LISTA DE ALUMNOS            -"<<endl;
+    cout<<"\t \t-               LISTA DE ALUMNOS            -"<<endl;
     txtLinea();
 }
 
@@ -216,7 +217,7 @@ system("cls");
 void clsMensajesView::txtListaMaterias(){
     system("cls");
     txtLinea();
-    cout<<setw(20)<<right<<"-               LISTA DE MATERIAS            -"<<endl;
+    cout<<"\t \t-               LISTA DE MATERIAS            -"<<endl;
     txtLinea();
 }
 
@@ -228,7 +229,7 @@ void clsMensajesView::txtListaMaterias(){
 ============================================================================= **/
 void clsMensajesView::txtAlumnoInexistente()
 {
-    cout<<setw(20)<<right<<"----------ADVERTENCIA: NO EXISTE EL ALUMNO---------"<<endl;
+    cout<<"\t \t----------ADVERTENCIA: NO EXISTE EL ALUMNO---------"<<endl;
 }
 
 /**=============================================================================
@@ -239,7 +240,7 @@ void clsMensajesView::txtAlumnoInexistente()
 ============================================================================= **/
 void clsMensajesView::txtMateriaInexistente()
 {
-    cout<<setw(20)<<right<<"----------ADVERTENCIA: NO EXISTE LA MATERIA--------"<<endl;
+    cout<<"\t \t----------ADVERTENCIA: NO EXISTE LA MATERIA--------"<<endl;
 }
 
 /**=============================================================================
@@ -250,9 +251,9 @@ void clsMensajesView::txtMateriaInexistente()
 ============================================================================= **/
 void clsMensajesView::txtBusquedaSinResultados()
 {
-    cout<<setw(20)<<right<<"-- ERROR: NO SE ENCONTRARON RESULTADOS PARA ESTA BUSQUEDA --"<<endl;
-    cout<<setw(20)<<right<<"--  NOTA: Ingrese 0 para regresar, o verifique su ingreso --"<<endl;
-    cout<<setw(20)<<right<<"--                  e intentelo nuevamente.               --"<<endl;
+    cout<<"\t \t-- ERROR: NO SE ENCONTRARON RESULTADOS PARA ESTA BUSQUEDA --"<<endl;
+    cout<<setw(40)<<right<<"--  NOTA: Ingrese 0 para regresar, o verifique su ingreso --"<<endl;
+    cout<<setw(40)<<right<<"--                  e intentelo nuevamente.               --"<<endl;
     cout<<endl;
     cout<<endl;
 }
@@ -265,10 +266,10 @@ void clsMensajesView::txtBusquedaSinResultados()
 ============================================================================= **/
 void clsMensajesView::txtAsignacionDeMaterias()
 {
-        cout<<setw(20)<<right<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
+        cout<<setw(40)<<right<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
-        cout<<setw(20)<<right<<  "Ingrese el ID de la materia que desea asignar al alumno:"<<endl;
+        cout<<setw(40)<<right<<  "Ingrese el ID de la materia que desea asignar al alumno:"<<endl;
 }
 
 /**=============================================================================
@@ -279,10 +280,10 @@ void clsMensajesView::txtAsignacionDeMaterias()
 ============================================================================= **/
 void clsMensajesView::txtAsignacionDeAlumnos()
 {
-    cout<<setw(20)<<right<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
+    cout<<setw(40)<<right<<  "||  NOTA: Ingrese 0 para finalizar la asignacion  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
-    cout<<setw(20)<< right<< "Ingrese el legajo del alumno que desea asignar a la materia:"<<endl;
+    cout<<setw(40)<< right<< "Ingrese el legajo del alumno que desea asignar a la materia:"<<endl;
 }
 
 /**=============================================================================
@@ -293,7 +294,7 @@ void clsMensajesView::txtAsignacionDeAlumnos()
 ============================================================================= **/
 void clsMensajesView::txtAsignacionExitosa()
 {
-cout<<setw(20)<<right<<"||  ASIGNACION EXITOSA  ||"<<endl;
+cout<<setw(40)<<right<<"||  ASIGNACION EXITOSA  ||"<<endl;
 cout << setw(40)<<right<<""; system("pause");
 }
 
@@ -305,7 +306,7 @@ cout << setw(40)<<right<<""; system("pause");
 ============================================================================= **/
 void clsMensajesView::txtAsignacionError()
 {
-cout<<setw(20)<<right<<"||  ERROR EN LA ASIGNACION  ||"<<endl;
+cout<<setw(40)<<right<<"||  ERROR EN LA ASIGNACION  ||"<<endl;
 cout << setw(40)<<right<<""; system("pause");
 }
 
@@ -317,10 +318,10 @@ cout << setw(40)<<right<<""; system("pause");
 ============================================================================= **/
 void clsMensajesView::txtSeleccionDeMateria()
 {
-        cout<<setw(20)<<right<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
+        cout<<setw(40)<<right<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
-        cout<<setw(20)<<right<<  "Ingrese la materia para mostrar los alumnos asignados:"<<endl;
+        cout<<setw(40)<<right<<  "Ingrese la materia para mostrar los alumnos asignados:"<<endl;
 
 }
 
@@ -332,10 +333,10 @@ void clsMensajesView::txtSeleccionDeMateria()
 ============================================================================= **/
 void clsMensajesView::txtSeleccionDeAlumno()
 {
-    cout<<setw(20)<<right<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
+    cout<<setw(40)<<right<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
-    cout<<setw(20)<<right<<  "Ingrese el alumno para mostrar las materias asignadas:"<<endl;
+    cout<<setw(40)<<right<<  "Ingrese el alumno para mostrar las materias asignadas:"<<endl;
 }
 
 /**=============================================================================
@@ -346,7 +347,7 @@ void clsMensajesView::txtSeleccionDeAlumno()
 ============================================================================= **/
 void clsMensajesView::txtErrorIngreso()
 {
-    cout<<setw(20)<<right<<  "||  NOTA: Por favor, verifique su ingreso  ||"<<endl;
+    cout<<setw(40)<<right<<  "||  NOTA: Por favor, verifique su ingreso  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
 }

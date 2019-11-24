@@ -85,6 +85,12 @@ void clsAlumnosView::MenuAlumnos()
             MostrarAsignaciones();
         }
         break;
+        case 'H':
+        case 'h':
+        {
+            //aca entra la ayuda
+        }
+        break;
         case 's':
         case 'S':
         {
