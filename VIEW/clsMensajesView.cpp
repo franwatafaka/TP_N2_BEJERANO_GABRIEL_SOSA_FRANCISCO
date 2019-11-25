@@ -143,12 +143,13 @@ void clsMensajesView::txtMenuMateria()
 {
     cout<<"\t \t |--------------SUBMENU MATERIAS-----------------------|"<<endl;
 
-    cout<<setw(40)<<right<< "A - Nueva Materia"<<endl;
-    cout<<setw(40)<<right<<"B - Listar Materias"<<endl;
+    cout<<setw(45)<<right<<"A - Nueva Materia"<<endl;
+    cout<<setw(47)<<right<<"B - Listar Materias"<<endl;
     cout<<setw(60)<<right<<"C - Buscar Materias (por nombre)"<<endl;
-    cout<<setw(40)<<right<<"D - Eliminar Materias"<<endl;
-    cout<<setw(40)<<right<<"E - Modificar Materias"<<endl;
-    cout<<setw(40)<<right<<"S - Salir"<<endl;
+    cout<<setw(48)<<right<<"D - Eliminar Materias"<<endl;
+    cout<<setw(48)<<right<<"E - Modificar Materias"<<endl;
+    cout<<setw(48)<<right<<"H - MOSTRAR AYUDAAAAA"<<endl;
+    cout<<setw(45)<<right<<"S - Salir"<<endl;
    txtLinea();
     cout<<endl;
 }

@@ -15,6 +15,7 @@
 =============================================================================**/
 #include "../BL/clsValidacionesBL.h"
 #include "../VIEW/clsMensajesView.h"
+#include "iomanip"
 using namespace std;
 
 /**=============================================================================
@@ -48,6 +49,8 @@ void clsAlumnosView::MenuAlumnos()
         {
             system("cls");
             Listar();
+            cout <<setw(40)<<right <<"" << endl; system("pause");
+            system("cls");
         }
         break;
         case'c':

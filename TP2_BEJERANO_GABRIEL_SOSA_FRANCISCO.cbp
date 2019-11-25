@@ -78,6 +78,8 @@ AYUDANTE : Fernando Calabuig.
 		<Unit filename="LICENCIA GPL/Licencia GPL original (ingles).txt" />
 		<Unit filename="VIEW/clsAlumnosView.cpp" />
 		<Unit filename="VIEW/clsAlumnosView.h" />
+		<Unit filename="VIEW/clsAyudaVIEW.cpp" />
+		<Unit filename="VIEW/clsAyudaVIEW.h" />
 		<Unit filename="VIEW/clsMainView.cpp" />
 		<Unit filename="VIEW/clsMainView.h" />
 		<Unit filename="VIEW/clsMateriaXAlumnoVIEW.cpp" />

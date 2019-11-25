@@ -185,10 +185,11 @@
 	<cstdlib>
 	<cstdio>
 
-1574639761 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
+1574649113 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
 	"clsAlumnosView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
+	"iomanip"
 
 1573945253 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
 	<cstring>
@@ -227,10 +228,12 @@
 1574116420 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
 	"../DTO/clsAlumnoDTO.h"
 
-1574637601 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+1574657858 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
 	"clsMateriasView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
+	"../VIEW/clsAyudaVIEW.h"
+	"iomanip"
 
 1574636918 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
 	"clsValidacionesBL.h"
@@ -281,7 +284,7 @@
 	<cstdlib>
 	<cstdio>
 
-1574638509 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
+1574653314 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
 	"clsMensajesView.h"
 	<cstdlib>
 	<iomanip>
@@ -520,4 +523,14 @@
 1573897017 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\helpers\clscadenas.cpp
 	"clsCadenas.h"
 	<cstring>
+
+1574651021 c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsayudaview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
+
+1574657972 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsayudaview.cpp
+	"clsAyudaVIEW.h"
 
