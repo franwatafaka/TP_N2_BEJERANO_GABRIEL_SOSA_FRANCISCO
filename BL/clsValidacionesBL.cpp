@@ -17,14 +17,14 @@
 ============================================================================= **/
 char clsValidacionesBL::validarUnNumero(char *opcion)
 {
-        if((opcion[0] >= 49) && (opcion[0] <= 57))
-        {
-            return opcion[0];
-        }
-        else
-        {
+    if((opcion[0] >= 49) && (opcion[0] <= 57))
+    {
+        return opcion[0];
+    }
+    else
+    {
         return -1;
-        }
+    }
 }
 
 /**=============================================================================
@@ -35,14 +35,14 @@ char clsValidacionesBL::validarUnNumero(char *opcion)
 ============================================================================= **/
 char clsValidacionesBL::validarUnaLetra(char *opcion)
 {
-        if(((opcion[0] >= 65) && (opcion[0] <= 90)) || ((opcion[0] >= 97) && (opcion[0] <= 122)))
-        {
-            return opcion[0];
-        }
-        else
-        {
+    if(((opcion[0] >= 65) && (opcion[0] <= 90)) || ((opcion[0] >= 97) && (opcion[0] <= 122)))
+    {
+        return opcion[0];
+    }
+    else
+    {
         return -1;
-        }
+    }
 }
 
 /**=============================================================================
@@ -55,33 +55,43 @@ char clsValidacionesBL::validarUnaLetra(char *opcion)
 ============================================================================= **/
 int clsValidacionesBL::strAlfa(char *str)
 {
-	int ic = 0, is,tamSub;
+    int ic = 0, is,tamSub;
     tamSub = strlen(str);
-	if(tamSub== 0)
+    if(tamSub== 0)
     {
         return -1;
     }
-	while(str[ic]!='\0')
-	{
-	    if(str[ic]==' ')
+    while(str[ic]!='\0')
+    {
+        if(ic==0)
         {
-             ic++;
-        }
-        else
-        {
-             if(((str[ic] >= 65) && (str[ic] <= 90)) || ((str[ic] >= 97) && (str[ic] <= 122)))
-             {
-                  ic++;
-             }
-                else
+            if(str[ic]==' ' )
             {
                 return -1;
                 break;
             }
         }
-         ic++;
-	}
-	return  ic++;;
+
+            if(str[ic]==' ')
+            {
+                ic++;
+            }
+            else
+            {
+                if(((str[ic] >= 65) && (str[ic] <= 90)) || ((str[ic] >= 97) && (str[ic] <= 122)))
+                {
+                    ic++;
+                }
+                else
+                {
+                    return -1;
+                    break;
+                }
+            }
+            ic++;
+
+    }
+    return  ic++;
 
 }
 
@@ -94,18 +104,18 @@ int clsValidacionesBL::strAlfa(char *str)
 bool clsValidacionesBL::ValidacionFecha(tFecha fecha)
 {
     int x=0;
-        if(fecha.dia>0 && fecha.dia<32)
-        {
-            x++;
-        }
-        if(fecha.mes>0 && fecha.mes<13)
-        {
-            x++;
-        }
-        if(fecha.anio>1900 && fecha.anio<2200)
-        {
-            x++;
-        }
+    if(fecha.dia>0 && fecha.dia<32)
+    {
+        x++;
+    }
+    if(fecha.mes>0 && fecha.mes<13)
+    {
+        x++;
+    }
+    if(fecha.anio>1900 && fecha.anio<2200)
+    {
+        x++;
+    }
     if(x==3)
     {
         return true;

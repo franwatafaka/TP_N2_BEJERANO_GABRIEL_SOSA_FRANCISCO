@@ -253,22 +253,21 @@ void clsAlumnosView::Listar()
 {
     clsAlumnoBL bl;
     clsMensajesView txt;
-    txt.txtListaAlumnos();
     int c=bl.Count();
     clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
     bl.Listar(lista);
     char nombre[50];
     char apellido[50];
-    cout<<setw(6)<<"NOMBRE:" << setw(20)<<"APELLIDO:" <<setw(20)<<"LEGAJO:"<<endl;
-    txt.txtLinea();
     for(int x=0; x<c; x++)
     {
+        if(x==0)
+        {
+            txt.txtListaAlumnos();
+        }
         lista[x].GetNombre(nombre);
-        cout<<setw(6)<<nombre;
         lista[x].GetApellido(apellido);
-        cout<<setw(20)<<apellido;
-        cout<<setw(20)<<lista[x].GetLegajo()<<endl;
-        txt.txtLinea();
+        cout<<setw(40)<<nombre <<setw(17)<<apellido <<setw(24)<<lista[x].GetLegajo()<<endl;
+        txt.txtLineaLarga();
     }
 }
 
@@ -283,7 +282,7 @@ void clsAlumnosView::ListarBusqueda()
     clsAlumnoBL bl;
     char cond[50];
     clsMensajesView txt;
-    txt.txtListaAlumnos();
+
     cout<<"Ingrese el alumno:"<<endl;
     cin.getline(cond, 50);
     int c=bl.BuscarSubCountA(cond);
@@ -291,18 +290,16 @@ void clsAlumnosView::ListarBusqueda()
     bl.BuscarSubA(lista, cond);
     char nombre[50];
     char apellido[50];
-    cout<<setw(6)<<"NOMBRE:";
-    cout<<setw(20)<<"APELLIDO:";
-    cout<<setw(20)<<"LEGAJO:"<<endl;
-    txt.txtLinea();
     for(int x=0; x<c; x++)
     {
+        if(x==0)
+        {
+            txt.txtListaAlumnos();
+        }
         lista[x].GetNombre(nombre);
-        cout<<setw(6)<<nombre;
         lista[x].GetApellido(apellido);
-        cout<<setw(20)<<apellido;
-        cout<<setw(20)<<lista[x].GetLegajo()<<endl;
-        txt.txtLinea();
+        cout<<setw(40)<<nombre <<setw(17)<<apellido << setw(24)<<lista[x].GetLegajo()<<endl;
+        txt.txtLineaLarga();
     }
 }
 

@@ -17,6 +17,7 @@ class clsMensajesView
         void txtMenuAlumno();
         void txtMenuMXA();
         void txtLinea();
+        void txtLineaLarga();
         void txtListaAlumnos();
         void txtListaMaterias();
         void txtPresentacion();

@@ -1,9 +1,9 @@
 /**#############################################################################
  ARCHIVO             : clsMensajesView.cpp
  AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
- VERSION             : 1.0 beta.
+ VERSION             : 1.2 beta.
  FECHA DE CREACION   : 07/11/2019.
- ULTIMA ACTUALIZACION: 16/11/2019.
+ ULTIMA ACTUALIZACION: 24/11/2019.
 *****************************************************************************
                              INCLUSIONES ESTANDAR
 =============================================================================**/
@@ -119,13 +119,16 @@ void clsMateriasView::Insertar()
     clsValidacionesBL validar;
     clsMensajesView txt;
     system("cls");
-    cout<<setw(20)<<"NUEVA MATERIA:"<<endl;
-    cout<<setw(20)<<"Ingrese un nombre:"<<endl;
-    cout << "\t \t " ; cin.getline(nombre, 50);
+    txt.txtLineaLarga();
+
+    cout<<setw(65)<<right<<"NUEVA MATERIA"<<endl;
+    txt.txtLineaLarga();
+    cout<<setw(60)<<right<<"INGRESE EL NOMBRE DE LA MATERIA : ";
+    cin.getline(nombre, 50);
     if(validar.strAlfa(nombre)!= -1)
     {
-        cout<<setw(20)<<"Ingrese un profesor:"<<endl;
-        cout << "\t \t " ; cin.getline(profesor, 50);
+        cout<<setw(40)<<right<<"INGRESE NOMBRE DEL PROFESOR : ";
+        cin.getline(profesor, 50);
         if(validar.strAlfa(profesor)!= -1)
         {
             system("pause");
@@ -157,7 +160,7 @@ void clsMateriasView::Eliminar()
     clsMateriaDAO dao;
     clsMateriaXAlumnoDAO mxadao;
     Listar();
-    cout<<setw(20)<<"Ingrese el ID de la materia a eliminar:"<<endl;
+    cout<<setw(40)<<right<<"INGRESE EL ID DE MATERIA A ELIMINAR : " ;
     cout << "\t \t "; cin>>Id;
     dao.Eliminar(Id);
     mxadao.EliminarXId(Id);
@@ -179,16 +182,16 @@ void clsMateriasView::Modificar()
     clsMensajesView txt;
     system("cls");
     Listar();
-    cout<<setw(20)<<"Ingrese el ID de la materia cuyos datos se deseen modificar:";
+    cout<<setw(40)<<right<<"Ingrese el ID de la materia cuyos datos se deseen modificar:";
     cout << "\t \t" ; cin>>id;
     dto.SetId(id);
     cin.ignore();
-    cout<<setw(40)<<right<<"MODIFICAR MATERIA:"<<endl;
-    cout<<setw(20)<<"Ingrese un nombre:"<<endl;
+    cout<<setw(60)<<right<<"MODIFICAR MATERIA:"<<endl;
+    cout<<setw(40)<<right<<"Ingrese un nombre:"<<endl;
     cout << "\t \t " ; cin.getline(nombre, 50);
     if(validar.strAlfa(nombre)!= -1)
     {
-        cout<<setw(20)<<"Ingrese un profesor:"<<endl;
+        cout<<setw(40)<<right<<"Ingrese un profesor:"<<endl;
         cout << "\t \t " ; cin.getline(profesor, 50);
         if(validar.strAlfa(profesor)!= -1)
         {
@@ -220,24 +223,23 @@ void clsMateriasView::ListarBusqueda()
     clsMensajesView txt;
     system("cls");
     txt.txtListaMaterias();
-   cout<<setw(20)<<"Ingrese la materia:"<<endl;
+   cout<<setw(40)<<right<<"INGRESE LA MATERIA : ";
     cout << "\t \t " ;cin.getline(cond, 50);
     int c=bl.BuscarSubCountM(cond);
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.BuscarSubM(lista, cond);
     char nombre[50];
     char profesor[50];
-    cout<<setw(6)<<"NOMBRE:";
-    cout<<setw(20)<<"PROFESOR:";
-    cout<<setw(20)<<"ID:"<<endl;
+     txt.txtLinea();
+    cout<<"|" <<setw(20)<<right<<"NOMBRE" <<setw(20)<<right <<"|" <<setw(20)<<right<<"PROFESOR" << setw(10)<<right<<"ID"<<endl;
     txt.txtLinea();
     for(int x=0;x<c;x++)
     {
         lista[x].GetNombre(nombre);
-        cout<<setw(6)<<nombre;
+        cout<<setw(40)<<right<<nombre;
         lista[x].GetProfesor(profesor);
-        cout<<setw(20)<<profesor;
-        cout<<setw(20)<<lista[x].GetId()<<endl;
+        cout<<setw(40)<<right<<profesor;
+        cout<<setw(40)<<right<<lista[x].GetId()<<endl;
         txt.txtLinea();
     }
     cout<<endl;
@@ -254,28 +256,24 @@ void clsMateriasView::Listar()
     clsMateriaBL bl;
     clsMensajesView txt;
     system("cls");
-    txt.txtListaMaterias();
     int c=bl.Count();
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.Listar(lista);
     char nombre[50];
     char profesor[50];
-    cout<<setw(6)<<"NOMBRE:";
-    cout<<setw(20)<<"PROFESOR:";
-    cout<<setw(20)<<"ID:"<<endl;
-    txt.txtLinea();
     for(int x=0;x<c;x++)
     {
         if(!lista[x].GetEliminado())
         {
-
+        if(x==0)
+        {
+            txt.txtListaMaterias();
+        }
 
         lista[x].GetNombre(nombre);
-        cout<<setw(6)<<nombre;
         lista[x].GetProfesor(profesor);
-        cout<<setw(20)<<profesor;
-        cout<<setw(20)<<lista[x].GetId()<<endl;
-        txt.txtLinea();
+        cout<<setw(40)<<right<<nombre <<setw(17)<<right<<profesor<<setw(24)<<right<<lista[x].GetId()<<endl;
+        txt.txtLineaLarga();
         }
     }
     cout<<endl;
@@ -294,17 +292,16 @@ void clsMateriasView::MostrarAsignadosM(clsMateriaDTO *listaids, int cant)
     txt.txtListaMaterias();
     char nombre[50];
     char profesor[50];
-    cout<<setw(6)<<"NOMBRE:";
-    cout<<setw(20)<<"PROFESOR:";
-    cout<<setw(20)<<"ID:"<<endl;
+    txt.txtLinea();
+    cout<<"|" <<setw(20)<<right<<"NOMBRE" <<setw(20)<<right <<"|" <<setw(20)<<right<<"PROFESOR" << setw(10)<<right<<"ID"<<endl;
     txt.txtLinea();
     for(int x=0; x<cant; x++)
     {
         listaids[x].GetNombre(nombre);
-        cout<<setw(6)<<nombre;
+        cout<<setw(40)<<right<<nombre;
         listaids[x].GetProfesor(profesor);
-        cout<<setw(20)<<profesor;
-        cout<<setw(20)<<listaids[x].GetId()<<endl;
+        cout<<setw(40)<<right<<profesor;
+        cout<<setw(40)<<right<<listaids[x].GetId()<<endl;
         txt.txtLinea();
     }
 }
@@ -319,18 +316,17 @@ void clsMateriasView::MostrarMateria(clsMateriaDTO dto)
     clsMensajesView txt;
     system("cls");
     txt.txtLinea();
-    cout<<"DATOS DE LA MATERIA CUYOS ALUMNOS SE LISTARAN:"<<endl;
+    cout<<setw(40)<<right<<"DATOS DE LA MATERIA CUYOS ALUMNOS SE LISTARAN:"<<endl;
     char nombre[50];
     char profesor[50];
-    cout<<setw(6)<<"NOMBRE:";
-    cout<<setw(20)<<"PROFESOR:";
-    cout<<setw(20)<<"ID:"<<endl;
+    txt.txtLinea();
+    cout<<"|" <<setw(20)<<right<<"NOMBRE" <<setw(20)<<right <<"|" <<setw(20)<<right<<"PROFESOR" << setw(10)<<right<<"ID"<<endl;
     txt.txtLinea();
         dto.GetNombre(nombre);
-        cout<<setw(6)<<nombre;
+        cout<<setw(40)<<right<<nombre;
         dto.GetProfesor(profesor);
-        cout<<setw(20)<<profesor;
-        cout<<setw(20)<<dto.GetId()<<endl;
+        cout<<setw(40)<<right<<profesor;
+        cout<<setw(40)<<right<<dto.GetId()<<endl;
         txt.txtLinea();
     cout<<endl;
     }

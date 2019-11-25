@@ -3,7 +3,7 @@
  AUTOR/ES            : Francisco Sosa y Gabriel Bejarano
  VERSION             : 0.01 beta.
  FECHA DE CREACION   : 07/11/2019.
- ULTIMA ACTUALIZACION: 16/11/2019.
+ ULTIMA ACTUALIZACION: 24/11/2019.
 *****************************************************************************
                              INCLUSIONES ESTANDAR
 =============================================================================**/
@@ -27,6 +27,17 @@ void clsMensajesView::txtLinea()
 {
 
     cout<<"\t \t |-----------------------------------------------------|"<<endl;
+}
+
+/**=============================================================================
+ FUNCION : void txtLineaLarga()
+ ACCION : Texto que muestra un separador
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtLineaLarga()
+{
+   cout<<"\t |----------------------------------------------------------------------------------------------|"<<endl;
 }
 
 /**==============================================================================
@@ -130,10 +141,11 @@ void clsMensajesView::txtMensajeError()
 ============================================================================= **/
 void clsMensajesView::txtMenuMateria()
 {
-    cout<<"\t \t----------SUBMENU MATERIAS---------"<<endl;
+    cout<<"\t \t |--------------SUBMENU MATERIAS-----------------------|"<<endl;
+
     cout<<setw(40)<<right<< "A - Nueva Materia"<<endl;
     cout<<setw(40)<<right<<"B - Listar Materias"<<endl;
-    cout<<setw(40)<<right<<"C - Buscar Materias (por nombre)"<<endl;
+    cout<<setw(60)<<right<<"C - Buscar Materias (por nombre)"<<endl;
     cout<<setw(40)<<right<<"D - Eliminar Materias"<<endl;
     cout<<setw(40)<<right<<"E - Modificar Materias"<<endl;
     cout<<setw(40)<<right<<"S - Salir"<<endl;
@@ -148,7 +160,8 @@ void clsMensajesView::txtMenuMateria()
 ============================================================================= **/
 void clsMensajesView::txtMenuAlumno()
 {
-    cout<<"\t \t----------SUBMENU ALUMNOS---------"<<endl;
+    cout<<"\t \t |-----------------SUBMENU ALUMNOS---------------------|"<<endl;
+
     cout<<setw(40)<<right<<"A - Nuevo Alumno"<<endl;
     cout<<setw(40)<<right<<"B - Listar Alumnos"<<endl;
     cout<<setw(55)<<right<<"C - Buscar Alumnos (por nombre)"<<endl;
@@ -166,7 +179,7 @@ void clsMensajesView::txtMenuAlumno()
 ============================================================================= **/
 void clsMensajesView::txtMenuMXA()
 {
-    cout<<"\t \t----------SUBMENU MATERIAS POR ALUMNO---------"<<endl;
+    cout<<"\t \t |------------SUBMENU MATERIAS POR ALUMNO--------------|"<<endl;
     cout<<setw(60)<<right<<"A - Asignar alumnos a materia"<<endl;
     cout<<setw(60)<<right<<"B - Asignar materias a alumno"<<endl;
     cout<<setw(55)<<right<<"C - Mostrar alumnos asignados a materia"<<endl;
@@ -185,7 +198,8 @@ void clsMensajesView::txtMenuMXA()
  DEVUELVE : nada
 ============================================================================= **/
 void clsMensajesView::txtMenuPpal(){
-        cout<<"\t \t|--------------------------MENU-----------------------|"<<endl;
+        cout<<"\t \t |--------------------------MENU-----------------------|"<<endl;
+
         cout<<setw(50)<<right<<" A - Materias"<<endl;
         cout<<setw(50)<<right<<" B - Alumnos"<<endl;
         cout<<setw(60)<<right<<" C - Materias por alumno"<<endl;
@@ -202,9 +216,12 @@ void clsMensajesView::txtMenuPpal(){
 ============================================================================= **/
 void clsMensajesView::txtListaAlumnos(){
 system("cls");
-    txtLinea();
-    cout<<"\t \t-               LISTA DE ALUMNOS            -"<<endl;
-    txtLinea();
+    cout<<"\t                                    LISTA DE ALUMNOS" << setw(60)<<right<< "-"<<endl;
+    cout<<"\t -                                  LISTA DE MATERIAS" << setw(60)<<right<< "-"<<endl;
+    txtLineaLarga();
+    cout<<"\t |" <<setw(3)<<right<<"NOMBRE" <<setw(30)<<right <<"|" <<setw(3)<<right<<"APELLIDO" << setw(25)<<right<<"|"<< setw(3)<< right <<"LEGAJO" << setw(23)<<right <<"|"<<endl;
+    txtLineaLarga();
+
 }
 
 /**=============================================================================
@@ -216,9 +233,12 @@ system("cls");
 
 void clsMensajesView::txtListaMaterias(){
     system("cls");
-    txtLinea();
-    cout<<"\t \t-               LISTA DE MATERIAS            -"<<endl;
-    txtLinea();
+    txtLineaLarga();
+
+    cout<<"\t -                                  LISTA DE MATERIAS                                        -"<<endl;
+    txtLineaLarga();
+    cout<<"\t |" <<setw(3)<<right<<"NOMBRE" <<setw(30)<<right <<"|" <<setw(3)<<right<<"PROFESOR" << setw(25)<<right<<"|"<< setw(3)<< right <<"ID" << setw(25)<<right <<"|"<<endl;
+    txtLineaLarga();
 }
 
 /**=============================================================================
@@ -229,7 +249,7 @@ void clsMensajesView::txtListaMaterias(){
 ============================================================================= **/
 void clsMensajesView::txtAlumnoInexistente()
 {
-    cout<<"\t \t----------ADVERTENCIA: NO EXISTE EL ALUMNO---------"<<endl;
+    cout<<"\t \t |----------ADVERTENCIA: NO EXISTE EL ALUMNO-----------|"<<endl;
 }
 
 /**=============================================================================
@@ -240,7 +260,7 @@ void clsMensajesView::txtAlumnoInexistente()
 ============================================================================= **/
 void clsMensajesView::txtMateriaInexistente()
 {
-    cout<<"\t \t----------ADVERTENCIA: NO EXISTE LA MATERIA--------"<<endl;
+    cout<<"\t \t |----------ADVERTENCIA: NO EXISTE LA MATERIA----------|"<<endl;
 }
 
 /**=============================================================================
