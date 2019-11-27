@@ -301,7 +301,7 @@ void clsMateriasView::Listar()
 
             lista[x].GetNombre(nombre);
             lista[x].GetProfesor(profesor);
-            cout<<setw(40)<<right<<nombre <<setw(17)<<right<<profesor<<setw(24)<<right<<lista[x].GetId()<<endl;
+            cout<<setw(40)<<right<<nombre <<setw(17)<<right<<profesor<<setw(22)<<right<<lista[x].GetId()<<endl;
             txt.txtLineaLarga();
         }
     }

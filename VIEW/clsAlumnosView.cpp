@@ -49,7 +49,7 @@ void clsAlumnosView::MenuAlumnos()
         {
             system("cls");
             Listar();
-            cout <<setw(40)<<right <<"" << endl; system("pause");
+            system("pause");
             system("cls");
         }
         break;
@@ -129,11 +129,12 @@ void clsAlumnosView::Insertar()
     cout<<"NUEVO ALUMNO:"<<endl;
     cout<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
     cout<<setw(20)<<"Ingrese un nombre:"<<endl;
-    cout << "\t \t " ; cin.getline(nombre, 50);
+    cin.getline(nombre, 50);
+    cin.ignore();
     if((validar.strAlfa(nombre)!= -1) && (validar.IngresoAyuda(nombre)!=-1))
     {
         cout<<setw(20)<<"Ingrese un apellido:"<<endl;
-        cout << "\t \t " ; cin.getline(apellido, 50);
+        cin.getline(apellido, 50);
         if((validar.strAlfa(apellido)!= -1) && (validar.IngresoAyuda(apellido)!=-1))
         {
             cout<<setw(20)<<"Ingrese dia de nacimiento:"<<endl;
@@ -272,6 +273,7 @@ void clsAlumnosView::Listar()
 {
     clsAlumnoBL bl;
     clsMensajesView txt;
+    system("cls");
     int c=bl.Count();
     clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
     bl.Listar(lista);
@@ -279,14 +281,17 @@ void clsAlumnosView::Listar()
     char apellido[50];
     for(int x=0; x<c; x++)
     {
-        if(x==0)
+        if(!lista[x].GetEliminado())
         {
-            txt.txtListaAlumnos();
+            if(x==0)
+            {
+                txt.txtListaAlumnos();
+            }
+            lista[x].GetNombre(nombre);
+            lista[x].GetApellido(apellido);
+            cout<<"\t |" <<nombre<<setw(30)<<apellido <<setw(30)<<lista[x].GetLegajo()<<endl;
+            txt.txtLineaLarga();
         }
-        lista[x].GetNombre(nombre);
-        lista[x].GetApellido(apellido);
-        cout<<setw(40)<<nombre <<setw(17)<<apellido <<setw(24)<<lista[x].GetLegajo()<<endl;
-        txt.txtLineaLarga();
     }
 }
 

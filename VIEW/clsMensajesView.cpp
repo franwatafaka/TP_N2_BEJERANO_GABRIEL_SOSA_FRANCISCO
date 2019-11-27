@@ -37,7 +37,7 @@ void clsMensajesView::txtLinea()
 ============================================================================= **/
 void clsMensajesView::txtLineaLarga()
 {
-   cout<<"\t |----------------------------------------------------------------------------------------------|"<<endl;
+   cout<<"\t |---------------------------------------------------------------------|"<<endl;
 }
 
 /**==============================================================================
@@ -217,10 +217,9 @@ void clsMensajesView::txtMenuPpal(){
 ============================================================================= **/
 void clsMensajesView::txtListaAlumnos(){
 system("cls");
-    cout<<"\t                                    LISTA DE ALUMNOS" << setw(60)<<right<< "-"<<endl;
-    cout<<"\t -                                  LISTA DE MATERIAS" << setw(60)<<right<< "-"<<endl;
+    cout<<"\t -                              LISTA DE ALUMNOS                       -"<<endl;
     txtLineaLarga();
-    cout<<"\t |" <<setw(3)<<right<<"NOMBRE" <<setw(30)<<right <<"|" <<setw(3)<<right<<"APELLIDO" << setw(25)<<right<<"|"<< setw(3)<< right <<"LEGAJO" << setw(23)<<right <<"|"<<endl;
+    cout<<"\t |" <<setw(3)<<right<<"|NOMBRE|" <<setw(20)<<right <<"|" <<setw(1)<<right<<"APELLIDO|" << setw(26)<<right<<"|" <<"LEGAJO|"<<endl;
     txtLineaLarga();
 
 }
@@ -236,9 +235,9 @@ void clsMensajesView::txtListaMaterias(){
     system("cls");
     txtLineaLarga();
 
-    cout<<"\t -                                  LISTA DE MATERIAS                                        -"<<endl;
+    cout<<"\t -                              LISTA DE MATERIAS                      -"<<endl;
     txtLineaLarga();
-    cout<<"\t |" <<setw(3)<<right<<"NOMBRE" <<setw(30)<<right <<"|" <<setw(3)<<right<<"PROFESOR" << setw(25)<<right<<"|"<< setw(3)<< right <<"ID" << setw(25)<<right <<"|"<<endl;
+    cout<<"\t |" <<setw(30)<<right<<"|NOMBRE|" <<setw(8)<<right <<"|" <<setw(1)<<right<<"PROFESOR|" << setw(20)<<right<<"|" <<"ID|"<<endl;
     txtLineaLarga();
 }
 

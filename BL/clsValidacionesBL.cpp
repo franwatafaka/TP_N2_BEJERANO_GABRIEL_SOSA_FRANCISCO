@@ -92,7 +92,7 @@ bool clsValidacionesBL::ValidacionFecha(tFecha fecha)
     {
         x++;
     }
-    if(fecha.anio>1900 && fecha.anio<2200)
+    if(fecha.anio>1900 && fecha.anio<2020)
     {
         x++;
     }

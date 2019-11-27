@@ -118,7 +118,9 @@ void clsAyudaVIEW::AyuInsertarA()
     cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
     cout<<endl;
     cout<<setw(65)<<right<<"EL SIGUIENTE PASO SERA INGRESAR LA FECHA DE NACIMIENTO DEL ALUMNO, POR EJEMPLO:"<<endl;
-    cout<<setw(60)<<right<<"DIA: 1 MES: 10 ANIO: 2000 "<< endl;
+    cout<<setw(60)<<right<<"DIA:(entre 1 y 31)"<<endl;
+    cout<<setw(60)<<right<<"MES: (entre 1 y 12)"<<endl;
+    cout<<setw(60)<<right<<"ANIO: (entre 1900 y 2019)"<<endl;
     cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
     cout<<endl;
     AyuLineas();
