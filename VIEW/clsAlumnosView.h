@@ -10,6 +10,7 @@
 #include "../BL/clsAlumnoBL.h"
 #include "clsMateriaXAlumnoVIEW.h"
 #include "../DAO/clsMateriaXAlumnoDAO.h"
+#include "clsAyudaVIEW.h"
 
 
 class clsAlumnosView

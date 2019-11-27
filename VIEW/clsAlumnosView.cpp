@@ -124,15 +124,17 @@ void clsAlumnosView::Insertar()
     clsAlumnoBL bl;
     clsValidacionesBL validar;
     clsMensajesView txt;
+    clsAyudaVIEW ayuda;
     system("cls");
     cout<<"NUEVO ALUMNO:"<<endl;
+    cout<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
     cout<<setw(20)<<"Ingrese un nombre:"<<endl;
     cout << "\t \t " ; cin.getline(nombre, 50);
-    if(validar.strAlfa(nombre)!= -1)
+    if((validar.strAlfa(nombre)!= -1) && (validar.IngresoAyuda(nombre)!=-1))
     {
         cout<<setw(20)<<"Ingrese un apellido:"<<endl;
         cout << "\t \t " ; cin.getline(apellido, 50);
-        if(validar.strAlfa(apellido)!= -1 )
+        if((validar.strAlfa(apellido)!= -1) && (validar.IngresoAyuda(apellido)!=-1))
         {
             cout<<setw(20)<<"Ingrese dia de nacimiento:"<<endl;
             cin>>fecha.dia;
@@ -155,12 +157,26 @@ void clsAlumnosView::Insertar()
         }
         else
         {
+            if(validar.IngresoAyuda(apellido)==-1)
+            {
+                ayuda.AyuInsertarA();
+            }
+            else
+            {
             txt.txtErrorIngreso();
+            }
         }
     }
     else
     {
+        if(validar.IngresoAyuda(nombre)==-1)
+        {
+            ayuda.AyuInsertarA();
+        }
+        else
+        {
         txt.txtErrorIngreso();
+        }
     }
 }
 

@@ -55,46 +55,26 @@ char clsValidacionesBL::validarUnaLetra(char *opcion)
 ============================================================================= **/
 int clsValidacionesBL::strAlfa(char *str)
 {
-    int ic = 0, is,tamSub;
-    tamSub = strlen(str);
-    if(tamSub== 0)
+	int len=0;
+	if(*str=='\0')
     {
         return -1;
     }
-    while(str[ic]!='\0')
-    {
-        if(ic==0)
+	while(*str!= '\0')
+	{
+    if(((*str >= 65) && (*str <= 90)) || ((*str >= 97) && (*str <= 122))|| (*str == 32))
         {
-            if(str[ic]==' ' )
-            {
-                return -1;
-                break;
-            }
+            len++;
+            str++;
         }
-
-            if(str[ic]==' ')
-            {
-                ic++;
-            }
-            else
-            {
-                if(((str[ic] >= 65) && (str[ic] <= 90)) || ((str[ic] >= 97) && (str[ic] <= 122)))
-                {
-                    ic++;
-                }
-                else
-                {
-                    return -1;
-                    break;
-                }
-            }
-            ic++;
-
-    }
-    return  ic++;
-
+        else
+        {
+            return -1;
+            break;
+        }
+	}
+	return len;
 }
-
 /**=============================================================================
  FUNCION : bool ValidacionFecha()
  ACCION : devuelve false si se ingresa una fecha incorrecta
@@ -123,5 +103,36 @@ bool clsValidacionesBL::ValidacionFecha(tFecha fecha)
     else
     {
         return false;
+    }
+}
+
+/**=============================================================================
+ FUNCION : char IngresoAyuda()
+ ACCION : devuelve el valor ascii si es una letra,
+ PARAMETROS: char * opcion
+ DEVUELVE : devuelve ascii si es una letra, caso contrario devolvera -1,
+============================================================================= **/
+int clsValidacionesBL::IngresoAyuda(char *userinput)
+{
+    int x=0;
+    char aux[50];
+    char cayuda[50] = {'A','Y','U','D','A','\0'};
+    strcpy(aux, userinput);
+    clsCadenas cadena;
+    cadena.strToUpper(aux);
+    for(int i=0; i<5; i++)
+    {
+        if(aux[i]==cayuda[i])
+        {
+            x++;
+        }
+    }
+    if(x==5)
+    {
+        return -1;
+    }
+    else
+    {
+        return 0;
     }
 }

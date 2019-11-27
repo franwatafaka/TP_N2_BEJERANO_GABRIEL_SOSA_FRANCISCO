@@ -13,6 +13,7 @@ class clsAyudaVIEW
 public:
     void AyuMenuMaterias();
     void AyuInsertar();
+    void AyuInsertarA();
     void AyuListar();
     void AyuEliminar();
     void AyuModificar();

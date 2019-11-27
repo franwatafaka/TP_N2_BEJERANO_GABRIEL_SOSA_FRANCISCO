@@ -122,26 +122,24 @@ void clsMateriasView::Insertar()
 {
     char nombre[50];
     char profesor[50];
-    char cAyuda[2];
     clsMateriaDTO dto;
     clsMateriaBL bl;
     clsValidacionesBL validar;
     clsMensajesView txt;
     system("cls");
     clsAyudaVIEW ayuda;
-
-    ayuda.AyuInsertar();
     system("cls");
     txt.txtLineaLarga();
     cout<<setw(65)<<right<<"NUEVA MATERIA"<<endl;
+    cout<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
     txt.txtLineaLarga();
     cout<<setw(60)<<right<<"INGRESE EL NOMBRE DE LA MATERIA : ";
     cin.getline(nombre, 50);
-    if(validar.strAlfa(nombre)!= -1)
+    if((validar.strAlfa(nombre)!= -1) && (validar.IngresoAyuda(nombre)!=-1))
     {
         cout<<setw(40)<<right<<"INGRESE NOMBRE DEL PROFESOR : ";
         cin.getline(profesor, 50);
-        if(validar.strAlfa(profesor)!= -1)
+        if((validar.strAlfa(profesor)!= -1) && (validar.IngresoAyuda(profesor)!=-1))
         {
             system("pause");
             dto.SetNombre(nombre);
@@ -150,14 +148,28 @@ void clsMateriasView::Insertar()
         }
         else
         {
-            txt.txtErrorIngreso();
-            system("pause");
+            if(validar.IngresoAyuda(profesor)==-1)
+            {
+                ayuda.AyuInsertar();
+            }
+            else
+            {
+                txt.txtErrorIngreso();
+                system("pause");
+            }
         }
     }
     else
     {
-        txt.txtErrorIngreso();
-        system("pause");
+        if(validar.IngresoAyuda(nombre)==-1)
+        {
+            ayuda.AyuInsertar();
+        }
+        else
+        {
+            txt.txtErrorIngreso();
+            system("pause");
+        }
     }
 }
 /**=============================================================================

@@ -2,6 +2,7 @@
 #define CLSVALIDACIONESBL_H
 
 #include "../DTO/clsAlumnoDTO.h"
+#include "../Helpers/clsCadenas.h"
 
 class clsValidacionesBL{
 
@@ -10,6 +11,7 @@ class clsValidacionesBL{
     char validarUnaLetra(char *);
     int strAlfa(char *);
     bool ValidacionFecha(tFecha);
+    IngresoAyuda(char *);
 };
 
 #endif // CLSVALIDACIONESBL_H

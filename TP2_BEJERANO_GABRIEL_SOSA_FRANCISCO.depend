@@ -1,32 +1,32 @@
 # depslib dependency file v1.0
-1573676598 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.cpp
 	"clsMateriaBL.h"
 
-1573664427 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriabl.h
 	"../DAO/clsMateriaDAO.h"
 	"../DTO/clsMateriaDTO.h"
 	<iostream>
 	<cstdio>
 	<iomanip>
 
-1573664427 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.h
 	<cstdio>
 	"../DTO/clsMateriaDTO.h"
 	"../VIEW/clsMensajesView.h"
 	"../Helpers/clsCadenas.h"
 
-1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.h
 	<cstring>
 
-1573667314 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriadao.cpp
 	"clsMateriaDAO.h"
 	"../DTO/clsMateriaDTO.h"
 	"../VIEW/clsMensajesView.h"
 
-1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriadto.cpp
 	"clsMateriaDTO.h"
 
-1573895484 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.cpp
 	<cstdio>
 	<iostream>
 	<cstdlib>
@@ -38,13 +38,13 @@
 	"../VIEW/clsMensajesView.h"
 	"../VIEW/clsMateriaXAlumnoVIEW.h"
 
-1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmainview.h
 	<cstring>
 	<iostream>
 	<cstdlib>
 	<cstdio>
 
-1573669417 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -55,12 +55,12 @@
 	"clsMateriaXAlumnoVIEW.h"
 	"../DAO/clsMateriaXAlumnoDAO.h"
 
-1573892424 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\main.cpp
 	<iostream>
 	<cstdlib>
 	"VIEW/clsMainView.h"
 
-1573892424 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\csystem\csystem.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -68,42 +68,45 @@
 	<windows.h>
 	<unistd.h>
 
-1573898262 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
+1574821044 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriasview.cpp
 	"clsMateriasView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
+	"../VIEW/clsAyudaVIEW.h"
+	"iomanip"
 
-1573676598 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
 	"clsAlumnoBL.h"
 
-1573665872 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.h
 	"../DAO/clsAlumnoDAO.h"
 	"../DTO/clsAlumnoDTO.h"
 	<iostream>
 	<cstdio>
 	<iomanip>
 
-1573895484 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.h
 	<cstdio>
 	"../DTO/clsAlumnoDTO.h"
 	"../Helpers/clsCadenas.h"
 
-1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.h
 	<cstring>
 
-1573895484 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsalumnodao.cpp
 	"clsAlumnoDAO.h"
 	"../VIEW/clsMensajesView.h"
 
-1573446617 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsalumnodto.cpp
 	"clsAlumnoDTO.h"
 
-1573899914 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
+1574821901 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.cpp
 	"clsAlumnosView.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
+	"iomanip"
 
-1573669417 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
+1574821440 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsalumnosview.h
 	<cstring>
 	<iostream>
 	<iomanip>
@@ -113,6 +116,7 @@
 	"../BL/clsAlumnoBL.h"
 	"clsMateriaXAlumnoVIEW.h"
 	"../DAO/clsMateriaXAlumnoDAO.h"
+	"clsAyudaVIEW.h"
 
 1574116420 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsalumnobl.cpp
 	"clsAlumnoBL.h"
@@ -289,24 +293,24 @@
 	<cstdlib>
 	<iomanip>
 
-1573898167 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.h
 	<cstring>
 	<iostream>
 	<iomanip>
 	<cstdlib>
 	<cstdio>
 
-1573676598 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.cpp
 	"clsMateriaXAlumnoBL.h"
 
-1573642712 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsmateriaxalumnobl.h
 	"../DAO/clsMateriaXAlumnoDAO.h"
 	"../DTO/clsMateriaXAlumnoDTO.h"
 	<iostream>
 	<cstdio>
 	<iomanip>
 
-1573642833 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.h
 	<cstdio>
 	"../DTO/clsMateriaXAlumnoDTO.h"
 	"../DTO/clsMateriaDTO.h"
@@ -316,31 +320,33 @@
 	"../VIEW/clsMateriasView.h"
 	"../VIEW/clsAlumnosView.h"
 
-1573446617 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.h
 
-1573643264 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.h
 	"../DAO/clsMateriaXAlumnoDAO.h"
 	"../DTO/clsMateriaXAlumnoDTO.h"
 	"../BL/clsMateriaXAlumnoBL.h"
 
-1573902245 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
+1574821368 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.cpp
 	"clsValidacionesBL.h"
 
-1573897017 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
+1574816195 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\bl\clsvalidacionesbl.h
+	"../DTO/clsAlumnoDTO.h"
+	"../Helpers/clsCadenas.h"
 
-1573677241 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dao\clsmateriaxalumnodao.cpp
 	"clsMateriaXAlumnoDAO.h"
 
-1573676681 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\dto\clsmateriaxalumnodto.cpp
 	"clsMateriaXAlumnoDTO.h"
 
-1573895484 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmateriaxalumnoview.cpp
 	"clsMateriaXAlumnoVIEW.h"
 	"../CSYSTEM/csystem.h"
 	"../BL/clsValidacionesBL.h"
 	"../VIEW/clsMensajesView.h"
 
-1573898108 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsmensajesview.cpp
 	"clsMensajesView.h"
 	<cstdlib>
 	<iomanip>
@@ -518,9 +524,9 @@
 	"clsCadenas.h"
 	<cstring>
 
-1573897017 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\helpers\clscadenas.h
+1574814848 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\helpers\clscadenas.h
 
-1573897017 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\helpers\clscadenas.cpp
+1574814848 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\helpers\clscadenas.cpp
 	"clsCadenas.h"
 	<cstring>
 
@@ -533,4 +539,14 @@
 
 1574657972 source:c:\users\mtlwa\documents\utn\2do-intento-2019\lab2\tp_n2_bejerano_gabriel_sosa_francisco\view\clsayudaview.cpp
 	"clsAyudaVIEW.h"
+
+1574822495 source:c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsayudaview.cpp
+	"clsAyudaVIEW.h"
+
+1574821901 c:\users\raptor\documents\github\tp_n2_bejerano_gabriel_sosa_francisco\view\clsayudaview.h
+	<cstring>
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<cstdio>
 

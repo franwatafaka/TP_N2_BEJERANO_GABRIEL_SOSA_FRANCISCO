@@ -72,7 +72,7 @@ void clsAyudaVIEW::AyuMenuMaterias()
 
 /**=============================================================================
 FUNCION : void AyuInsertar()
-ACCION : Muestra y permite el acceso a las funciones de gestion de materias
+ACCION : Muestra una ayuda para realizar la carga de materias
 PARAMETROS: nada
 DEVUELVE : nada
 ============================================================================= **/
@@ -80,18 +80,47 @@ void clsAyudaVIEW::AyuInsertar()
 {
     AyuLineas();
     AyuTitulo();
-    cout<<setw(65)<<right<<"NUEVA MATERIA"<<endl;
-    cout << "\t\t\t" ;system("pause");
+    cout<<setw(65)<<right<<"AYUDA PARA EL INGRESO DE UNA NUEVA MATERIA"<<endl;
+    cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
+    cout<<endl;
     cout<<setw(60)<<right<<"INGRESE EL NOMBRE DE LA MATERIA : "<< endl;
-    cout<<setw(65)<<right<<"DEBERA INGRESAR EL NOMBRE DE LA MATERIA"<<endl;
-    cout << "\t\t\t" ;system("pause");
-    cout<<setw(60)<<right<<"MATERIA SARASA 123 "<< endl;
-    cout << "\t\t\t" ;system("pause");
+    cout<<setw(65)<<right<<"DEBERA INGRESAR EL NOMBRE DE LA MATERIA, POR EJEMPLO:"<<endl;
+    cout<<setw(60)<<right<<"INTRODUCCION AL ROBO "<< endl;
+    cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
+    cout<<endl;
     cout<<setw(60)<<right<<"INGRESE NOMBRE DEL PROFESOR : "<< endl;
-    cout<<setw(65)<<right<<"EL SIGUIENTE PASO SERA INGRESAR EL NOMBRE DEL PROFESOR"<<endl;
-    cout << "\t\t\t" ;system("pause");
+    cout<<setw(65)<<right<<"EL SIGUIENTE PASO SERA INGRESAR EL NOMBRE DEL PROFESOR, POR EJEMPLO:"<<endl;
     cout<<setw(60)<<right<<"RICARDO FORT "<< endl;
-    cout << "\t\t\t" ;system("pause");
+    cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
+    cout<<endl;
+    AyuLineas();
+}
+
+/**=============================================================================
+FUNCION : void AyuInsertarA()
+ACCION : Muestra una ayuda para realizar la carga de alumnos
+PARAMETROS: nada
+DEVUELVE : nada
+============================================================================= **/
+void clsAyudaVIEW::AyuInsertarA()
+{
+    AyuLineas();
+    AyuTitulo();
+    cout<<setw(65)<<right<<"AYUDA PARA EL INGRESO DE UN NUEVO ALUMNO"<<endl;
+    cout<<setw(60)<<right<<"INGRESE EL NOMBRE DEL ALUMNO : "<< endl;
+    cout<<setw(65)<<right<<"DEBERA INGRESAR EL NOMBRE DEL ALUMNO, POR EJEMPLO:"<<endl;
+    cout<<setw(60)<<right<<"JOAQUIN PHOENIX "<< endl;
+    cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
+    cout<<endl;
+    cout<<setw(60)<<right<<"INGRESE NOMBRE DEL ALUMNO : "<< endl;
+    cout<<setw(65)<<right<<"EL SIGUIENTE PASO SERA INGRESAR EL NOMBRE DEL ALUMNO, POR EJEMPLO:"<<endl;
+    cout<<setw(60)<<right<<"CARLIN CALVO "<< endl;
+    cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
+    cout<<endl;
+    cout<<setw(65)<<right<<"EL SIGUIENTE PASO SERA INGRESAR LA FECHA DE NACIMIENTO DEL ALUMNO, POR EJEMPLO:"<<endl;
+    cout<<setw(60)<<right<<"DIA: 1 MES: 10 ANIO: 2000 "<< endl;
+    cout<<endl; cout<< "\t\t\t"<<endl ;system("pause");
+    cout<<endl;
     AyuLineas();
 }
 
