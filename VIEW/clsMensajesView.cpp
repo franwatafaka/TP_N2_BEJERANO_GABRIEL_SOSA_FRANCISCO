@@ -341,7 +341,7 @@ void clsMensajesView::txtSeleccionDeMateria()
         cout<<setw(40)<<right<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
-        cout<<setw(40)<<right<<  "Ingrese la materia para mostrar los alumnos asignados:"<<endl;
+        cout<<setw(40)<<right<<  "Ingrese el ID de la materia para mostrar los alumnos asignados:"<<endl;
 
 }
 
@@ -356,7 +356,7 @@ void clsMensajesView::txtSeleccionDeAlumno()
     cout<<setw(40)<<right<<  "||  NOTA: Ingrese 0 para salir  ||"<<endl;
         clsMensajesView txt;
         txt.txtLinea();
-    cout<<setw(40)<<right<<  "Ingrese el alumno para mostrar las materias asignadas:"<<endl;
+    cout<<setw(40)<<right<<  "Ingrese el legajo del alumno para mostrar las materias asignadas:"<<endl;
 }
 
 /**=============================================================================

@@ -207,37 +207,57 @@ void clsMateriaXAlumnoVIEW::MenuMXA()
  DEVUELVE : nada
 ============================================================================= **/
 void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
+//{
+//    clsMateriaXAlumnoBL bl;
+//    clsAlumnoBL abl;
+//    clsAlumnosView aview;
+//    clsMensajesView txt;
+//    clsMateriaXAlumnoDAO dao;
+//    bool exit;
+//    aview.Listar();
+//    txt.txtLinea();
+//    txt.txtSeleccionDeAlumno();
+//    int id;
+//    cin>>id;
+//    cin.ignore();
+//    if(id!=0)
+//    {
+//        if(!dao.verificarEstadoAlumno(id))
+//        {
+//            int c=bl.CountAsignados(id);
+//            int legajos[c];
+//            for(int x=0; x<c; x++)
+//            {
+//                legajos[x]=0;
+//            }
+//            clsAlumnoDTO *listalegajos = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
+//            bl.ListaLegajos(id, legajos);
+//            abl.ListarAsignados(listalegajos, legajos);
+//            aview.MostrarAsignados(listalegajos, c);
+//        }
+//    }
+//    cout << "estoy en MostrarAsignaciones()" << endl;
+//    system("pause");
+//}
 {
-    clsMateriaXAlumnoBL bl;
-    clsAlumnoBL abl;
-    clsAlumnosView aview;
-    clsMensajesView txt;
-    clsMateriaXAlumnoDAO dao;
-    bool exit;
-    aview.Listar();
-    txt.txtLinea();
-    txt.txtSeleccionDeAlumno();
-    int id;
-    cin>>id;
-    cin.ignore();
-    if(id!=0)
-    {
-        if(!dao.verificarEstadoAlumno(id))
-        {
-            int c=bl.CountAsignados(id);
-            int legajos[c];
-            for(int x=0; x<c; x++)
-            {
-                legajos[x]=0;
-            }
-            clsAlumnoDTO *listalegajos = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
-            bl.ListaLegajos(id, legajos);
-            abl.ListarAsignados(listalegajos, legajos);
-            aview.MostrarAsignados(listalegajos, c);
-        }
-    }
-    cout << "estoy en MostrarAsignaciones()" << endl;
-    system("pause");
+        clsMateriaXAlumnoBL bl;
+        clsAlumnoBL abl;
+        clsAlumnosView aview;
+        clsMateriasView mview;
+        clsMensajesView txt;
+        mview.Listar();
+        txt.txtLinea();
+        txt.txtSeleccionDeMateria();
+        int id;
+        cin>>id;
+        int c=bl.CountAsignados(id);
+        system("pause");
+        int legajos[c];
+        for(int x=0; x<c; x++){legajos[x]=0;}
+        clsAlumnoDTO *listalegajos = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
+        bl.ListaLegajos(id, legajos);
+        abl.ListarAsignados(listalegajos, legajos);
+        aview.MostrarAsignados(listalegajos, c);
 }
 
 /**=============================================================================
@@ -250,15 +270,17 @@ void clsMateriaXAlumnoVIEW::MostrarAsignacionesM()
 {
     clsMateriaXAlumnoBL bl;
     clsMateriaBL abl;
-    clsMateriasView aview;
+    clsMateriasView mview;
+    clsAlumnosView aview;
     clsMensajesView txt;
+    clsMateriaXAlumnoDAO dao;
     aview.Listar();
     txt.txtLinea();
-    txt.txtSeleccionDeMateria();
+    txt.txtSeleccionDeAlumno();
     int legajo;
     cin>>legajo;
     cin.ignore();
-    if(legajo != 0)
+    if(legajo != 0 && !dao.verificarEstadoAlumno(legajo))
     {
 
         int c=bl.CountAsignadosM(legajo);
@@ -271,7 +293,7 @@ void clsMateriaXAlumnoVIEW::MostrarAsignacionesM()
         clsMateriaDTO *listaIds = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
         bl.ListaIds(legajo, ids);
         abl.ListarAsignados(listaIds, ids);
-        aview.MostrarAsignadosM(listaIds, c);
+        mview.MostrarAsignadosM(listaIds, c);
     }
 }
 
