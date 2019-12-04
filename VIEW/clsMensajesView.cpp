@@ -343,6 +343,21 @@ cout << setw(40)<<right<<""; system("pause");
 }
 
 /**=============================================================================
+ FUNCION : void txtYaAsignado()
+ ACCION : Texto que indica que no se han encontrado resultados.
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtNoResults()
+{
+cout<<endl;
+cout<<"La busqueda no ha encontrado resultados."<<endl;
+cout<<endl;
+system("pause");
+system("cls");
+}
+
+/**=============================================================================
  FUNCION : void txtSeleccionDeMateria()
   ACCION : Texto que indica el ingreso de un caracter para finalizar, y el ingreso de un dato
  PARAMETROS: nada

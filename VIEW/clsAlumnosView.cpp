@@ -310,6 +310,10 @@ void clsAlumnosView::ListarBusqueda()
     cout<<"Ingrese el alumno:"<<endl;
     cin.getline(cond, 50);
     int c=bl.BuscarSubCountA(cond);
+    if(c==0){
+        txt.txtNoResults();
+    }
+    else{
     clsAlumnoDTO *lista = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
     bl.BuscarSubA(lista, cond);
     char nombre[50];
@@ -324,6 +328,7 @@ void clsAlumnosView::ListarBusqueda()
         lista[x].GetApellido(apellido);
         cout<<setw(40)<<nombre <<setw(17)<<apellido << setw(24)<<lista[x].GetLegajo()<<endl;
         txt.txtLineaLarga();
+    }
     }
 }
 

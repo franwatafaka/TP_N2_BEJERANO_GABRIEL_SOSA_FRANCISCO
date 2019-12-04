@@ -255,6 +255,11 @@ void clsMateriasView::ListarBusqueda()
     cout << "\t \t " ;
     cin.getline(cond, 50);
     int c=bl.BuscarSubCountM(cond);
+    if(c==0){
+        txt.txtNoResults();
+    }
+    else
+    {
     clsMateriaDTO *lista = (clsMateriaDTO*)malloc(sizeof(clsMateriaDTO)*c);
     bl.BuscarSubM(lista, cond);
     char nombre[50];
@@ -272,6 +277,7 @@ void clsMateriasView::ListarBusqueda()
         txt.txtLinea();
     }
     cout<<endl;
+    }
 }
 
 /**=============================================================================
