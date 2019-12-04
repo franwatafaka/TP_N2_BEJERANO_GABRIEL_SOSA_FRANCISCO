@@ -126,8 +126,10 @@ void clsAlumnosView::Insertar()
     clsMensajesView txt;
     clsAyudaVIEW ayuda;
     system("cls");
-    cout<<"NUEVO ALUMNO:"<<endl;
-    cout<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
+    txt.txtLineaLarga();
+    cout<<setw(65)<<right<<"NUEVO ALUMNO:"<<endl;
+    txt.txtLineaLarga();
+    cout<<"\t"<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
     cout<<setw(20)<<"Ingrese un nombre:"<<endl;
     cin.getline(nombre, 50);
     cin.ignore();
@@ -165,6 +167,7 @@ void clsAlumnosView::Insertar()
             else
             {
             txt.txtErrorIngreso();
+            system("pause");
             }
         }
     }
@@ -177,6 +180,7 @@ void clsAlumnosView::Insertar()
         else
         {
         txt.txtErrorIngreso();
+        system("pause");
         }
     }
 }
@@ -341,22 +345,24 @@ void clsAlumnosView::ListarBusqueda()
 void clsAlumnosView::MostrarAsignados(clsAlumnoDTO *listalegajos, int cant)
 {
     clsMensajesView txt;
-    txt.txtListaAlumnos();
+    system("cls");
     char nombre[50];
     char apellido[50];
-    cout<<setw(6)<<"NOMBRE:";
+    cout<<"\t \t "<<setw(6)<<"NOMBRE:";
     cout<<setw(20)<<"APELLIDO:";
     cout<<setw(20)<<"LEGAJO:"<<endl;
     txt.txtLinea();
     for(int x=0; x<cant; x++)
     {
         listalegajos[x].GetNombre(nombre);
-        cout<<setw(6)<<nombre;
+        cout<<"\t \t "<<setw(6)<<nombre;
         listalegajos[x].GetApellido(apellido);
         cout<<setw(20)<<apellido;
         cout<<setw(20)<<listalegajos[x].GetLegajo()<<endl;
         txt.txtLinea();
     }
+    cout<<endl;
+    cout<<endl;
 }
 
 /**=============================================================================

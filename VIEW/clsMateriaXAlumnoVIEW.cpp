@@ -210,38 +210,6 @@ void clsMateriaXAlumnoVIEW::MenuMXA()
  DEVUELVE : nada
 ============================================================================= **/
 void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
-//{
-//    clsMateriaXAlumnoBL bl;
-//    clsAlumnoBL abl;
-//    clsAlumnosView aview;
-//    clsMensajesView txt;
-//    clsMateriaXAlumnoDAO dao;
-//    bool exit;
-//    aview.Listar();
-//    txt.txtLinea();
-//    txt.txtSeleccionDeAlumno();
-//    int id;
-//    cin>>id;
-//    cin.ignore();
-//    if(id!=0)
-//    {
-//        if(!dao.verificarEstadoAlumno(id))
-//        {
-//            int c=bl.CountAsignados(id);
-//            int legajos[c];
-//            for(int x=0; x<c; x++)
-//            {
-//                legajos[x]=0;
-//            }
-//            clsAlumnoDTO *listalegajos = (clsAlumnoDTO*)malloc(sizeof(clsAlumnoDTO)*c);
-//            bl.ListaLegajos(id, legajos);
-//            abl.ListarAsignados(listalegajos, legajos);
-//            aview.MostrarAsignados(listalegajos, c);
-//        }
-//    }
-//    cout << "estoy en MostrarAsignaciones()" << endl;
-//    system("pause");
-//}
 {
         clsMateriaXAlumnoBL bl;
         clsAlumnoBL abl;

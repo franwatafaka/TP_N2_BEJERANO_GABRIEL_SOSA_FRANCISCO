@@ -146,10 +146,10 @@ void clsMensajesView::txtMenuMateria()
     cout<<setw(45)<<right<<"A - Nueva Materia"<<endl;
     cout<<setw(47)<<right<<"B - Listar Materias"<<endl;
     cout<<setw(60)<<right<<"C - Buscar Materias (por nombre)"<<endl;
-    cout<<setw(48)<<right<<"D - Eliminar Materias"<<endl;
-    cout<<setw(48)<<right<<"E - Modificar Materias"<<endl;
-    cout<<setw(48)<<right<<"H - MOSTRAR AYUDAAAAA"<<endl;
-    cout<<setw(45)<<right<<"S - Salir"<<endl;
+    cout<<setw(49)<<right<<"D - Eliminar Materias"<<endl;
+    cout<<setw(50)<<right<<"E - Modificar Materias"<<endl;
+    cout<<setw(45)<<right<<"H - Mostrar ayuda"<<endl;
+    cout<<setw(61)<<right<<"S - Salir(Regresar al menu anterior)"<<endl;
    txtLinea();
     cout<<endl;
 }
@@ -163,12 +163,13 @@ void clsMensajesView::txtMenuAlumno()
 {
     cout<<"\t \t |-----------------SUBMENU ALUMNOS---------------------|"<<endl;
 
-    cout<<setw(40)<<right<<"A - Nuevo Alumno"<<endl;
-    cout<<setw(40)<<right<<"B - Listar Alumnos"<<endl;
-    cout<<setw(55)<<right<<"C - Buscar Alumnos (por nombre)"<<endl;
-    cout<<setw(40)<<right<<"D - Eliminar Alumnos"<<endl;
-    cout<<setw(40)<<right<<"E - Modificar Alumnos"<<endl;
-    cout<<setw(40)<<right<<"S - Salir"<<endl;
+    cout<<setw(45)<<right<<"A - Nuevo Alumno"<<endl;
+    cout<<setw(47)<<right<<"B - Listar Alumnos"<<endl;
+    cout<<setw(60)<<right<<"C - Buscar Alumnos (por nombre)"<<endl;
+    cout<<setw(49)<<right<<"D - Eliminar Alumnos"<<endl;
+    cout<<setw(50)<<right<<"E - Modificar Alumnos"<<endl;
+    cout<<setw(46)<<right<<"H - Mostrar ayuda"<<endl;
+    cout<<setw(61)<<right<<"S - Salir(Regresar al menu anterior)"<<endl;
     txtLinea();
     cout<<endl;
 }
@@ -183,9 +184,9 @@ void clsMensajesView::txtMenuMXA()
     cout<<"\t \t |------------SUBMENU MATERIAS POR ALUMNO--------------|"<<endl;
     cout<<setw(60)<<right<<"A - Asignar alumnos a materia"<<endl;
     cout<<setw(60)<<right<<"B - Asignar materias a alumno"<<endl;
-    cout<<setw(55)<<right<<"C - Mostrar alumnos asignados a materia"<<endl;
-    cout<<setw(55)<<right<<"D - Mostrar materias asignados a alumnos"<<endl;
-    cout<<setw(60)<<right<<"S - Salir"<<endl;
+    cout<<setw(65)<<right<<"C - Mostrar alumnos asignados a materia"<<endl;
+    cout<<setw(66)<<right<<"D - Mostrar materias asignados a alumnos"<<endl;
+    cout<<setw(65)<<right<<"S - Salir(Regresar al menu anterior)"<<endl;
     txtLinea();
     cout<<endl;
 }
@@ -202,9 +203,10 @@ void clsMensajesView::txtMenuPpal(){
         cout<<"\t \t |--------------------------MENU-----------------------|"<<endl;
 
         cout<<setw(50)<<right<<" A - Materias"<<endl;
-        cout<<setw(50)<<right<<" B - Alumnos"<<endl;
-        cout<<setw(60)<<right<<" C - Materias por alumno"<<endl;
-        cout<<setw(50)<<right<<" S - Salir"<<endl;
+        cout<<setw(49)<<right<<" B - Alumnos"<<endl;
+        cout<<setw(61)<<right<<" C - Materias por alumno"<<endl;
+        cout<<setw(55)<<right<<" H - Mostrar ayuda"<<endl;
+        cout<<setw(65)<<right<<" S - Salir(Cerrar el programa)"<<endl;
         txtLinea();
 }
 

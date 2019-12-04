@@ -131,7 +131,8 @@ void clsMateriasView::Insertar()
     system("cls");
     txt.txtLineaLarga();
     cout<<setw(65)<<right<<"NUEVA MATERIA"<<endl;
-    cout<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
+    txt.txtLineaLarga();
+    cout<<"\t"<<"NOTA: Ingrese la palabra \" ayuda \" para desplegar ejemplos de carga"<<endl;
     txt.txtLineaLarga();
     cout<<setw(60)<<right<<"INGRESE EL NOMBRE DE LA MATERIA : ";
     cin.getline(nombre, 50);
@@ -324,21 +325,25 @@ DEVUELVE : nada
 void clsMateriasView::MostrarAsignadosM(clsMateriaDTO *listaids, int cant)
 {
     clsMensajesView txt;
-    txt.txtListaMaterias();
+    system("cls");
     char nombre[50];
     char profesor[50];
     txt.txtLinea();
-    cout<<"|" <<setw(20)<<right<<"NOMBRE" <<setw(20)<<right <<"|" <<setw(20)<<right<<"PROFESOR" << setw(10)<<right<<"ID"<<endl;
+    cout<<"\t \t "<<setw(6)<<"NOMBRE:";
+    cout<<setw(20)<<"PROFESOR:";
+    cout<<setw(30)<<"ID:    "<<endl;
     txt.txtLinea();
     for(int x=0; x<cant; x++)
     {
         listaids[x].GetNombre(nombre);
-        cout<<setw(40)<<right<<nombre;
+        cout<<"\t \t "<<setw(6)<<nombre;
         listaids[x].GetProfesor(profesor);
-        cout<<setw(40)<<right<<profesor;
-        cout<<setw(40)<<right<<listaids[x].GetId()<<endl;
+        cout<<setw(20)<<profesor;
+        cout<<setw(25)<<listaids[x].GetId()<<endl;
         txt.txtLinea();
     }
+    cout<<endl;
+    cout<<endl;
 }
 /**=============================================================================
  FUNCION : void MostrarMateria()
