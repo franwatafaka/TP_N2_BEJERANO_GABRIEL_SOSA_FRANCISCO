@@ -190,6 +190,33 @@ int clsMateriaXAlumnoDAO::Count()
 }
 
 /**=============================================================================
+ FUNCION : int ExisteAsignacion()
+ ACCION : verifica si la asignacion indicada ya existe
+ PARAMETROS: int id, int legajo
+ DEVUELVE : true si existe, false si no es así
+============================================================================= **/
+bool clsMateriaXAlumnoDAO::ExisteAsignacion(int id, int legajo)
+{
+    FILE *p;
+    int cant=0;
+    clsMateriaXAlumnoDTO dto;
+    p = fopen(ARCHIVO_MXA,"rb");
+    if(p!=NULL)
+    {
+        while(fread(&dto,sizeof(clsMateriaXAlumnoDTO),1,p))
+        {
+            if(dto.GetId()==id && dto.GetLegajo()==legajo)
+            {
+                return true;
+                break;
+            }
+        }
+        fclose(p);
+    }
+    return false;
+}
+
+/**=============================================================================
  FUNCION : int CountAsignados()
  ACCION : cuenta la cantidad de registros activos en la db que correspondan al id dado
  PARAMETROS: nada

@@ -26,6 +26,7 @@ class clsMensajesView
         void txtAsignacionExitosa();
         void txtAsignacionDeAlumnos();
         void txtAsignacionDeMaterias();
+        void txtYaAsignado();
         void txtMateriaInexistente();
         void txtAlumnoInexistente();
         void txtSeleccionDeAlumno();

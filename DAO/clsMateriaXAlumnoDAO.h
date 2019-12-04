@@ -36,6 +36,7 @@ public:
     void ListaLegajos(int, int *);
     void ListaIds(int, int *);
     int Count();
+    bool ExisteAsignacion(int, int);
     int CountAsignados(int);
     int CountAsignadosM(int);
 //    int buscarAlumno(int, clsAlumnoDTO);

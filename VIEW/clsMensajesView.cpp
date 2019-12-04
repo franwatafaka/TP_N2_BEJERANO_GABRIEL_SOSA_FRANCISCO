@@ -331,6 +331,18 @@ cout << setw(40)<<right<<""; system("pause");
 }
 
 /**=============================================================================
+ FUNCION : void txtYaAsignado()
+ ACCION : Texto que indica una previa asignacion
+ PARAMETROS: nada
+ DEVUELVE : nada
+============================================================================= **/
+void clsMensajesView::txtYaAsignado()
+{
+cout<<setw(40)<<right<<"||  EL ALUMNO YA SE ENCUENTRA ASIGNADO A LA MATERIA  ||"<<endl;
+cout << setw(40)<<right<<""; system("pause");
+}
+
+/**=============================================================================
  FUNCION : void txtSeleccionDeMateria()
   ACCION : Texto que indica el ingreso de un caracter para finalizar, y el ingreso de un dato
  PARAMETROS: nada

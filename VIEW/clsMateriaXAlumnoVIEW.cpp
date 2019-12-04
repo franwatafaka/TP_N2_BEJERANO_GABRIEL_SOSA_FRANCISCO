@@ -48,8 +48,9 @@ void clsMateriaXAlumnoVIEW::AsignarAtoM()
             txt.txtAsignacionDeMaterias();
             cin>>id;
             cin.ignore();
-            if(id==0)
+            if(id==0 || dao.ExisteAsignacion(id, legajo))
             {
+                txt.txtYaAsignado();
                 exit = true;
             }
             else
@@ -84,6 +85,7 @@ void clsMateriaXAlumnoVIEW::AsignarMtoA()
     system("cls");
     clsMateriaXAlumnoDAO dao;
     clsMateriaXAlumnoDTO dto;
+    clsMateriaXAlumnoBL bl;
     clsAlumnosView aview;
     clsMateriasView mview;
     clsMensajesView txt;
@@ -107,8 +109,9 @@ void clsMateriaXAlumnoVIEW::AsignarMtoA()
             cin>>legajo;
             cin.ignore();
 
-            if(legajo == 0)
+            if(legajo == 0 || dao.ExisteAsignacion(id, legajo))
             {
+                txt.txtYaAsignado();
                 exit = true;
             }
             else
@@ -244,12 +247,15 @@ void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
         clsAlumnoBL abl;
         clsAlumnosView aview;
         clsMateriasView mview;
+        clsMateriaXAlumnoDAO dao;
         clsMensajesView txt;
         mview.Listar();
         txt.txtLinea();
         txt.txtSeleccionDeMateria();
         int id;
         cin>>id;
+        if(id != 0 && !dao.verificarEstadoMateria(id))
+        {
         int c=bl.CountAsignados(id);
         system("pause");
         int legajos[c];
@@ -258,6 +264,7 @@ void clsMateriaXAlumnoVIEW::MostrarAsignaciones()
         bl.ListaLegajos(id, legajos);
         abl.ListarAsignados(listalegajos, legajos);
         aview.MostrarAsignados(listalegajos, c);
+        }
 }
 
 /**=============================================================================
@@ -279,7 +286,6 @@ void clsMateriaXAlumnoVIEW::MostrarAsignacionesM()
     txt.txtSeleccionDeAlumno();
     int legajo;
     cin>>legajo;
-    cin.ignore();
     if(legajo != 0 && !dao.verificarEstadoAlumno(legajo))
     {
 
